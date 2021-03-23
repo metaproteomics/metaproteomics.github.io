@@ -19,3 +19,6 @@ If you don't run a lab, or are not working in one, but would like to be informed
 
 Thank you for your interest,<br>
 the Metaproteomics Intitiative
+<br>
+<br>
+Contact details: <a href="mailto:info@metaproteomics.org">info@metaproteomics.org</a>
