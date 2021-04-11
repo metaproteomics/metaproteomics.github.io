@@ -30,6 +30,32 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+include: ["_pages"]
+twitter:
+  username: "MetaP_Init"
+social:
+  type: "Organization"
+  name: "Metaproteomics Initiative"
+  links:
+    - "https://twitter.com/MetaP_Init"
+footer:
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/MetaP_Init"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/metaproteomics"
+
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

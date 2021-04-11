@@ -1,0 +1,7 @@
+---
+
+title: Education
+permalink: /education/
+
+---
+

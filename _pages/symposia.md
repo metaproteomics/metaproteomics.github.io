@@ -1,0 +1,7 @@
+---
+
+title: Symposia
+permalink: /symposia/
+
+---
+

@@ -1,0 +1,9 @@
+main:
+  - title: "Who are we?"
+    url: /whoarewe/
+  - title: "CAMPI"
+    url: /campi/
+  - title: "Education"
+    url: /education/
+  - title: "Symposia"
+    url: /symposia/
