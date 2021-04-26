@@ -1,6 +1,6 @@
 ---
 
-layout: single
+layout: home
 title: Home
 
 ---

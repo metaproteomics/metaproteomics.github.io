@@ -70,7 +70,18 @@ defaults:
       author_profile: false
       share: false
       classes: wide
-      
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      permalink: /news/:year-:month-:day-:title/
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: true
+      related: false
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
