@@ -14,3 +14,5 @@ the Metaproteomics Intitiative
 
 
 *Contact details: [info@metaproteomics.org](mailto:info@metaproteomics.org)*
+
+<a class="twitter-timeline" data-lang="en" href="https://twitter.com/MetaP_Init?ref_src=twsrc%5Etfw">Tweets by MetaP_Init</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
