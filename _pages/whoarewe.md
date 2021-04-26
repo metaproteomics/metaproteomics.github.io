@@ -6,6 +6,7 @@ permalink: /whoarewe/
 ---
 
 *Belgium*
+
 [CompOmics (Ghent, Belgium)](https://www.compomics.com), bioinformatics lab led by Prof. Lennart Martens 
  
 *Germany*
