@@ -15,4 +15,4 @@ Thank you for your interest,<br>
 the Metaproteomics Intitiative
 
 
-Contact details: [info@metaproteomics.org](mailto:info@metaproteomics.org)
+*Contact details: [info@metaproteomics.org](mailto:info@metaproteomics.org)*
