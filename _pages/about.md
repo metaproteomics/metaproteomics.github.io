@@ -16,7 +16,6 @@ permalink: /about/
 * Pratik Jagtap
 * Nico Jehmlich
 * Catherine Juste
-* Katharina Keiblinger
 * Benoit Kunath
 * Bart Mesuere
 * Thilo Muth
