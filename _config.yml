@@ -30,6 +30,8 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+breadcrumbs: true
+
 include: ["_pages"]
 twitter:
   username: "MetaP_Init"
@@ -47,6 +49,10 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/metaproteomics"
 
+collections:
+  symposia:
+    output: true
+    permalink: /:collection/:path/
 
 defaults:
   # _pages
@@ -55,6 +61,15 @@ defaults:
       type: pages
     values:
       layout: single
+  # _symposia
+  - scope:
+      path: ""
+      type: symposia
+    values:
+      layout: single
+      author_profile: false
+      share: false
+      classes: wide
       
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
