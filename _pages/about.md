@@ -5,7 +5,7 @@ permalink: /about/
 
 ---
 
-**Team members**
+**Our team**
 
 * Magnus Arntzen
 * Jean Armengaud
