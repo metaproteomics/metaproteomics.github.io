@@ -5,7 +5,7 @@ permalink: /whoarewe/
 
 ---
 
-**Want your lab on this list? Become a member and add your lab [here](https://forms.gle/CUgvt7owKTkjncWG8)!**
+**Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
 *Belgium*
 
