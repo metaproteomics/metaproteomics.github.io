@@ -1,7 +1,7 @@
 ---
 
-title: Who are we?
-permalink: /whoarewe/
+title: Research groups
+permalink: /research_groups/
 
 ---
 
