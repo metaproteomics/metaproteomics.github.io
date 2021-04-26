@@ -1,5 +1,5 @@
 ---
-title: Hello World and logo contest
+title: Logo contest
 ---
 
 We are delighted to announce the birth of the Metaproteomics Initiative, an official Initiative of the European Proteomics Association (EuPA)!
