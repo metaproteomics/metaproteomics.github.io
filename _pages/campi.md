@@ -1,7 +1,0 @@
----
-
-title: CAMPI
-permalink: /campi/
-
----
-
