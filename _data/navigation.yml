@@ -9,3 +9,5 @@ main:
     url: /symposia/
   - title: "News"
     url: /news/
+  - title: "About us"
+    url: /about/
