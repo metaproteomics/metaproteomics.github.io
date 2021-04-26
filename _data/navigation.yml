@@ -1,9 +1,11 @@
 main:
-  - title: "Who are we?"
+  - title: "Research groups"
     url: /whoarewe/
-  - title: "CAMPI"
+  - title: "Collaborative projects"
     url: /collaborative_projects/
   - title: "Education"
     url: /education/
   - title: "Symposia"
     url: /symposia/
+  - title: "News"
+    url: /news/
