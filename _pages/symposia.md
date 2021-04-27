@@ -10,4 +10,4 @@ classes: wide
 
 ---
 
-Lorem ipsum
+This page gives an overview of the past metaproteomics symposia.
