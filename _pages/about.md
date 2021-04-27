@@ -23,7 +23,7 @@ permalink: /about/
 * Jana Seifert
 * Alessandro Tanca
 * Sergio Uzzau
-* Tim Van Den Bossche (coordinator)
+* Tim Van Den Bossche
 * Paul Wilmes
 
 *If you'd like to play an active role in the Metaproteomics Initiative, please send an e-mail to [info@metaproteomics.org](mailto:info@metaproteomics.org)*
