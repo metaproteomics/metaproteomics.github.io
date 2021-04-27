@@ -6,7 +6,6 @@ collection: symposia
 layout: collection
 entries_layout: list
 show_excerpts: true
-classes: wide
 
 ---
 
