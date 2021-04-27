@@ -5,9 +5,7 @@ permalink: /collaborative_projects/
 
 ---
 
-## Critical Assessment of Metaproteome Investigation (CAMPI): A Multi-Lab Comparison of Established Workflows
-
-*Abstract* 
+## Critical Assessment of Metaproteome Investigation (CAMPI):<br>A Multi-Lab Comparison of Established Workflows
 
 Metaproteomics has matured into a powerful tool to assess functional interactions in microbial communities. While many metaproteomic workflows are available, the impact of method choice on results remains unclear.
 
@@ -17,10 +15,6 @@ We observed that variability at the peptide level was predominantly due to wet-l
 
 CAMPI demonstrates the robustness of present-day metaproteomics research, serves as a template for multi-lab studies in metaproteomics, and provides publicly available data sets for benchmarking future developments.
 
-*Full text*
+Full text Available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.03.05.433915v1)
 
-Available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.03.05.433915v1)
-
-*Citation*
-
-Van Den Bossche, T. et al. Critical assessment of metaproteome investigation (CAMPI): A multi-lab comparison of established workflows. bioRxiv (2021) doi:10.1101/2021.03.05.433915
+**Citation**: Van Den Bossche, T. et al. Critical assessment of metaproteome investigation (CAMPI): A multi-lab comparison of established workflows. bioRxiv (2021) doi:10.1101/2021.03.05.433915
