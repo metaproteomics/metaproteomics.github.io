@@ -12,4 +12,4 @@ Submit your original logo before **June 10th, 2021** and the winner wins a free 
 
 Please send your high-resolution proposal to **info@metaproteomics.org**. All proposals will be presented to the Metaproteomics Initiative community at the first online meeting scheduled mid-June. Everyone who's attending gets to vote for their favourite proposals. Remember, the best proposal is the one that illustrates best what the Metaproteomics Initiative is.
 
-In the meantime, have a look at our website metaproteomics.org and follow us on Twitter ([@MetaP_Init](https://twitter.com/metap_init).
+In the meantime, have a look at our website metaproteomics.org and follow us on Twitter ([@MetaP_Init](https://twitter.com/metap_init)).
