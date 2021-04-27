@@ -8,6 +8,7 @@ permalink: /education/
 ## Tutorials
 
 * [Metaproteomics tutorial using Galaxy-P](https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html)
+* [Integrative meta-omics using Galaxy-P](https://galaxyproject.eu/posts/2020/04/14/integrative-meta-omics/)
 * [Unipept](https://www.sciencedirect.com/science/article/abs/pii/S1874391917301896)
 * [MetaProteomeAnalyzer](http://www.mpa.ovgu.de/index.php/tutorials/)
 * [MetaQuantome, data creation](https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html)
