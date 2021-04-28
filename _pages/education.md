@@ -25,3 +25,7 @@ permalink: /education/
 * [“Metaproteomics @ GTN Smörgåsbord”](https://www.youtube.com/watch?v=3_yaPp-RCFw) by Dr. Pratik Jagtap
 * [“New Pathways for Old Metals”](https://www.youtube.com/watch?v=ohmtTWCD4mw) by Dr. Nadia Szeinbaum
 
+
+
+*If you have additional metaproteomics tutorials or lectures you'd like to share, please contact [info@metaproteomics.org](mailto:info@metaproteomics.org). For tutorials and lectures on (single-species) proteomics, please visit the [Proteomics Academy website](https://www.proteomics-academy.org//online-education).*
+
