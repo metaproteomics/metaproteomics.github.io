@@ -8,7 +8,7 @@ We promote dissemination of metaproteomics and applications through collaborativ
 
 **Currently, we're still looking for a shiny logo!**
 
-Submit your original logo before **June 10th, 2021** and the winner wins a free spot for the next International Metaproteomics Symposium!
+Become a member (click [here](https://forms.gle/zAqJDPZNvf7vSoNi9)) and submit your original logo before **June 10th, 2021**. The winner wins a free spot for the next International Metaproteomics Symposium!
 
 Please send your high-resolution proposal to **info@metaproteomics.org**. All proposals will be presented to the Metaproteomics Initiative community at the first online meeting scheduled mid-June. Everyone who's attending gets to vote for their favourite proposals. Remember, the best proposal is the one that illustrates best what the Metaproteomics Initiative is.
 
