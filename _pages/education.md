@@ -21,9 +21,15 @@ permalink: /education/
 
 * [“Metaproteomics to Investigate Functional Interactions in Microbiota"](https://www.youtube.com/watch?v=4xv46IFWNxo) by Dr. Manuel Kleiner
 * [“Systems Ecology of the Human Gut Microbiome”](https://www.youtube.com/watch?v=QR9pX5nBnGE) by Dr. Paul Wilmes
-* [“Complexity in Ocean MetaProteomics: 20,000 Spectral Counts under the Sea.”](https://www.youtube.com/watch?v=MGJmdqBQlfM) - Dr. Mak Saito
+* [“Complexity in Ocean MetaProteomics: 20,000 Spectral Counts under the Sea.”](https://www.youtube.com/watch?v=MGJmdqBQlfM) by Dr. Mak Saito
 * [“Metaproteomics @ GTN Smörgåsbord”](https://www.youtube.com/watch?v=3_yaPp-RCFw) by Dr. Pratik Jagtap
 * [“New Pathways for Old Metals”](https://www.youtube.com/watch?v=ohmtTWCD4mw) by Dr. Nadia Szeinbaum
+* [“What can the tiniest organisms teach us about the vast ocean?”](https://www.youtube.com/watch?v=1w0DQ5L7SaU) by Dr. Brook L. Nunn
+* [“pepFunk: an R shiny app and workflow for peptide-centric functional analysis of metaproteomic microbiome data”](https://www.youtube.com/watch?v=ze2bAOQsRKI) by Dr. Caitlin Simopoulus
+
+
+
+
 
 
 
