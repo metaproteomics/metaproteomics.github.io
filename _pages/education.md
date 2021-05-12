@@ -25,7 +25,7 @@ permalink: /education/
 * [“Metaproteomics @ GTN Smörgåsbord”](https://www.youtube.com/watch?v=3_yaPp-RCFw) by Dr. Pratik Jagtap
 * [“New Pathways for Old Metals”](https://www.youtube.com/watch?v=ohmtTWCD4mw) by Dr. Nadia Szeinbaum
 * [“What can the tiniest organisms teach us about the vast ocean?”](https://www.youtube.com/watch?v=1w0DQ5L7SaU) by Dr. Brook L. Nunn
-* [“pepFunk: an R shiny app and workflow for peptide-centric functional analysis of metaproteomic microbiome data”](https://www.youtube.com/watch?v=ze2bAOQsRKI) by Dr. Caitlin Simopoulus
+* [“pepFunk: an R shiny app and workflow for peptide-centric functional analysis of metaproteomic microbiome data”](https://www.youtube.com/watch?v=ze2bAOQsRKI) by Dr. Caitlin Simopoulos
 * ["Designer Fibre for Beneficial Microbes: A Path to Microbiome Modulation"](https://www.youtube.com/watch?v=PVUjh-MlmFk) by Dr. Phil Pope
 * ["Metaproteomics session at TSMC 2021"](https://www.youtube.com/watch?v=axXB6ihcva0) by Dr. Pratik Jagtap, Dr. Bob Hettich, and Dr. Mak Saito
 
