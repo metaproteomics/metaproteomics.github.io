@@ -11,6 +11,7 @@ permalink: /about/
 * Jean Armengaud
 * Dörte Becher
 * Dirk Benndorf
+* Vincent Eijsink
 * Céline Henry
 * Robert Hettich
 * Pratik Jagtap
