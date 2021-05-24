@@ -1,6 +1,7 @@
 ---
 title: "Second Metaproteomics Symposium"
 excerpt: "Alghero, Italy (June 14-16, 2017)"
+date: 2017-06-14
 header:
   overlay_image: /assets/images/sardinia.jpg
   caption: "Photo credit: [*Arianta* on flickr](https://www.flickr.com/photos/arianta/9782680172)"

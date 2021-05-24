@@ -1,6 +1,7 @@
 ---
 title: "First Metaproteomics Symposium"
 excerpt: "Magdeburg, Germany (February 8-9, 2016)"
+date: 2016-02-08
 header:
   overlay_image: /assets/images/magdeburg.jpg
   caption: "Photo credit: [*Oliver Brauns* on pixabay](https://pixabay.com/photos/germany-magdeburg-saxony-anhalt-3912872/)"

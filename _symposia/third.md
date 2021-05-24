@@ -1,6 +1,7 @@
 ---
 title: "Third Metaproteomics Symposium"
 excerpt: "Leipzig, Germany (December 3-5, 2018)"
+date: 2018-12-03
 header:
   overlay_image: /assets/images/leipzig.jpg
   caption: "Photo credit: [*Yves Rötting* on wikimedia](https://commons.wikimedia.org/wiki/File:Leipzig_-_Panorama.jpg)"
