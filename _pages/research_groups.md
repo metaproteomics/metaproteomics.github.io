@@ -30,7 +30,8 @@ permalink: /research_groups/
 
 ## France
 
-* PAPPSO proteomic facility (Paris, France), led by Céline Henry and Olivier Langella
+* [Micalis Institute](http://www2.agroparistech.fr/Micalis-Microbiologie-de-l.html) (INRAE, AgroParisTech, Universite Paris-Saclay, Jouy-en-Josas, France), led by Catherine Juste
+* [PAPPSO proteomic facility](http://pappso.inrae.fr) (Paris, France), led by Céline Henry and Olivier Langella
 * [ProGenoMix platform](https://www.ibisa.net/plateformes/progenomix-570.html) (CEA, Bagnols-sur-Cèze, France), led by Dr. Jean Armengaud
 * [Systems biology of microbial consortia](http://www.toulouse-biotechnology-institute.fr/) (Toulouse Biotechnology Institute, Toulouse, France), led by Dr. Guillermina Hernandez-Raquet
 * [Mass Spec lab and dedicated Bioinformatics](https://phylogene.com) (Nîmes, France), led by Mr. Gilbert Skorski
@@ -71,6 +72,7 @@ permalink: /research_groups/
 ## Spain
 
 * [Laboratory of Microbiology](https://www.christieoleza-lab.com/) (University of the Balearic Islands, Palma, Spain), led by Dr. Joseph Christie-Oleza
+* [Microbiota in infant development](https://cibm.ugr.es/pages/lineasdeinvestigacion) (University of Granada, Granada, Spain), led by Dr. Antonio Suarez
 
 ## Switzerland
 
@@ -82,6 +84,7 @@ permalink: /research_groups/
 * [Microbial Systems Engineering](https://www.pandhalresearchgroup.co.uk) (The University of Sheffield, Sheffield, UK), led by Dr. Jags Pandhal
 * [Molecular Ecotoxicology and Environmental Proteomics](https://www.stir.ac.uk/people/257410#research) (University of Stirling, Stirling, UK), led by Dr. Sabine Matallana Surget
 * [Proteomics team](https://www.ebi.ac.uk/about/people/juan-vizcaino) (EMBL-EBI, Hinxton, UK), led by Dr. Juan Antonio Vizcaino
+* [Roslin Proteomics and Metabolomics Facility](https://www.ed.ac.uk/roslin/facilities-resources/proteomics-and-metabolomics-facility) (University of Edinburgh, Edinburgh, UK), led by Dr. Dominic Kurian
 
 ## United State of America
 
