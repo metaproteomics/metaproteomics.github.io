@@ -5,4 +5,5 @@ date: 2021-06-15
 
 ---
 
-More information coming soon!
+![flyer](/assets/images/online_symposium_1.jpg)
+![flyer](/assets/images/online_symposium_2.jpg)
