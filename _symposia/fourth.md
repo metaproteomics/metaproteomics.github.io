@@ -6,4 +6,4 @@ date: 2021-06-15
 ---
 
 ![flyer](/assets/images/online_symposium_1.jpg)
-![flyer](/assets/images/online_symposium_2.jpg)
+![program](/assets/images/online_symposium_2.jpg)
