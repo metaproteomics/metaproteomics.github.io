@@ -9,6 +9,10 @@ sidebar:
 .sidebar:not(.sticky) {
   display: none;
 }
+.entries-list h2 {
+  margin-top: 0;
+  font-size: 1em;
+}
 </style>
 
 We promote dissemination of metaproteomics fundamentals, advancements, and applications through collaborative networking in microbiome research. We aim to be the central information hub and open meeting place where newcomers and experts interact to communicate, standardize and accelerate experimental and bioinformatic methodologies in this field. This will be achieved initially through this website, presentations, online communication channel, collaborative projects, and symposia.
@@ -20,8 +24,3 @@ the Metaproteomics Intitiative
 
 
 *Contact details: [info@metaproteomics.org](mailto:info@metaproteomics.org)*
-
-<br>
-<br>
-
-*Some parts of this website are still under construction*
