@@ -66,8 +66,8 @@ permalink: /research_groups/
 
 ## Norway
 
-* Microbial Ecology and Meta-Omics Group (Aas, Norway), led by Assoc. Prof. Phil Pope and Dr. Magnus Arntzen
-* The Protein engineering and proteomics group (Aas, Norway), led by Prof. Vincent Eijsink
+* [Microbial Ecology and Meta-Omics Group](https://www.nmbu.no/en/research/groups/memo) (NMBU, Aas, Norway), led by Assoc. Prof. Phil Pope and Dr. Magnus Arntzen
+* The Protein engineering and proteomics group (NMBU, Aas, Norway), led by Prof. Vincent Eijsink
 
 ## Spain
 
