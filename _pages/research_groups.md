@@ -7,76 +7,82 @@ permalink: /research_groups/
 
 **Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
+This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 48 labs in 15 countries (12 European countries, Australia, Canada and the United States of America) joined. 
+
+## Australia
+
+* [Immunoproteomics laboratory](https://www.monash.edu/discovery-institute/purcell-lab) (Monash University, Clayton), led by Prof. Anthony Purcell
+
 ## Austria
 
-* Center for Microbiology and Environmental Systems Science (University of Vienna, Vienna, Austria), led by Prof. Wolfgang Wanek
-* Institute of Soil Research (Vienna, Austria), led by Prof. Sophie Zechmeister-Boltenstern
+* Center for Microbiology and Environmental Systems Science (University of Vienna, Vienna), led by Prof. Wolfgang Wanek
+* Institute of Soil Research (University of Natural Resources and Life Sciences, Vienna), led by Prof. Sophie Zechmeister-Boltenstern
 
 ## Belgium
 
-* [CompOmics](https://www.compomics.com) (Ghent University, Ghent, Belgium), led by Prof. Lennart Martens
-* Computational Biology Group (Ghent University, Ghent, Belgium), led by Prof. Peter Dawyndt
-* Proteomics and microbiology (University of Mons, Mons, Belgium), led by Prof. Ruddy Wattiez
+* [CompOmics](https://www.compomics.com) (Ghent University, Ghent), led by Prof. Lennart Martens
+* Computational Biology Group (Ghent University, Ghent), led by Prof. Peter Dawyndt
+* Proteomics and microbiology (University of Mons, Mons), led by Prof. Ruddy Wattiez
 
 ## Canada
 
-* Bioinformatics of Proteomics and Network Biology lab (Ottawa, Canada), led by Prof. Mathieu Lavallée-Adam
-* [Energy Bioengineering Group](https://ucalgary.ca/labs/ebg) (University of Calgary, Calgary Canada), led by Dr. Marc Strous
-* [Northomics lab](http://northomics.ca/) (University of Ottawa, Ottawa, Canada), led by Prof. Daniel Figeys
+* Bioinformatics of Proteomics and Network Biology lab (Ottawa), led by Prof. Mathieu Lavallée-Adam
+* [Energy Bioengineering Group](https://ucalgary.ca/labs/ebg) (University of Calgary, Calgary), led by Dr. Marc Strous
+* [Northomics lab](http://northomics.ca/) (University of Ottawa, Ottawa), led by Prof. Daniel Figeys
 
 ## Finland
 
-* [Computational Biomedicine](Computational Biomedicine) (University of Turku, Turku, Finland), led by Prof. Laura Elo
+* [Computational Biomedicine](Computational Biomedicine) (University of Turku, Turku), led by Prof. Laura Elo
 
 ## France
 
-* [Micalis Institute](http://www2.agroparistech.fr/Micalis-Microbiologie-de-l.html) (INRAE, AgroParisTech, Universite Paris-Saclay, Jouy-en-Josas, France), led by Catherine Juste
-* [PAPPSO proteomic facility](http://pappso.inrae.fr) (Paris, France), led by Céline Henry and Olivier Langella
-* [ProGenoMix platform](https://www.ibisa.net/plateformes/progenomix-570.html) (CEA, Bagnols-sur-Cèze, France), led by Dr. Jean Armengaud
-* [Systems biology of microbial consortia](http://www.toulouse-biotechnology-institute.fr/) (Toulouse Biotechnology Institute, Toulouse, France), led by Dr. Guillermina Hernandez-Raquet
-* [Mass Spec lab and dedicated Bioinformatics](https://phylogene.com) (Nîmes, France), led by Mr. Gilbert Skorski
+* [Micalis Institute](http://www2.agroparistech.fr/Micalis-Microbiologie-de-l.html) (INRAE, AgroParisTech, Universite Paris-Saclay, Jouy-en-Josas), led by Catherine Juste
+* [PAPPSO proteomic facility](http://pappso.inrae.fr) (Paris), led by Céline Henry and Olivier Langella
+* [ProGenoMix platform](https://www.ibisa.net/plateformes/progenomix-570.html) (CEA, Bagnols-sur-Cèze), led by Dr. Jean Armengaud
+* [Systems biology of microbial consortia](http://www.toulouse-biotechnology-institute.fr/) (Toulouse Biotechnology Institute, Toulouse), led by Dr. Guillermina Hernandez-Raquet
+* [Mass Spec lab and dedicated Bioinformatics](https://phylogene.com) (Nîmes), led by Mr. Gilbert Skorski
 
 ## Germany
 
-* [Applied Bioinformatics Group](http://kohlbacherlab.org/) (University of Tübingen, Tübingen, Germany), led by Prof. Oliver Kohlbacher
-* [BAM eScience Group](http://www.esciencelab.de) (Federal Institute for Materials Research and Testing (BAM), Berlin, Germany), led by Dr. Thilo Muth
-* Chair of Bioprocess Engineering (Otto von Guericke University, Magdeburg, Germany), led by Prof. Udo Reichl
-* Functional Microbiology in Animal Science group (Stuttgart, Germany), led by Prof. Jana Seifert
-* [Department of Molecular Systems Biology](https://www.ufz.de/index.php?en=34249) (Helmholtz-Centre for Environmental Research - UFZ, Leipzig, Germany), led by Prof. Martin von Bergen
-* Data Analytics & Computational Statistics Group (HPI Potsdam, Germany), led by Bernhard Renard
-* MF1 - Bioinformatics Group (RKI Berlin, Germany), led by Stephan Fuchs
-* Microbial Communities (Magdeburg, Germany), led by Dr. Dirk Benndorf
-* [Microbial Proteomics](https://microbialproteomics.uni-greifswald.de/en/) ( University of Greifswald, Greifswald, Germany), led by Prof. Katharina Riedel and Prof. Dörte Becher
-* [Microbiome Biology](https://www.ufz.de/index.php?en=44127) (Helmholtz-Centre for Environmental Research - UFZ, Leipzig, Germany), led by Dr. Nico Jehmlich
+* [Applied Bioinformatics Group](http://kohlbacherlab.org/) (University of Tübingen, Tübingen), led by Prof. Oliver Kohlbacher
+* [BAM eScience Group](http://www.esciencelab.de) (Federal Institute for Materials Research and Testing (BAM), Berlin), led by Dr. Thilo Muth
+* Chair of Bioprocess Engineering (Otto von Guericke University, Magdeburg), led by Prof. Udo Reichl
+* Functional Microbiology in Animal Science group (Stuttgart), led by Prof. Jana Seifert
+* [Department of Molecular Systems Biology](https://www.ufz.de/index.php?en=34249) (Helmholtz-Centre for Environmental Research - UFZ, Leipzig), led by Prof. Martin von Bergen
+* Data Analytics & Computational Statistics Group (HPI Potsdam), led by Bernhard Renard
+* MF1 - Bioinformatics Group (RKI Berlin), led by Stephan Fuchs
+* Microbial Communities (Magdeburg), led by Dr. Dirk Benndorf
+* [Microbial Proteomics](https://microbialproteomics.uni-greifswald.de/en/) ( University of Greifswald, Greifswald), led by Prof. Katharina Riedel and Prof. Dörte Becher
+* [Microbiome Biology](https://www.ufz.de/index.php?en=44127) (Helmholtz-Centre for Environmental Research - UFZ, Leipzig), led by Dr. Nico Jehmlich
 
 ## Italy
 
-* Center for Research and Education on the Microbiota (University of Sassari, Sassari, Italy), led by Prof. Sergio Uzzau
-* Microbial proteomics - one health section (University of Milan, Milan , Italy), led by Prof. Alessio Soggiu
-* [microbial biochemistry, proteomics and metabolic engineering](https://www.biochemistry-scienze.unito.it/pessione-projects.html) (University of Torino, Torino, Italy), led by Prof. Enrica Pessione
+* Center for Research and Education on the Microbiota (University of Sassari, Sassari), led by Prof. Sergio Uzzau
+* Microbial proteomics - one health section (University of Milan, Milan), led by Prof. Alessio Soggiu
+* [microbial biochemistry, proteomics and metabolic engineering](https://www.biochemistry-scienze.unito.it/pessione-projects.html) (University of Torino, Torino), led by Prof. Enrica Pessione
 
 ## Luxemburg
 
-* EcoSystemsBiology Group (Luxembourg, Luxembourg), led by Prof. Paul Wilmes
+* EcoSystemsBiology Group (Luxembourg), led by Prof. Paul Wilmes
 
-## Netherlands
+## The Netherlands
 
-* [Mass Spectrometry of Biomolecules](https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html) (University of Amsterdam, Amsterdam, The Netherlands), led by Dr. Gertjan Kramer
-* [Microbial proteomics lab](https://www.tudelft.nl/tnw/over-faculteit/afdelingen/biotechnology/research-sections/environmental-biotechnology/martin-pabst-group) (Delft University of Technology, Delft, The Netherlands), led by Dr. Martin Pabst
+* [Mass Spectrometry of Biomolecules](https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html) (University of Amsterdam, Amsterdam), led by Dr. Gertjan Kramer
+* [Microbial proteomics lab](https://www.tudelft.nl/tnw/over-faculteit/afdelingen/biotechnology/research-sections/environmental-biotechnology/martin-pabst-group) (Delft University of Technology, Delft), led by Dr. Martin Pabst
 
 ## Norway
 
-* [Microbial Ecology and Meta-Omics Group](https://www.nmbu.no/en/research/groups/memo) (NMBU, Aas, Norway), led by Assoc. Prof. Phil Pope and Dr. Magnus Arntzen
-* The Protein engineering and proteomics group (NMBU, Aas, Norway), led by Prof. Vincent Eijsink
+* [Microbial Ecology and Meta-Omics Group](https://www.nmbu.no/en/research/groups/memo) (NMBU, Aas), led by Assoc. Prof. Phil Pope and Dr. Magnus Arntzen
+* The Protein engineering and proteomics group (NMBU, Aas), led by Prof. Vincent Eijsink
 
 ## Spain
 
-* [Laboratory of Microbiology](https://www.christieoleza-lab.com/) (University of the Balearic Islands, Palma, Spain), led by Dr. Joseph Christie-Oleza
-* [Microbiota in infant development](https://cibm.ugr.es/pages/lineasdeinvestigacion) (University of Granada, Granada, Spain), led by Dr. Antonio Suarez
+* [Laboratory of Microbiology](https://www.christieoleza-lab.com/) (University of the Balearic Islands, Palma), led by Dr. Joseph Christie-Oleza
+* [Microbiota in infant development](https://cibm.ugr.es/pages/lineasdeinvestigacion) (University of Granada, Granada), led by Dr. Antonio Suarez
 
 ## Switzerland
 
-* Bioinformatics and Proteogenomics Group, SIB Swiss Institute of Bioinformatics and Agroscope, led by Dr. Christian Ahrens
+* [Bioinformatics and Proteogenomics Group](https://www.sib.swiss/christian-ahrens-group) (SIB Swiss Institute of Bioinformatics, Wädenswil) led by Dr. Christian Ahrens
 
 ## United Kingdom
 
