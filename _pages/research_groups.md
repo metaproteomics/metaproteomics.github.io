@@ -32,7 +32,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## Finland
 
-* [Computational Biomedicine](Computational Biomedicine) (University of Turku, Turku), led by Prof. Laura Elo
+* [Computational Biomedicine](https://elolab.utu.fi/) (University of Turku, Turku), led by Prof. Laura Elo
 
 ## France
 
