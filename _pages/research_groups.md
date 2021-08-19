@@ -86,18 +86,18 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## United Kingdom
 
-* Environmental Molecular Microbiology Group (University of Sheffield, Sheffield, UK), led by Dr. Ian Lidbury
-* [Microbial Systems Engineering](https://www.pandhalresearchgroup.co.uk) (The University of Sheffield, Sheffield, UK), led by Dr. Jags Pandhal
-* [Molecular Ecotoxicology and Environmental Proteomics](https://www.stir.ac.uk/people/257410#research) (University of Stirling, Stirling, UK), led by Dr. Sabine Matallana Surget
-* [Proteomics team](https://www.ebi.ac.uk/about/people/juan-vizcaino) (EMBL-EBI, Hinxton, UK), led by Dr. Juan Antonio Vizcaino
-* [Roslin Proteomics and Metabolomics Facility](https://www.ed.ac.uk/roslin/facilities-resources/proteomics-and-metabolomics-facility) (University of Edinburgh, Edinburgh, UK), led by Dr. Dominic Kurian
+* Environmental Molecular Microbiology Group (University of Sheffield, Sheffield), led by Dr. Ian Lidbury
+* [Microbial Systems Engineering](https://www.pandhalresearchgroup.co.uk) (The University of Sheffield, Sheffield), led by Dr. Jags Pandhal
+* [Molecular Ecotoxicology and Environmental Proteomics](https://www.stir.ac.uk/people/257410#research) (University of Stirling, Stirling), led by Dr. Sabine Matallana Surget
+* [Proteomics team](https://www.ebi.ac.uk/about/people/juan-vizcaino) (EMBL-EBI, Hinxton), led by Dr. Juan Antonio Vizcaino
+* [Roslin Proteomics and Metabolomics Facility](https://www.ed.ac.uk/roslin/facilities-resources/proteomics-and-metabolomics-facility) (University of Edinburgh, Edinburgh), led by Dr. Dominic Kurian
 
 ## United State of America
 
-* [Bioinformatics lab](https://homes.luddy.indiana.edu/yye) (Indiana University, Bloomington, USA), led by Dr. Yuzhen Ye
-* Computational Omics Lab (Indiana University, Bloomington, USA), led by Prof. Haixu Tang
-* [Griffin Research Group/Galaxy-P](https://galaxyp.org) (University of Minnesota, Minneapolis, MN, USA), led by Dr. Pratik Jagtap and Prof. Timothy Griffin
-* [Kleiner Lab](https://kleinerlab.cals.ncsu.edu/) (North Carolina State University, Raleigh, NC, USA), led by Dr. Manuel Kleiner
-* [Bioanalytical Mass Spectrometry](https://www.ornl.gov/group/bioanalytical-mass-spectrometry) (Oak Ridge National Laboratory, Oak Ridge, TN, USA), led by Dr. Robert L. Hettich
-* Nutritional Immunology (Arkansas Children's Nutrition Center, Little Rock, USA), led by Dr. Laxmi Yeruva
-* [Saeed Lab](https://saeedlab.cis.fiu.edu/) (FIU, Miami, USA), led by Prof. Fahad Saeed
+* [Bioinformatics lab](https://homes.luddy.indiana.edu/yye) (Indiana University, Bloomington, IN), led by Dr. Yuzhen Ye
+* Computational Omics Lab (Indiana University, Bloomington, IN), led by Prof. Haixu Tang
+* [Griffin Research Group/Galaxy-P](https://galaxyp.org) (University of Minnesota, Minneapolis, MN), led by Dr. Pratik Jagtap and Prof. Timothy Griffin
+* [Kleiner Lab](https://kleinerlab.cals.ncsu.edu/) (North Carolina State University, Raleigh, NC), led by Dr. Manuel Kleiner
+* [Bioanalytical Mass Spectrometry](https://www.ornl.gov/group/bioanalytical-mass-spectrometry) (Oak Ridge National Laboratory, Oak Ridge, TN), led by Dr. Robert L. Hettich
+* Nutritional Immunology (Arkansas Children's Nutrition Center, Little Rock, AR), led by Dr. Laxmi Yeruva
+* [Saeed Lab](https://saeedlab.cis.fiu.edu/) (FIU, Miami, FL), led by Prof. Fahad Saeed
