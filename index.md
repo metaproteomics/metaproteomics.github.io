@@ -1,6 +1,7 @@
 ---
 
-layout: home
+layout: single
+classes: wide
 title: Welcome to the Metaproteomics Initiative!
 sidebar:
   - text: '<a class="twitter-timeline" data-lang="en" href="https://twitter.com/MetaP_Init?ref_src=twsrc%5Etfw">Tweets by MetaP_Init</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>'
