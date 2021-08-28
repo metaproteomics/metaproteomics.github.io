@@ -18,7 +18,7 @@ sidebar:
 
 We promote dissemination of metaproteomics fundamentals, advancements, and applications through collaborative networking in microbiome research. We aim to be the central information hub and open meeting place where newcomers and experts interact to communicate, standardize and accelerate experimental and bioinformatic methodologies in this field. This will be achieved initially through this website, presentations, online communication channel, collaborative projects, and symposia.
 
-Since February 2021, we are recognized as an official [EuPA](https://eupa.org/) Initiative. 
+Since February 2021, we are recognized as an official [EuPA](https://eupa.org/) Initiative.
 Currently, we're in the start-up phase of our Initiative, but we warmly invite you to become a member of this Inititive. [Click here to register](https://forms.gle/zAqJDPZNvf7vSoNi9).
 
 Thank you for your interest,<br>
@@ -26,3 +26,6 @@ the Metaproteomics Intitiative
 
 
 *Contact details: [info@metaproteomics.org](mailto:info@metaproteomics.org)*
+
+![mpi logo](assets/images/mpilogo.png){:style="height:150px;"}
+![EuPA logo](assets/images/eupalogo.png){:style="height:150px;"}
