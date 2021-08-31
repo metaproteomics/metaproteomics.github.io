@@ -1,6 +1,4 @@
 main:
-  - title: "News"
-    url: /news/
   - title: "Groups"
     url: /research_groups/
   - title: "Projects"
@@ -11,3 +9,5 @@ main:
     url: /symposia/
   - title: "About us"
     url: /about/
+  - title: "News"
+    url: /news/
