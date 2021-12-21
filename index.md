@@ -1,6 +1,6 @@
 ---
 
-layout: single
+layout: home
 classes: wide
 title: Welcome to the Metaproteomics Initiative!
 sidebar:
