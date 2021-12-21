@@ -1,7 +1,7 @@
 ---
 title: "Fourth Metaproteomics Symposium"
 excerpt: "Luxembourg, Luxembourg (September 27-29, 2021)"
-date: 2021-09-27
+date: 2021-12-21
 header:
   overlay_image: /assets/images/luxembourg.jpg
   caption: "Photo credit: [*Wolfgang Staudt* on wikimedia](https://fr.wikipedia.org/wiki/Abbaye_de_Neum%C3%BCnster#/media/Fichier:Luxembourg_Abbaye_de_Neum%C3%BCnster.jpg)"
@@ -16,3 +16,5 @@ The Metaproteomics Symposium welcomes international scientists from every career
 Find out more here:
 * [Website](https://ims2021.uni.lu/)
 * [Abstract and Registration](https://ims2021.uni.lu/abstract-and-registration/)
+
+![group picture](/assets/images/luxembourg_group.png)
