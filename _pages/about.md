@@ -5,7 +5,36 @@ permalink: /about/
 
 ---
 
-## Our team
+During the Metaproteomics Symposium in Luxembourg (september 27-29, 2021), the first formal board of the Metaproteomics Initiative was elected.
+
+#### Administrator
+Tim Van Den Bossche (EuPA contact person) and Benoît Kunath
+
+##### Secretary
+Jana Seifert
+
+##### Treasurer
+Celine Henry
+
+##### Communication
+Lucia Grenga
+
+##### Webmaster
+Bart Mesuere
+
+##### Working group coordinator
+Jean Armengaud
+
+##### Education
+Pratik Jagtap
+
+##### International correspondence
+Leyuan Li (for Asia), Etienne Nzabarushimana (for Africa)
+
+##### Scientific Advisors
+Dirk Benndorf, Daniel Figeys, Bob Hettich, Paul Wilmes, Nico Jehmlich, Sergio Uzzau
+
+## Founding members
 
 * Magnus Arntzen
 * Jean Armengaud
@@ -26,6 +55,3 @@ permalink: /about/
 * Sergio Uzzau
 * Tim Van Den Bossche
 * Paul Wilmes
-
-*If you'd like to play an active role in the Metaproteomics Initiative, please send an e-mail to [info@metaproteomics.org](mailto:info@metaproteomics.org)*
-
