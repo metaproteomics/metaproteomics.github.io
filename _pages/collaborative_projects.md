@@ -15,6 +15,6 @@ We observed that variability at the peptide level was predominantly due to wet-l
 
 CAMPI demonstrates the robustness of present-day metaproteomics research, serves as a template for multi-lab studies in metaproteomics, and provides publicly available data sets for benchmarking future developments.
 
-Full text Available on [bioRxiv](https://www.biorxiv.org/content/10.1101/2021.03.05.433915v2)
+Article published in open access in [Nature Communications](https://www.nature.com/articles/s41467-021-27542-8)
 
-**Citation**: Van Den Bossche, T. et al. Critical assessment of metaproteome investigation (CAMPI): A multi-lab comparison of established workflows. bioRxiv (2021) doi:10.1101/2021.03.05.433915
+**Citation**: Van Den Bossche, T., Kunath, B.J., Schallert, K., Schäpe, S.S., et al. Critical Assessment of MetaProteome Investigation (CAMPI): a multi-laboratory comparison of established workflows. Nat Commun 12, 7305 (2021). https://doi.org/10.1038/s41467-021-27542-8
