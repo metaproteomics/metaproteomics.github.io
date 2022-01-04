@@ -22,7 +22,7 @@ Since February 2021, we are recognized as an official [EuPA](https://eupa.org/) 
 Want to stay up to date about the metaproteomics field and the Initiative? Become a member by filling in [this form](https://forms.gle/zAqJDPZNvf7vSoNi9). If you can't fill in the Google form because of certain restrictions, please contact us via [info@metaproteomics.org](mailto:info@metaproteomics.org).
 
 Thank you for your interest,<br>
-the Metaproteomics Intitiative
+the Metaproteomics Initiative
 
 
 *Contact details: [info@metaproteomics.org](mailto:info@metaproteomics.org)*
