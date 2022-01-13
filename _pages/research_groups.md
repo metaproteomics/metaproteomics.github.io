@@ -38,9 +38,9 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 * [Micalis Institute](http://www2.agroparistech.fr/Micalis-Microbiologie-de-l.html) (INRAE, AgroParisTech, Universite Paris-Saclay, Jouy-en-Josas), led by Catherine Juste
 * [PAPPSO proteomic facility](http://pappso.inrae.fr) (Paris), led by Céline Henry and Olivier Langella
+* [Phylogene Mass Spec lab and dedicated Bioinformatics](https://phylogene.com) (Nîmes), led by Mr. Gilbert Skorski
 * [ProGenoMix platform](https://www.ibisa.net/plateformes/progenomix-570.html) (CEA, Bagnols-sur-Cèze), led by Dr. Jean Armengaud
 * [Systems biology of microbial consortia](http://www.toulouse-biotechnology-institute.fr/) (Toulouse Biotechnology Institute, Toulouse), led by Dr. Guillermina Hernandez-Raquet
-* [Mass Spec lab and dedicated Bioinformatics](https://phylogene.com) (Nîmes), led by Mr. Gilbert Skorski
 
 ## Germany
 
