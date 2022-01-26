@@ -55,6 +55,10 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * [Microbial Proteomics](https://microbialproteomics.uni-greifswald.de/en/) ( University of Greifswald, Greifswald), led by Prof. Katharina Riedel and Prof. Dörte Becher
 * [Microbiome Biology](https://www.ufz.de/index.php?en=44127) (Helmholtz-Centre for Environmental Research - UFZ, Leipzig), led by Dr. Nico Jehmlich
 
+## India
+
+* Micro-omics Lab (CSIR-National Institute of Oceanography, Goa), led by Dr. Samir R. Damare
+
 ## Italy
 
 * Center for Research and Education on the Microbiota (University of Sassari, Sassari), led by Prof. Sergio Uzzau
@@ -79,6 +83,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 * [Laboratory of Microbiology](https://www.christieoleza-lab.com/) (University of the Balearic Islands, Palma), led by Dr. Joseph Christie-Oleza
 * [Microbiota in infant development](https://cibm.ugr.es/pages/lineasdeinvestigacion) (University of Granada, Granada), led by Dr. Antonio Suarez
+* Molecular Oncology and Pathology Lab (Hospital Universitario La Paz, Madrid), led by Dr. Juan Ángel Fresno Vara
 
 ## Switzerland
 
@@ -94,6 +99,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## United State of America
 
+* [Bioanalysis and Omics Center, Analytical Resources Core](https://www.research.colostate.edu/bio/), (Colorado State University, Fort Collins, CO),  Led by Dr. Corey Broeckling
 * [Bioinformatics lab](https://homes.luddy.indiana.edu/yye) (Indiana University, Bloomington, IN), led by Dr. Yuzhen Ye
 * Computational Omics Lab (Indiana University, Bloomington, IN), led by Prof. Haixu Tang
 * [Griffin Research Group/Galaxy-P](https://galaxyp.org) (University of Minnesota, Minneapolis, MN), led by Dr. Pratik Jagtap and Prof. Timothy Griffin
