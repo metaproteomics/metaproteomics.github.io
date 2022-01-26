@@ -7,11 +7,12 @@ permalink: /research_groups/
 
 **Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
-This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 48 labs in 15 countries (12 European countries, Australia, Canada and the United States of America) joined. 
+This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 62 labs in 17 countries joined. 
 
 ## Australia
 
 * [Immunoproteomics laboratory](https://www.monash.edu/discovery-institute/purcell-lab) (Monash University, Clayton), led by Prof. Anthony Purcell
+* [Type 1 diabetes pathogenesis and therapy](https://di.uq.edu.au/profile/1399/emma-hamilton-williams) (University of Queensland, Brisbane), led by Dr. Emma Hamilton-Williams
 
 ## Austria
 
@@ -27,8 +28,14 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 ## Canada
 
 * Bioinformatics of Proteomics and Network Biology lab (Ottawa), led by Prof. Mathieu Lavallée-Adam
+* Cellular immuology and mass spectrometry laboratory (Health Canada, Ottawa), led by Dr. Xu Zhang
 * [Energy Bioengineering Group](https://ucalgary.ca/labs/ebg) (University of Calgary, Calgary), led by Dr. Marc Strous
 * [Northomics lab](http://northomics.ca/) (University of Ottawa, Ottawa), led by Prof. Daniel Figeys
+
+## China
+
+* [Rumen microbiome group](https://loop.frontiersin.org/people/255437) (Institute of Animal Sciences, Chinese Academy of Agricultural Sciences, Beijing), led by Prof. Shengguo Zhao
+* Wastewater Treatment Biotechnology and Aquatic Environment Remediation (Nanjing University, Nanjing), led by Prof. Hongqiang Ren
 
 ## Finland
 
@@ -67,7 +74,8 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## Luxemburg
 
-* EcoSystemsBiology Group (Luxembourg), led by Prof. Paul Wilmes
+* [Biotechnologies and Environmental Analytics Platform](http://www.list.lu), led by Dr. Jenny Renaut
+* [Systems Ecology](https://wwwen.uni.lu/lcsb/research/systems_ecology) (University of Luxembourg, Luxembourg), led by Prof. Paul Wilmes
 
 ## The Netherlands
 
@@ -83,6 +91,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 * [Laboratory of Microbiology](https://www.christieoleza-lab.com/) (University of the Balearic Islands, Palma), led by Dr. Joseph Christie-Oleza
 * [Microbiota in infant development](https://cibm.ugr.es/pages/lineasdeinvestigacion) (University of Granada, Granada), led by Dr. Antonio Suarez
+* [Microorganism - Host Interaction. Human Proteome Project](https://www.ucm.es/candida-en/investigation-group) (Universidad Complutense de Madrid, Madrid), led by dr. Concha Gil
 * Molecular Oncology and Pathology Lab (Hospital Universitario La Paz, Madrid), led by Dr. Juan Ángel Fresno Vara
 
 ## Switzerland
@@ -92,6 +101,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 ## United Kingdom
 
 * Environmental Molecular Microbiology Group (University of Sheffield, Sheffield), led by Dr. Ian Lidbury
+* [Graystock lab](http://www.graystock.info) (Imperial College London, Ascot), led by Dr. Peter Graystock
 * [Microbial Systems Engineering](https://www.pandhalresearchgroup.co.uk) (The University of Sheffield, Sheffield), led by Dr. Jags Pandhal
 * [Molecular Ecotoxicology and Environmental Proteomics](https://www.stir.ac.uk/people/257410#research) (University of Stirling, Stirling), led by Dr. Sabine Matallana Surget
 * [Proteomics team](https://www.ebi.ac.uk/about/people/juan-vizcaino) (EMBL-EBI, Hinxton), led by Dr. Juan Antonio Vizcaino
@@ -99,11 +109,15 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## United State of America
 
-* [Bioanalysis and Omics Center, Analytical Resources Core](https://www.research.colostate.edu/bio/), (Colorado State University, Fort Collins, CO),  Led by Dr. Corey Broeckling
+* [Bhatt lab](http://bhattlab.com) (Stanford University, Stanford), led by Prof. Ami Bhatt
+* [Bioanalysis and Omics Center, Analytical Resources Core](https://www.research.colostate.edu/bio/), (Colorado State University, Fort Collins, CO), led by Dr. Corey Broeckling
+* [Bioanalytical Mass Spectrometry](https://www.ornl.gov/group/bioanalytical-mass-spectrometry) (Oak Ridge National Laboratory, Oak Ridge, TN), led by Dr. Robert L. Hettich
 * [Bioinformatics lab](https://homes.luddy.indiana.edu/yye) (Indiana University, Bloomington, IN), led by Dr. Yuzhen Ye
 * Computational Omics Lab (Indiana University, Bloomington, IN), led by Prof. Haixu Tang
+* [Gastrointestinal Barrier Function Laboratory](https://www.mayo.edu/research/labs/gastrointestinal-barrier-function) (Mayo Clinic, Rochester, MN), led by Dr. Madhusudan Grover 
 * [Griffin Research Group/Galaxy-P](https://galaxyp.org) (University of Minnesota, Minneapolis, MN), led by Dr. Pratik Jagtap and Prof. Timothy Griffin
 * [Kleiner Lab](https://kleinerlab.cals.ncsu.edu/) (North Carolina State University, Raleigh, NC), led by Dr. Manuel Kleiner
-* [Bioanalytical Mass Spectrometry](https://www.ornl.gov/group/bioanalytical-mass-spectrometry) (Oak Ridge National Laboratory, Oak Ridge, TN), led by Dr. Robert L. Hettich
+* [Nunn Lab- Environmental Proteomics](http://environmentalproteomics.org) (University of Washington), led by Prof. Brook Nunn
 * Nutritional Immunology (Arkansas Children's Nutrition Center, Little Rock, AR), led by Dr. Laxmi Yeruva
 * [Saeed Lab](https://saeedlab.cis.fiu.edu/) (FIU, Miami, FL), led by Prof. Fahad Saeed
+* [Saito Lab](Www.WHOI.edu/saitolab) (Woods Hole Oceanographic Institution, Massachusetts), led by Prof. Mak Saito
