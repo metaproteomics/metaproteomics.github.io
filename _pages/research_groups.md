@@ -7,7 +7,7 @@ permalink: /research_groups/
 
 **Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
-This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 62 labs in 17 countries joined. 
+This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 64 labs in 17 countries joined. 
 
 ## Australia
 
