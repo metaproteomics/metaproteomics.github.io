@@ -7,7 +7,7 @@ permalink: /research_groups/
 
 **Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
-This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 64 labs in 17 countries joined. 
+This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 64 labs in 17 countries joined.
 
 ## Australia
 
@@ -28,7 +28,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 ## Canada
 
 * Bioinformatics of Proteomics and Network Biology lab (Ottawa), led by Prof. Mathieu Lavallée-Adam
-* Cellular immuology and mass spectrometry laboratory (Health Canada, Ottawa), led by Dr. Xu Zhang
+* Cellular immunology and mass spectrometry laboratory (Health Canada, Ottawa), led by Dr. Xu Zhang
 * [Energy Bioengineering Group](https://ucalgary.ca/labs/ebg) (University of Calgary, Calgary), led by Dr. Marc Strous
 * [Northomics lab](http://northomics.ca/) (University of Ottawa, Ottawa), led by Prof. Daniel Figeys
 
@@ -79,7 +79,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## The Netherlands
 
-* [Center for Proteomics and Metabolomics](cpm.lumc.nl) (Leiden University Medical Center, Leiden), led by Prof. Magnus Palmblad
+* [Center for Proteomics and Metabolomics](http://cpm.lumc.nl) (Leiden University Medical Center, Leiden), led by Prof. Magnus Palmblad
 * [Mass Spectrometry of Biomolecules](https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html) (University of Amsterdam, Amsterdam), led by Dr. Gertjan Kramer
 * [Microbial proteomics lab](https://www.tudelft.nl/tnw/over-faculteit/afdelingen/biotechnology/research-sections/environmental-biotechnology/martin-pabst-group) (Delft University of Technology, Delft), led by Dr. Martin Pabst
 
@@ -116,7 +116,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * [Biochemical and Exposure Science Group](https://www.nist.gov/mml/csd/biochemical-and-exposure-science-group) (NIST-Charleston, Charleston, SC), led by Dr. Benjamin Neely
 * [Bioinformatics lab](https://homes.luddy.indiana.edu/yye) (Indiana University, Bloomington, IN), led by Dr. Yuzhen Ye
 * Computational Omics Lab (Indiana University, Bloomington, IN), led by Prof. Haixu Tang
-* [Gastrointestinal Barrier Function Laboratory](https://www.mayo.edu/research/labs/gastrointestinal-barrier-function) (Mayo Clinic, Rochester, MN), led by Dr. Madhusudan Grover 
+* [Gastrointestinal Barrier Function Laboratory](https://www.mayo.edu/research/labs/gastrointestinal-barrier-function) (Mayo Clinic, Rochester, MN), led by Dr. Madhusudan Grover
 * [Griffin Research Group/Galaxy-P](https://galaxyp.org) (University of Minnesota, Minneapolis, MN), led by Dr. Pratik Jagtap and Prof. Timothy Griffin
 * [Kleiner Lab](https://kleinerlab.cals.ncsu.edu/) (North Carolina State University, Raleigh, NC), led by Dr. Manuel Kleiner
 * [Nunn Lab- Environmental Proteomics](http://environmentalproteomics.org) (University of Washington), led by Prof. Brook Nunn
