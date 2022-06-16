@@ -61,6 +61,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * Microbial Communities (Magdeburg), led by Dr. Dirk Benndorf
 * [Microbial Proteomics](https://microbialproteomics.uni-greifswald.de/en/) ( University of Greifswald, Greifswald), led by Prof. Katharina Riedel and Prof. Dörte Becher
 * [Microbiome Biology](https://www.ufz.de/index.php?en=44127) (Helmholtz-Centre for Environmental Research - UFZ, Leipzig), led by Dr. Nico Jehmlich
+* Multidimensional omics data analysis (ISAS e.V., Dortmund), led by Jun.-Prof. Robert Heyer
 
 ## India
 
