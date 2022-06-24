@@ -7,7 +7,7 @@ permalink: /research_groups/
 
 **Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
-This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 64 labs in 17 countries joined.
+This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 68 labs in 17 countries joined.
 
 ## Australia
 
@@ -17,7 +17,8 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 ## Austria
 
 * Center for Microbiology and Environmental Systems Science (University of Vienna, Vienna), led by Prof. Wolfgang Wanek
-* Institute of Soil Research (University of Natural Resources and Life Sciences, Vienna), led by Prof. Sophie Zechmeister-Boltenstern
+* Institute of Soil Research (University of Natural Resources and Life Sciences, Vienna), led by Prof. Sophie Zechmeister-Boltenstern 
+* Systems Biology of Pain. Division of Pharmacology & Toxicology (University of Vienna, Vienna), led by Prof. Manuela Schmidt
 
 ## Belgium
 
@@ -34,6 +35,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## China
 
+* Liu’s lab (University of Chinese Academy and Sciences, Shenzhen), led by Prof. Siqi Liu
 * [Rumen microbiome group](https://loop.frontiersin.org/people/255437) (Institute of Animal Sciences, Chinese Academy of Agricultural Sciences, Beijing), led by Prof. Shengguo Zhao
 * Wastewater Treatment Biotechnology and Aquatic Environment Remediation (Nanjing University, Nanjing), led by Prof. Hongqiang Ren
 
@@ -122,5 +124,6 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * [Kleiner Lab](https://kleinerlab.cals.ncsu.edu/) (North Carolina State University, Raleigh, NC), led by Dr. Manuel Kleiner
 * [Nunn Lab- Environmental Proteomics](http://environmentalproteomics.org) (University of Washington), led by Prof. Brook Nunn
 * Nutritional Immunology (Arkansas Children's Nutrition Center, Little Rock, AR), led by Dr. Laxmi Yeruva
+* [RAW lab](http://www.rawlab.com) (UNCC, Charlotte, NC), led by Dr. Richard Allen White III
 * [Saeed Lab](https://saeedlab.cis.fiu.edu/) (FIU, Miami, FL), led by Prof. Fahad Saeed
 * [Saito Lab](Www.WHOI.edu/saitolab) (Woods Hole Oceanographic Institution, Massachusetts), led by Prof. Mak Saito
