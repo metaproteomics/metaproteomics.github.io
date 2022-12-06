@@ -11,7 +11,7 @@ CAMPI-2 is a new Critical Assessment of MetaProteome Investigation (CAMPI) launc
 
 **Participants**: Labs with interest in metaproteome analyses.
 
-**Start date**: November 2022 - **Tentative end date**: April 2023
+**Start date**: December 2022 - **Tentative end date**: April 2023
 
 ### Short description
 One of the main challenges in metaproteomics studies is sample handling. Directly after sample collection, biological samples are shipped or stored at different temperatures, treated with preservation solutions or a direct protein extraction is performed. All these treatments lead finally to a different proteome profile which definitely influences the biological interpretation of your study.
@@ -21,7 +21,7 @@ The scope of CAMPI-2 is a comparative assessment of proteome sample stability  a
 Volunteers will participate in applying their methods to stabilize the samples to be subjected to a real world “stress-test”, that will include the shipment with no control over temperature conditions. The expected CAMPI-2 result is to provide a standard procedure for sample handling.
 
 ### CAMPI-2 participants activities
-Participants (pLabs) will be asked to suggest and apply a method for sample preservation. The method should be applied to either soil or fecal samples (or both) and must be provided by January 6, 2023.
+Participants (pLabs) will be asked to suggest and apply a method for sample preservation. The method should be applied to either soil or fecal samples (or both).
 
 Afterwards, 10 pLabs for soil and 10 for fecal samples, respectively, will be selected according to the criteria listed below. In addition to their provided method, pLabs will receive material and methods for 2 additional methods that will be common between all pLabs. pLabs will receive frozen samples in dry-ice to be treated according to the 3 different methods in duplicate. Each pLabs will then send treated (stabilized) samples to 2 designed MS lab (one set of 3 samples each). MS analyses will be provided by the organizers as a collaborative service. CAMPI-2 does not focus on comparative analysis of MS performances on a standard sample. A further CAMPI dedicated to these issues will be organized in the next future.
 
@@ -29,9 +29,7 @@ The MS labs will extract the peptides with a standardized protocol and acquire M
 
 Online meetings will be scheduled before the program starts and at defined time points according to program progression.
 
-_This call will close on **January 6, 2023 at 5pm CET**_
-
-Application must be sent by email (……@........) using the CAMPI-2 application form.
+Application must be sent by email (CAMPI2MPI@gmail.com) using the CAMPI-2 application form.
 
 Further details and any sort of questions can be addresses to:
 Sergio Uzzau - uzzau@uniss.it
