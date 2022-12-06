@@ -1,8 +1,8 @@
 main:
   - title: "Groups"
     url: /research_groups/
-  - title: "Projects"
-    url: /collaborative_projects/
+  - title: "CAMPI"
+    url: /campi/
   - title: "Education"
     url: /education/
   - title: "Symposia"

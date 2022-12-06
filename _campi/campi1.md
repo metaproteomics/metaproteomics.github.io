@@ -1,8 +1,6 @@
 ---
-
-title: Collaborative projects
-permalink: /collaborative_projects/
-
+title: "CAMPI 1"
+excerpt: "A Multi-Lab Comparison of Established Workflows"
 ---
 
 ## Critical Assessment of Metaproteome Investigation (CAMPI):<br>A Multi-Lab Comparison of Established Workflows
