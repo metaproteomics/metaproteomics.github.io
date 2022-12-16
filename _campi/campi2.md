@@ -29,7 +29,8 @@ Afterwards, 10 pLabs for soil and 10 for fecal samples, respectively, will be se
 
 pLabs will receive frozen samples in dry-ice (feces and/or soil) to be treated according to the 3 different methods in duplicate. Each pLabs will then send treated (stabilized) samples to 2 designed MS lab (one set of 3 samples each).
 
-Costs:
+#### Costs
+
 pLabs will receive any special reagent required for the 2 - additional - common methods
 MS analyses will be provided by the organizers as a collaborative service. CAMPI 2 does not focus on comparative analysis of MS performances on a standard sample. A further CAMPI dedicated to these issues will be organized in the next future.
 
@@ -43,7 +44,7 @@ Online meetings will be scheduled before the shipment of samples to pLabs and at
 
 _This call will close on January 12, 2023  at 5pm CET_
 
-Application must be sent by email CAMPI2MPI@gmail.com using the CAMPI 2 application form.
+Application must be sent by email CAMPI2MPI@gmail.com using the CAMPI 2 [application form](/assets/CAMPI2_application_form.docx).
 
 Further details and any sort of questions can be addresses to: Sergio Uzzau - uzzau@uniss.it.
 
