@@ -11,7 +11,7 @@ Metaproteomics is beginning to dramatically advance our understanding of microbi
 
 The International Metaproteomics Symposium is the leading event in the field of metaproteomics. Hosted in the charming historical city of Avignon from the 25th to the 27th of April 2023, in its 5th edition, the symposium welcomes international scientists from every career stage, offering plenty of opportunities for interaction, networking, exchanging results, and initiating new projects.
 
-The Scientific Committee is developing an exciting program for a three-day meeting covering the most important topics related to metaproteomics and microbiome studies; stay tuned for more details!
+The programme can be found [here](/assets/IMS5.pdf).
 
 ## Scientific Committee
 Dirk Benndorf, Daniel Figeys, Robert Hettich, Sabine Matallana-Surget, Phil Pope, Sergio Uzzau & Paul Wilmes
