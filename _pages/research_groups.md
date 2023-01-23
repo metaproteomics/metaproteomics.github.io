@@ -7,7 +7,7 @@ permalink: /research_groups/
 
 **Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
-This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 68 labs in 17 countries joined.
+This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 72 labs in 17 countries joined.
 
 ## Australia
 
@@ -17,7 +17,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 ## Austria
 
 * Center for Microbiology and Environmental Systems Science (University of Vienna, Vienna), led by Prof. Wolfgang Wanek
-* Institute of Soil Research (University of Natural Resources and Life Sciences, Vienna), led by Prof. Sophie Zechmeister-Boltenstern 
+* Institute of Soil Research (University of Natural Resources and Life Sciences, Vienna), led by Prof. Sophie Zechmeister-Boltenstern
 * Systems Biology of Pain. Division of Pharmacology & Toxicology (University of Vienna, Vienna), led by Prof. Manuela Schmidt
 
 ## Belgium
@@ -36,6 +36,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 ## China
 
 * Liu’s lab (University of Chinese Academy and Sciences, Shenzhen), led by Prof. Siqi Liu
+* Proteome-level Microbial Systems Ecology (ProMiSE Lab) (National Center for Protein Sciences (the Phoenix Center), Beijing), led by Dr. Leyuan Li
 * [Rumen microbiome group](https://loop.frontiersin.org/people/255437) (Institute of Animal Sciences, Chinese Academy of Agricultural Sciences, Beijing), led by Prof. Shengguo Zhao
 * Wastewater Treatment Biotechnology and Aquatic Environment Remediation (Nanjing University, Nanjing), led by Prof. Hongqiang Ren
 
@@ -64,6 +65,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * [Microbial Proteomics](https://microbialproteomics.uni-greifswald.de/en/) ( University of Greifswald, Greifswald), led by Prof. Katharina Riedel and Prof. Dörte Becher
 * [Microbiome Biology](https://www.ufz.de/index.php?en=44127) (Helmholtz-Centre for Environmental Research - UFZ, Leipzig), led by Dr. Nico Jehmlich
 * Multidimensional omics data analysis (ISAS e.V., Dortmund), led by Jun.-Prof. Robert Heyer
+* [Proteomics and Signal Transduction](https://www.biochem.mpg.de/mann) (Ludwig Maximilians Uni Munich, Munich), led by Prof. Matthias Mann
 
 ## India
 
@@ -72,6 +74,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 ## Italy
 
 * Center for Research and Education on the Microbiota (University of Sassari, Sassari), led by Prof. Sergio Uzzau
+* [Human Microbiome](https://www.ospedalebambinogesu.it/microbioma-umano-94861/) (Bambino Gesù Children’s Hospital, Rome), led by Prof. Lorenza Putignani
 * Microbial proteomics - one health section (University of Milan, Milan), led by Prof. Alessio Soggiu
 * [microbial biochemistry, proteomics and metabolic engineering](https://www.biochemistry-scienze.unito.it/pessione-projects.html) (University of Torino, Torino), led by Prof. Enrica Pessione
 
@@ -118,6 +121,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * [Bioanalytical Mass Spectrometry](https://www.ornl.gov/group/bioanalytical-mass-spectrometry) (Oak Ridge National Laboratory, Oak Ridge, TN), led by Dr. Robert L. Hettich
 * [Biochemical and Exposure Science Group](https://www.nist.gov/mml/csd/biochemical-and-exposure-science-group) (NIST-Charleston, Charleston, SC), led by Dr. Benjamin Neely
 * [Bioinformatics lab](https://homes.luddy.indiana.edu/yye) (Indiana University, Bloomington, IN), led by Dr. Yuzhen Ye
+* [Biomolecular Pathways Integrated Research Core](emsl.pnnl.gov) (Pacific Northwest National Laboratory, Richland), led by  Dr. Mary Lipton
 * Computational Omics Lab (Indiana University, Bloomington, IN), led by Prof. Haixu Tang
 * [Gastrointestinal Barrier Function Laboratory](https://www.mayo.edu/research/labs/gastrointestinal-barrier-function) (Mayo Clinic, Rochester, MN), led by Dr. Madhusudan Grover
 * [Griffin Research Group/Galaxy-P](https://galaxyp.org) (University of Minnesota, Minneapolis, MN), led by Dr. Pratik Jagtap and Prof. Timothy Griffin
