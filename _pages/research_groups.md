@@ -7,7 +7,7 @@ permalink: /research_groups/
 
 **Want your lab on this list? Become a member and add your lab [here](https://forms.gle/zAqJDPZNvf7vSoNi9)!**
 
-This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 72 labs in 17 countries joined.
+This page lists all laboratories that joined the Metaproteomics Intitiative. Currently, 77 labs in 19 countries joined.
 
 ## Australia
 
@@ -35,10 +35,16 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## China
 
+* [Liang Qiao's Research Group](https://faculty.fudan.edu.cn/qiaoliang/zh_CN//) (Fudan University, Shanghai), led by Prof. Liang Qiao
 * Liu’s lab (University of Chinese Academy and Sciences, Shenzhen), led by Prof. Siqi Liu
 * Proteome-level Microbial Systems Ecology (ProMiSE Lab) (National Center for Protein Sciences (the Phoenix Center), Beijing), led by Dr. Leyuan Li
 * [Rumen microbiome group](https://loop.frontiersin.org/people/255437) (Institute of Animal Sciences, Chinese Academy of Agricultural Sciences, Beijing), led by Prof. Shengguo Zhao
 * Wastewater Treatment Biotechnology and Aquatic Environment Remediation (Nanjing University, Nanjing), led by Prof. Hongqiang Ren
+
+## Denmark
+
+* [Environmental Biology Monitoring](https://vbn.aau.dk/da/organisations/environmental-biology-monitoring) (Aalborg University, Aalborg), led by Prof. Jeppe Lund Nielsen
+
 
 ## Finland
 
@@ -69,6 +75,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## India
 
+* Bioenergy group (Agharkar Research Institute, Pune), led by Dr. Prashant	Dhakephalkar
 * Micro-omics Lab (CSIR-National Institute of Oceanography, Goa), led by Dr. Samir R. Damare
 
 ## Italy
@@ -94,6 +101,10 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * [Microbial Ecology and Meta-Omics Group](https://www.nmbu.no/en/research/groups/memo) (NMBU, Aas), led by Assoc. Prof. Phil Pope and Dr. Magnus Arntzen
 * The Protein engineering and proteomics group (NMBU, Aas), led by Prof. Vincent Eijsink
 
+## Romania
+
+* [Protein Chemistry Facility (PCF)](http://cristianvamunteanu.tk) (Institute of Biochemistry of the Romanian Academy, Buccharest), led by Dr. Christian Munteanu
+
 ## Spain
 
 * [Laboratory of Microbiology](https://www.christieoleza-lab.com/) (University of the Balearic Islands, Palma), led by Dr. Joseph Christie-Oleza
@@ -111,6 +122,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 * [Graystock lab](http://www.graystock.info) (Imperial College London, Ascot), led by Dr. Peter Graystock
 * [Microbial Systems Engineering](https://www.pandhalresearchgroup.co.uk) (The University of Sheffield, Sheffield), led by Dr. Jags Pandhal
 * [Molecular Ecotoxicology and Environmental Proteomics](https://www.stir.ac.uk/people/257410#research) (University of Stirling, Stirling), led by Dr. Sabine Matallana Surget
+* [Patil lab](https://www.mrc-tox.cam.ac.uk/research/research-groups/patil-group) (University of Cambridge, Cambridge), led by Dr. Kiran Raosaheb	Patil
 * [Proteomics team](https://www.ebi.ac.uk/about/people/juan-vizcaino) (EMBL-EBI, Hinxton), led by Dr. Juan Antonio Vizcaino
 * [Roslin Proteomics and Metabolomics Facility](https://www.ed.ac.uk/roslin/facilities-resources/proteomics-and-metabolomics-facility) (University of Edinburgh, Edinburgh), led by Dr. Dominic Kurian
 
