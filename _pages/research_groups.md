@@ -118,7 +118,7 @@ This page lists all laboratories that joined the Metaproteomics Intitiative. Cur
 
 ## United Kingdom
 
-* Environmental Molecular Microbiology Group (University of Sheffield, Sheffield), led by Dr. Ian Lidbury
+* [Environmental Molecular Microbiology Group](https://sites.google.com/sheffield.ac.uk/lidbury-ecophysiology-lab) (University of Sheffield, Sheffield), led by Dr. Ian Lidbury
 * [Graystock lab](http://www.graystock.info) (Imperial College London, Ascot), led by Dr. Peter Graystock
 * [Microbial Systems Engineering](https://www.pandhalresearchgroup.co.uk) (The University of Sheffield, Sheffield), led by Dr. Jags Pandhal
 * [Molecular Ecotoxicology and Environmental Proteomics](https://www.stir.ac.uk/people/257410#research) (University of Stirling, Stirling), led by Dr. Sabine Matallana Surget
