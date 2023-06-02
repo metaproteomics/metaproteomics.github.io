@@ -11,6 +11,7 @@ source "https://rubygems.org"
 # gem "jekyll", "~> 3.8.5"
 gem "github-pages", "212", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
+gem "jekyll-redirect-from", group: :jekyll_plugins
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.0"
