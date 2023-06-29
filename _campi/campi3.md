@@ -3,13 +3,18 @@ title: "CAMPI 3"
 excerpt: "CAMPI 3 has launched!"
 ---
 
-The Metaproteomics Initiative has announced the CAMPI3 study to assess the informatic methods used in the field of metaproteomics research. This is the latest study in the series of [CAMPI studies](https://metaproteomics.org/campi/) initiated by the Metaproteomics Initiative. Through this study, the Metaproteomics Initiative intends to understand how decisions in different workflows impact assignments. We are looking for diverse perspectives and areas of expertise (tool developers, experimentalists, analysts, etc.)
+CAMPI3, the latest study initiated by the Metaproteomics Initiative, has been launched.
 
-Interested participants will be sent mass spectrometry files, protein sequence database, and parameters for searches for a ‘synthetic community’ dataset and a ‘biological dataset’. Reporting templates and metrics will be provided so that you can share the results. The results will be kept anonymous.
+The CAMPI3 study aims to:
 
-Next Steps:
-- Interested in participating? Fill in the survey: [z.umn.edu/campi3ing](https://z.umn.edu/campi3ing)
-- Ready for results submission? Contact Anonymizer (ningzhibin@gmail.com)
-- Questions? Contact pjagtap@umn.edu and peterssl@ornl.gov
+- Identify strengths and limitations of the bioinformatic workflows for protein assignment and peptide spectral matching quality among users at varying levels of expertise and experience in the field of metaproteomics.
 
-You can download the data from [https://metaproteomics.org/campi3/download](https://metaproteomics.org/campi3/download)
+- Evaluate the impact of key decision points that are commonly encountered across bioinformatic methods on taxonomic and functional annotation.
+
+To facilitate your participation, we have prepared two datasets: a ground-truth “synthetic community” dataset and a biological dataset. These MS datasets and associated protein databases will serve as the foundation for your analyses. To get involved, we encourage you to download the data from [https://metaproteomics.org/campi3/download](https://metaproteomics.org/campi3/download) and leverage the provided reporting templates and metrics to ensure standardized sharing of results. (Note: The shared CAMPI3 data is to be used for the CAMPI3 study only. If participants would like to use it for other purposes, please reach out for permission from the CAMPI3 Team.)
+
+We value your contributions and understand the importance of maintaining confidentiality. Rest assured that all submissions will be treated with the utmost confidentiality and kept anonymous throughout the study. 
+
+If you have any questions or require further information about CAMPI3, please visit [https://z.umn.edu/campi3faqs](https://z.umn.edu/campi3faqs). Moreover, the project coordinators (pjagtap@umn.edu, peterssl@ornl.gov, and benoit.kunath@uni.lu) are ready to assist you at every step of the process. Don't hesitate to reach out to them.
+
+Ready to submit your results? Please contact our Anonymizer at [ningzhibin@gmail.com](mailto:ningzhibin@gmail.com).
