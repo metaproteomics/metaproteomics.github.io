@@ -27,7 +27,7 @@ the Metaproteomics Initiative
 
 *Contact details: [info@metaproteomics.org](mailto:info@metaproteomics.org)*
 
-![group picture](/assets/images/avignon_group.png){:style="height:400px;"}
+![group picture](/assets/images/avignon_group.jpg){:style="height:400px;"}
 
 ![mpi logo](assets/images/mpilogo.png){:style="height:150px;"}
 ![EuPA logo](assets/images/eupalogo.png){:style="height:150px;"}
