@@ -15,3 +15,5 @@ The website can be found on [https://ims23.com](https://ims23.com).
 
 ## Scientific Committee
 Dirk Benndorf, Daniel Figeys, Robert Hettich, Sabine Matallana-Surget, Phil Pope, Sergio Uzzau & Paul Wilmes
+
+![group picture](/assets/images/avignon_group.png)
