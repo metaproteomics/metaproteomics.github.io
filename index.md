@@ -31,3 +31,4 @@ the Metaproteomics Initiative
 
 ![mpi logo](assets/images/mpilogo.png){:style="height:150px;"}
 ![EuPA logo](assets/images/eupalogo.png){:style="height:150px;"}
+![HUPO logo](assets/images/hupologo.jpg){:style="height:150px;"}
