@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+const publishedBlogEntries = await getCollection("news", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date
+publishedBlogEntries.sort(function (a, b) {
+  return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+});
+---
+
+<Layout title="News">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">News</Fragment>
+      <Fragment slot="desc">The latest metaproteomics news.</Fragment>
+    </Sectionhead>
+    <main class="mt-16">
+      <ul class="grid gap-4 max-w-4xl mx-auto">
+        {
+          publishedBlogEntries.map((blogPostEntry, index) => (
+            <a
+              href={`/news/${blogPostEntry.slug}`}
+              class="flex gap-4 items-start">
+              <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+                <Icon class="text-white" name="bx:bxs-news" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">
+                  {blogPostEntry.data.title}
+                </h3>{" "}
+                <p class="text-slate-500 mb-2 leading-relaxed">
+                  Published on {blogPostEntry.data.publishDate.toDateString()}
+                </p>
+              </div>
+            </a>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>

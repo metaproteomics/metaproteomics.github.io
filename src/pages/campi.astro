@@ -1,0 +1,56 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+const campis = await getCollection("campi");
+---
+
+<Layout title="News">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">CAMPI</Fragment>
+      <Fragment slot="desc">
+        Critical Assessment of Metaproteome Investigation.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">About CAMPI</h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        The Critical Assessment of Metaproteome Investigation (CAMPI) is a
+        series of studies that aim to evaluate and improve the state-of-the-art
+        in metaproteomics. These studies have been conducted over the years by a
+        large number of research groups. The goal of CAMPI is to identify the
+        strengths and limitations of current metaproteomics methods, and to
+        develop new strategies and approaches to better understand the proteins
+        present in a given environment. This overview page provides a summary of
+        past and current CAMPI studies, including their findings and
+        contributions to the field of metaproteomics.
+      </p>
+    </div>
+
+    <main class="mt-16">
+      <ul class="grid gap-4 max-w-4xl mx-auto">
+        {
+          campis.map((campi, index) => (
+            <a href={`/campi/${campi.slug}`} class="flex gap-4 items-start">
+              <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+                <Icon class="text-white" name="bx:bx-test-tube" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">{campi.data.title}</h3>{" "}
+                <p class="text-slate-500 mb-2 leading-relaxed">
+                  {campi.data.summary}
+                </p>
+              </div>
+            </a>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>
