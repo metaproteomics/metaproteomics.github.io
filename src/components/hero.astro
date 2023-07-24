@@ -1,0 +1,52 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/mpilogo.png";
+import Link from "@components/ui/link.astro";
+import { Icon } from "astro-icon";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 lg:order-1 hidden lg:block">
+    <Picture
+      src={heroImage}
+      alt="MPI logo"
+      widths={[200, 400, 600]}
+      aspectRatio="4:4"
+      sizes="(max-width: 400px) 100vw, 400px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Welcome to the Metaproteomics Initiative!
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      We promote dissemination of metaproteomics fundamentals, advancements, and applications through collaborative networking in microbiome research.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link
+        href="#"
+        href="https://forms.gle/zAqJDPZNvf7vSoNi9"
+        target="_blank"
+        class="flex gap-1 items-center justify-center"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-user-plus" />
+
+        Become a member
+      </Link>
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="mailto:info@metaproteomics.org"
+        class="flex gap-1 items-center justify-center"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bx-mail-send" />
+        Contact us
+      </Link>
+    </div>
+  </div>
+</main>

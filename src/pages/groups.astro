@@ -1,0 +1,581 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="groups">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Research Groups</Fragment>
+      <Fragment slot="desc">
+        The members of the Metaproteomics Initiative.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <p class="text-lg leading-relaxed text-slate-500">
+        This page lists all laboratories that joined the Metaproteomics
+        Intitiative. Currently, 77 labs in 19 countries joined.
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Want your lab on this list? Become a member and add your lab <a
+          href="https://forms.gle/zAqJDPZNvf7vSoNi9"
+          class="font-medium hover:underline">here</a
+        >!
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-1 gap-1 mx-auto max-w-4xl mt-8">
+      <h2 class="font-medium text-2xl text-gray-800">Australia</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.monash.edu/discovery-institute/purcell-lab"
+            >Immunoproteomics laboratory</a
+          > (Monash University, Clayton), led by Prof. Anthony Purcell
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://di.uq.edu.au/profile/1399/emma-hamilton-williams"
+            >Type 1 diabetes pathogenesis and therapy</a
+          > (University of Queensland, Brisbane), led by Dr. Emma Hamilton-Williams
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Austria</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          Center for Microbiology and Environmental Systems Science (University
+          of Vienna, Vienna), led by Prof. Wolfgang Wanek
+        </li>
+        <li>
+          Institute of Soil Research (University of Natural Resources and Life
+          Sciences, Vienna), led by Prof. Sophie Zechmeister-Boltenstern
+        </li>
+        <li>
+          Systems Biology of Pain. Division of Pharmacology &amp; Toxicology
+          (University of Vienna, Vienna), led by Prof. Manuela Schmidt
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Belgium</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.compomics.com">CompOmics</a
+          > (Ghent University, Ghent), led by Prof. Lennart Martens
+        </li>
+        <li>
+          Computational Biology Group (Ghent University, Ghent), led by Prof.
+          Peter Dawyndt
+        </li>
+        <li>
+          Proteomics and microbiology (University of Mons, Mons), led by Prof.
+          Ruddy Wattiez
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Canada</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          Bioinformatics of Proteomics and Network Biology lab (Ottawa), led by
+          Prof. Mathieu Lavallée-Adam
+        </li>
+        <li>
+          Cellular immunology and mass spectrometry laboratory (Health Canada,
+          Ottawa), led by Dr. Xu Zhang
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://ucalgary.ca/labs/ebg">Energy Bioengineering Group</a
+          >
+          (University of Calgary, Calgary), led by Dr. Marc Strous
+        </li>
+        <li>
+          <a class="font-medium hover:underline" href="http://northomics.ca/"
+            >Northomics lab</a
+          > (University of Ottawa, Ottawa), led by Prof. Daniel Figeys
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">China</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://faculty.fudan.edu.cn/qiaoliang/zh_CN//"
+            >Liang Qiao’s Research Group</a
+          > (Fudan University, Shanghai), led by Prof. Liang Qiao
+        </li>
+        <li>
+          Liu’s lab (University of Chinese Academy and Sciences, Shenzhen), led
+          by Prof. Siqi Liu
+        </li>
+        <li>
+          Proteome-level Microbial Systems Ecology (ProMiSE Lab) (National
+          Center for Protein Sciences (the Phoenix Center), Beijing), led by Dr.
+          Leyuan Li
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://loop.frontiersin.org/people/255437"
+            >Rumen microbiome group</a
+          > (Institute of Animal Sciences, Chinese Academy of Agricultural Sciences,
+          Beijing), led by Prof. Shengguo Zhao
+        </li>
+        <li>
+          Wastewater Treatment Biotechnology and Aquatic Environment Remediation
+          (Nanjing University, Nanjing), led by Prof. Hongqiang Ren
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Denmark</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            href="https://vbn.aau.dk/da/organisations/environmental-biology-monitoring"
+            >Environmental Biology Monitoring</a
+          > (Aalborg University, Aalborg), led by Prof. Jeppe Lund Nielsen
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Finland</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a class="font-medium hover:underline" href="https://elolab.utu.fi/"
+            >Computational Biomedicine</a
+          > (University of Turku, Turku), led by Prof. Laura Elo
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">France</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="http://www2.agroparistech.fr/Micalis-Microbiologie-de-l.html"
+            >Micalis Institute</a
+          > (INRAE, AgroParisTech, Universite Paris-Saclay, Jouy-en-Josas), led by
+          Catherine Juste
+        </li>
+        <li>
+          <a class="font-medium hover:underline" href="http://pappso.inrae.fr"
+            >PAPPSO proteomic facility</a
+          > (Paris), led by Céline Henry and Olivier Langella
+        </li>
+        <li>
+          <a class="font-medium hover:underline" href="https://phylogene.com"
+            >Phylogene Mass Spec lab and dedicated Bioinformatics</a
+          > (Nîmes), led by Mr. Gilbert Skorski
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.ibisa.net/plateformes/progenomix-570.html"
+            >ProGenoMix platform</a
+          > (CEA, Bagnols-sur-Cèze), led by Dr. Jean Armengaud
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="http://www.toulouse-biotechnology-institute.fr/"
+            >Systems biology of microbial consortia</a
+          > (Toulouse Biotechnology Institute, Toulouse), led by Dr. Guillermina
+          Hernandez-Raquet
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Germany</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="http://kohlbacherlab.org/">Applied Bioinformatics Group</a
+          > (University of Tübingen, Tübingen), led by Prof. Oliver Kohlbacher
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="http://www.esciencelab.de">BAM eScience Group</a
+          > (Federal Institute for Materials Research and Testing (BAM), Berlin),
+          led by Dr. Thilo Muth
+        </li>
+        <li>
+          Chair of Bioprocess Engineering (Otto von Guericke University,
+          Magdeburg), led by Prof. Udo Reichl
+        </li>
+        <li>
+          Functional Microbiology in Animal Science group (Stuttgart), led by
+          Prof. Jana Seifert
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.ufz.de/index.php?en=34249"
+            >Department of Molecular Systems Biology</a
+          > (Helmholtz-Centre for Environmental Research - UFZ, Leipzig), led by
+          Prof. Martin von Bergen
+        </li>
+        <li>
+          Data Analytics &amp; Computational Statistics Group (HPI Potsdam), led
+          by Bernhard Renard
+        </li>
+        <li>MF1 - Bioinformatics Group (RKI Berlin), led by Stephan Fuchs</li>
+        <li>Microbial Communities (Magdeburg), led by Dr. Dirk Benndorf</li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://microbialproteomics.uni-greifswald.de/en/"
+            >Microbial Proteomics</a
+          > ( University of Greifswald, Greifswald), led by Prof. Katharina Riedel
+          and Prof. Dörte Becher
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.ufz.de/index.php?en=44127">Microbiome Biology</a
+          >
+          (Helmholtz-Centre for Environmental Research - UFZ, Leipzig), led by Dr.
+          Nico Jehmlich
+        </li>
+        <li>
+          Multidimensional omics data analysis (ISAS e.V., Dortmund), led by
+          Jun.-Prof. Robert Heyer
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.biochem.mpg.de/mann"
+            >Proteomics and Signal Transduction</a
+          > (Ludwig Maximilians Uni Munich, Munich), led by Prof. Matthias Mann
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">India</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          Bioenergy group (Agharkar Research Institute, Pune), led by Dr.
+          Prashant Dhakephalkar
+        </li>
+        <li>
+          Micro-omics Lab (CSIR-National Institute of Oceanography, Goa), led by
+          Dr. Samir R. Damare
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Italy</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          Center for Research and Education on the Microbiota (University of
+          Sassari, Sassari), led by Prof. Sergio Uzzau
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.ospedalebambinogesu.it/microbioma-umano-94861/"
+            >Human Microbiome</a
+          > (Bambino Gesù Children’s Hospital, Rome), led by Prof. Lorenza Putignani
+        </li>
+        <li>
+          Microbial proteomics - one health section (University of Milan,
+          Milan), led by Prof. Alessio Soggiu
+        </li>
+        <li>
+          <a
+            href="https://www.biochemistry-scienze.unito.it/pessione-projects.html"
+            >microbial biochemistry, proteomics and metabolic engineering</a
+          > (University of Torino, Torino), led by Prof. Enrica Pessione
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Luxemburg</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a class="font-medium hover:underline" href="http://www.list.lu"
+            >Biotechnologies and Environmental Analytics Platform</a
+          > (Belvaux), led by Dr. Jenny Renaut
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://wwwen.uni.lu/lcsb/research/systems_ecology"
+            >Systems Ecology</a
+          > (University of Luxembourg, Luxembourg), led by Prof. Paul Wilmes
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">
+        The Netherlands<a
+          class="header-link"
+          href="#the-netherlands"
+          title="Permalink"></a>
+      </h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a class="font-medium hover:underline" href="http://cpm.lumc.nl"
+            >Center for Proteomics and Metabolomics</a
+          > (Leiden University Medical Center, Leiden), led by Prof. Magnus Palmblad
+        </li>
+        <li>
+          <a
+            href="https://sils.uva.nl/content/research-groups/mass-spectrometry-of-biomolecules/mass-spectrometry-of-biomolecules.html"
+            >Mass Spectrometry of Biomolecules</a
+          > (University of Amsterdam, Amsterdam), led by Dr. Gertjan Kramer
+        </li>
+        <li>
+          <a
+            href="https://www.tudelft.nl/tnw/over-faculteit/afdelingen/biotechnology/research-sections/environmental-biotechnology/martin-pabst-group"
+            >Microbial proteomics lab</a
+          > (Delft University of Technology, Delft), led by Dr. Martin Pabst
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Norway</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.nmbu.no/en/research/groups/memo"
+            >Microbial Ecology and Meta-Omics Group</a
+          > (NMBU, Aas), led by Assoc. Prof. Phil Pope and Dr. Magnus Arntzen
+        </li>
+        <li>
+          The Protein engineering and proteomics group (NMBU, Aas), led by Prof.
+          Vincent Eijsink
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Romania</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="http://cristianvamunteanu.tk"
+            >Protein Chemistry Facility (PCF)</a
+          > (Institute of Biochemistry of the Romanian Academy, Buccharest), led
+          by Dr. Christian Munteanu
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Spain</h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.christieoleza-lab.com/"
+            >Laboratory of Microbiology</a
+          > (University of the Balearic Islands, Palma), led by Dr. Joseph Christie-Oleza
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://cibm.ugr.es/pages/lineasdeinvestigacion"
+            >Microbiota in infant development</a
+          > (University of Granada, Granada), led by Dr. Antonio Suarez
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.ucm.es/candida-en/investigation-group"
+            >Microorganism - Host Interaction. Human Proteome Project</a
+          > (Universidad Complutense de Madrid, Madrid), led by dr. Concha Gil
+        </li>
+        <li>
+          Molecular Oncology and Pathology Lab (Hospital Universitario La Paz,
+          Madrid), led by Dr. Juan Ángel Fresno Vara
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">
+        Switzerland<a class="header-link" href="#switzerland" title="Permalink"
+        ></a>
+      </h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.sib.swiss/christian-ahrens-group"
+            >Bioinformatics and Proteogenomics Group</a
+          > (SIB Swiss Institute of Bioinformatics, Wädenswil) led by Dr. Christian
+          Ahrens
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">
+        United Kingdom<a
+          class="header-link"
+          href="#united-kingdom"
+          title="Permalink"></a>
+      </h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            href="https://sites.google.com/sheffield.ac.uk/lidbury-ecophysiology-lab"
+            >Environmental Molecular Microbiology Group</a
+          > (University of Sheffield, Sheffield), led by Dr. Ian Lidbury
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="http://www.graystock.info">Graystock lab</a
+          > (Imperial College London, Ascot), led by Dr. Peter Graystock
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.pandhalresearchgroup.co.uk"
+            >Microbial Systems Engineering</a
+          > (The University of Sheffield, Sheffield), led by Dr. Jags Pandhal
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.stir.ac.uk/people/257410#research"
+            >Molecular Ecotoxicology and Environmental Proteomics</a
+          > (University of Stirling, Stirling), led by Dr. Sabine Matallana Surget
+        </li>
+        <li>
+          <a
+            href="https://www.mrc-tox.cam.ac.uk/research/research-groups/patil-group"
+            >Patil lab</a
+          > (University of Cambridge, Cambridge), led by Dr. Kiran Raosaheb Patil
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.ebi.ac.uk/about/people/juan-vizcaino"
+            >Proteomics team</a
+          > (EMBL-EBI, Hinxton), led by Dr. Juan Antonio Vizcaino
+        </li>
+        <li>
+          <a
+            href="https://www.ed.ac.uk/roslin/facilities-resources/proteomics-and-metabolomics-facility"
+            >Roslin Proteomics and Metabolomics Facility</a
+          > (University of Edinburgh, Edinburgh), led by Dr. Dominic Kurian
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">
+        United State of America<a
+          class="header-link"
+          href="#united-state-of-america"
+          title="Permalink"></a>
+      </h2>
+
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a class="font-medium hover:underline" href="http://bhattlab.com"
+            >Bhatt lab</a
+          > (Stanford University, Stanford), led by Prof. Ami Bhatt
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.research.colostate.edu/bio/"
+            >Bioanalysis and Omics Center, Analytical Resources Core</a
+          >, (Colorado State University, Fort Collins, CO), led by Dr. Corey
+          Broeckling
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://www.ornl.gov/group/bioanalytical-mass-spectrometry"
+            >Bioanalytical Mass Spectrometry</a
+          > (Oak Ridge National Laboratory, Oak Ridge, TN), led by Dr. Robert L.
+          Hettich
+        </li>
+        <li>
+          <a
+            href="https://www.nist.gov/mml/csd/biochemical-and-exposure-science-group"
+            >Biochemical and Exposure Science Group</a
+          > (NIST-Charleston, Charleston, SC), led by Dr. Benjamin Neely
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://homes.luddy.indiana.edu/yye">Bioinformatics lab</a
+          > (Indiana University, Bloomington, IN), led by Dr. Yuzhen Ye
+        </li>
+        <li>
+          <a class="font-medium hover:underline" href="emsl.pnnl.gov"
+            >Biomolecular Pathways Integrated Research Core</a
+          > (Pacific Northwest National Laboratory, Richland), led by Dr. Mary Lipton
+        </li>
+        <li>
+          Computational Omics Lab (Indiana University, Bloomington, IN), led by
+          Prof. Haixu Tang
+        </li>
+        <li>
+          <a
+            href="https://www.mayo.edu/research/labs/gastrointestinal-barrier-function"
+            >Gastrointestinal Barrier Function Laboratory</a
+          > (Mayo Clinic, Rochester, MN), led by Dr. Madhusudan Grover
+        </li>
+        <li>
+          <a class="font-medium hover:underline" href="https://galaxyp.org"
+            >Griffin Research Group/Galaxy-P</a
+          > (University of Minnesota, Minneapolis, MN), led by Dr. Pratik Jagtap
+          and Prof. Timothy Griffin
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://kleinerlab.cals.ncsu.edu/">Kleiner Lab</a
+          > (North Carolina State University, Raleigh, NC), led by Dr. Manuel Kleiner
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="http://environmentalproteomics.org"
+            >Nunn Lab- Environmental Proteomics</a
+          > (University of Washington), led by Prof. Brook Nunn
+        </li>
+        <li>
+          Nutritional Immunology (Arkansas Children’s Nutrition Center, Little
+          Rock, AR), led by Dr. Laxmi Yeruva
+        </li>
+        <li>
+          <a class="font-medium hover:underline" href="http://www.rawlab.com"
+            >RAW lab</a
+          > (UNCC, Charlotte, NC), led by Dr. Richard Allen White III
+        </li>
+        <li>
+          <a
+            class="font-medium hover:underline"
+            href="https://saeedlab.cis.fiu.edu/">Saeed Lab</a
+          > (FIU, Miami, FL), led by Prof. Fahad Saeed
+        </li>
+        <li>
+          <a class="font-medium hover:underline" href="Www.WHOI.edu/saitolab"
+            >Saito Lab</a
+          > (Woods Hole Oceanographic Institution, Massachusetts), led by Prof. Mak
+          Saito
+        </li>
+      </ul>
+    </div>
+  </Container>
+</Layout>

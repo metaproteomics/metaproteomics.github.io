@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const campis = await getCollection("campi");
+  return campis.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+// Get the entry directly from the prop on render
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">{entry.data.title}</Fragment>
+      <Fragment slot="desc">{entry.data.subTitle}</Fragment>
+    </Sectionhead>
+  </Container>
+
+  <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
+    <Content />
+  </div>
+  <div class="text-center mt-8">
+    <a
+      href="/campi"
+      class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
+      >← Back to CAMPI</a
+    >
+  </div>
+</Layout>

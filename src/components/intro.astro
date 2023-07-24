@@ -1,0 +1,58 @@
+---
+// @ts-ignore
+import { Picture } from "@astrojs/image/components";
+import groupPicture from "assets/group.jpg";
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="mt-16 md:mt-0">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      A vibrant community
+    </h2>
+    <p class="text-lg mt-4 text-slate-600">
+      We promote dissemination of metaproteomics fundamentals, advancements, and
+      applications through collaborative networking in microbiome research. We
+      aim to be the central information hub and open meeting place where
+      newcomers and experts interact to communicate, standardize and accelerate
+      experimental and bioinformatic methodologies in this field. This will be
+      achieved initially through this website, presentations, online
+      communication channel, collaborative projects, and symposia. More
+      information can be found in our commentary article in
+      <a
+        href="https://microbiomejournal.biomedcentral.com/articles/10.1186/s40168-021-01176-w"
+        class="font-medium hover:underline">Microbiome</a
+      >.
+    </p>
+    <p class="text-lg mt-4 text-slate-600">
+      Our Initiative is also recognized by international, well-renowned
+      scientific organizations: since February 2021 by
+      <a href="https://eupa.org/" class="font-medium hover:underline">EuPA</a>,
+      and since June 2023 by
+      <a href="https://hupo.org/" class="font-medium hover:underline">HUPO</a> under
+      the <a href="https://hupo.org/B/D-HPP" class="font-medium hover:underline"
+        >B/D-HPP pillar</a
+      >. Do you want to stay up to date about the metaproteomics field and the
+      Initiative? Become a member by filling in
+      <a
+        href="https://forms.gle/zAqJDPZNvf7vSoNi9"
+        class="font-medium hover:underline">this form</a
+      >. If you can't fill in the Google form because of certain restrictions,
+      please contact us via
+      <a
+        href="mailto:info@metaproteomics.org"
+        class="font-medium hover:underline">info@metaproteomics.org</a
+      >.
+    </p>
+  </div>
+  <div class="py-6 sm:order-1 hidden sm:block">
+    <Picture
+      src={groupPicture}
+      alt="Group picture"
+      widths={[200, 400, 600]}
+      sizes="(max-width: 600px) 100vw, 600px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+</main>

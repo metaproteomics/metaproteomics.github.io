@@ -1,0 +1,63 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+import { getCollection } from "astro:content";
+
+// Filter blog entries with 'draft: false' & date before current date
+let publishedBlogEntries = await getCollection("news", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+
+// Sort content entries by publication date and get the first few entries
+publishedBlogEntries = publishedBlogEntries
+  .sort(function (a, b) {
+    return b.data.publishDate.valueOf() - a.data.publishDate.valueOf();
+  })
+  .slice(0, 5);
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-12">
+  <div class="mt-16 md:mt-0">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+      The latest news
+    </h2>
+    <main class="mt-16">
+      <ul class="grid gap-4 max-w-4xl mx-auto">
+        {
+          publishedBlogEntries.map((blogPostEntry, index) => (
+            <a
+              href={`/news/${blogPostEntry.slug}`}
+              class="flex gap-4 items-start">
+              <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+                <Icon class="text-white" name="bx:bxs-news" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg">
+                  {blogPostEntry.data.title}
+                </h3>{" "}
+                <p class="text-slate-500 mb-2 leading-relaxed">
+                  {blogPostEntry.data.publishDate.toDateString()}
+                </p>
+              </div>
+            </a>
+          ))
+        }
+      </ul>
+    </main>
+  </div>
+
+  <div class="py-6 sm:order-1 hidden sm:block">
+    <a
+      class="twitter-timeline"
+      data-width="500"
+      data-height="500"
+      data-dnt="true"
+      href="https://twitter.com/MetaP_Init?ref_src=twsrc%5Etfw"
+      >Tweets by MetaP_Init</a
+    >
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
+    ></script>
+  </div>
+</main>

@@ -1,0 +1,84 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+const board = [
+  {name: "Tim Van Den Bossche", role: "Administrator and EuPA contact person"},
+  {name: "Benoît Kunath", role: "Administrator"},
+  {name: "Jana Seifert", role: "Secretary"},
+  {name: "Celine Henry", role: "Treasurer"},
+  {name: "Lucia Grenga", role: "Communication"},
+  {name: "Bart Mesuere", role: "Webmaster"},
+  {name: "Jean Armengaud", role: "Working group coordinator"},
+  {name: "Pratik Jagtap", role: "Education"},
+  {name: "Leyuan Li", role: "International correspondence (Asia)"},
+  {name: "Etienne Nzabarushimana", role: "International correspondence (Africa)"},
+  {name: "Dirk Benndorf", role: "Scientific Advisor"},
+  {name: "Daniel Figeys", role: "Scientific Advisor"},
+  {name: "Bob Hettich", role: "Scientific Advisor"},
+  {name: "Paul Wilmes", role: "Scientific Advisor"},
+  {name: "Nico Jehmlich", role: "Scientific Advisor"},
+  {name: "Sergio Uzzau", role: "Scientific Advisor"},
+]
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About us</Fragment>
+      <Fragment slot="desc">Meet the board members.</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">
+        Executive board
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        During the Metaproteomics Symposium in Luxembourg (september 27-29, 2021), the first formal board of the Metaproteomics Initiative was elected.
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        board.map((teamMemberEntry) => (
+          <div class="group">
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800">
+                {teamMemberEntry.name}
+              </h2>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.role}
+              </h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">
+        Founding members
+      </h2>
+      <ul class="list-disc list-inside text-lg leading-relaxed">
+        <li>Magnus Arntzen</li>
+        <li>Jean Armengaud</li>
+        <li>Dörte Becher</li>
+        <li>Dirk Benndorf</li>
+        <li>Vincent Eijsink</li>
+        <li>Céline Henry</li>
+        <li>Robert Hettich</li>
+        <li>Pratik Jagtap</li>
+        <li>Nico Jehmlich</li>
+        <li>Catherine Juste</li>
+        <li>Benoit Kunath</li>
+        <li>Bart Mesuere</li>
+        <li>Thilo Muth</li>
+        <li>Phil Pope</li>
+        <li>Jana Seifert</li>
+        <li>Alessandro Tanca</li>
+        <li>Sergio Uzzau</li>
+        <li>Tim Van Den Bossche</li>
+        <li>Paul Wilmes</li>
+      </ul>
+    </div>
+  </Container>
+</Layout>

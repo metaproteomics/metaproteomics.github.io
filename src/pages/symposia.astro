@@ -1,0 +1,85 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "@astrojs/image/components";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter blog entries with 'draft: false' & date before current date
+let symposia = await getCollection("symposia", ({ data }) => {
+  return !data.draft;
+});
+
+// Sort content entries by publication date
+symposia.sort(function (a, b) {
+  if (a.data.sortDate === b.data.sortDate) {
+    return 0;
+  }
+  if (a.data.sortDate < b.data.sortDate) {
+    return 1;
+  }
+  return -1;
+});
+---
+
+<Layout title="Symposia">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Symposia</Fragment>
+      <Fragment slot="desc">
+        The International Metaproteomics Symposia.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">
+        About the International Metaproteomics Symposia
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Every 18 months, the International Metaproteomics Symposium brings
+        together researchers from around the world to discuss the latest
+        developments in metaproteomics.
+      </p>
+    </div>
+    <main class="mt-16">
+      <ul class="grid gap-16 max-w-4xl mx-auto">
+        {
+          symposia.map((symposium, index) => (
+            <li>
+              <a href={`/symposia/${symposium.slug}`}>
+                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+                  <Picture
+                    src={symposium.data.photo}
+                    alt={symposium.data.caption}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    widths={[200, 400, 800]}
+                    aspectRatio="16:9"
+                    background="#ffffff"
+                    fit="cover"
+                    position="center"
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    decoding={index <= 2 ? "sync" : "async"}
+                    class="w-full rounded-md"
+                  />
+                  <div>
+                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      {symposium.data.location}
+                    </span>
+
+                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                      {symposium.data.title}
+                    </h2>
+
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-gray-400">{symposium.data.date}</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>

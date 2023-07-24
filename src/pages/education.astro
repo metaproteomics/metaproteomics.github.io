@@ -1,0 +1,165 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="Education">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Education</Fragment>
+      <Fragment slot="desc">Educational resources for metaproteomics.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-1 gap-1 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">Tutorials</h2>
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html"
+            class="font-medium hover:underline"
+            >Metaproteomics tutorial using Galaxy-P</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://galaxyproject.eu/posts/2020/04/14/integrative-meta-omics/"
+            class="font-medium hover:underline"
+            >Integrative meta-omics using Galaxy-P</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.sciencedirect.com/science/article/abs/pii/S1874391917301896"
+            class="font-medium hover:underline">Unipept</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://www.mpa.ovgu.de/index.php/tutorials/"
+            class="font-medium hover:underline">MetaProteomeAnalyzer</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html"
+            class="font-medium hover:underline">MetaQuantome, data creation</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-function/tutorial.html"
+            class="font-medium hover:underline"
+            >MetaQuantome, functional annotation</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-taxonomy/tutorial.html"
+            class="font-medium hover:underline"
+            >MetaQuantome, taxonomic annotation</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://proteinportal.whoi.edu/about"
+            class="font-medium hover:underline">Ocean Protein Portal</a
+          >
+        </li>
+      </ul>
+
+      <h2 class="font-medium text-2xl text-gray-800">Lectures</h2>
+      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=4xv46IFWNxo"
+            class="font-medium hover:underline"
+            >“Metaproteomics to Investigate Functional Interactions in
+            Microbiota”</a
+          >
+          by Dr. Manuel Kleiner
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=QR9pX5nBnGE"
+            class="font-medium hover:underline"
+            >“Systems Ecology of the Human Gut Microbiome”</a
+          >
+          by Dr. Paul Wilmes
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=MGJmdqBQlfM"
+            class="font-medium hover:underline"
+            >“Complexity in Ocean MetaProteomics: 20,000 Spectral Counts under
+            the Sea.”</a
+          >
+          by Dr. Mak Saito
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=3_yaPp-RCFw"
+            class="font-medium hover:underline"
+            >“Metaproteomics @ GTN Smörgåsbord”</a
+          >
+          by Dr. Pratik Jagtap
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=ohmtTWCD4mw"
+            class="font-medium hover:underline">“New Pathways for Old Metals”</a
+          >
+          by Dr. Nadia Szeinbaum
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=1w0DQ5L7SaU"
+            class="font-medium hover:underline"
+            >“What can the tiniest organisms teach us about the vast ocean?”</a
+          >
+          by Dr. Brook L. Nunn
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=ze2bAOQsRKI"
+            class="font-medium hover:underline"
+            >“pepFunk: an R shiny app and workflow for peptide-centric
+            functional analysis of metaproteomic microbiome data”</a
+          >
+          by Dr. Caitlin Simopoulos
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=PVUjh-MlmFk"
+            class="font-medium hover:underline"
+            >"Designer Fibre for Beneficial Microbes: A Path to Microbiome
+            Modulation"</a
+          >
+          by Dr. Phil Pope
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=axXB6ihcva0"
+            class="font-medium hover:underline"
+            >“Metaproteomics session at TSMC 2021”</a
+          >
+          by Dr. Pratik Jagtap, Dr. Bob Hettich, and Dr. Mak Saito
+        </li>
+      </ul>
+
+      <p class="mb-4">
+        If you have additional metaproteomics tutorials or lectures you'd like
+        to share, please contact
+        <a
+          href="mailto:info@metaproteomics.org"
+          class="font-medium hover:underline">info@metaproteomics.org</a
+        >. For tutorials and lectures on (single-species) proteomics, please
+        visit the
+        <a
+          href="https://www.proteomics-academy.org//online-education"
+          class="font-medium hover:underline">Proteomics Academy website</a
+        >.
+      </p>
+    </div>
+  </Container>
+</Layout>
