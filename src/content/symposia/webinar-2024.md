@@ -7,6 +7,6 @@ photo: /images/online.jpg
 caption: ""
 ---
 
-![flyer](/images/webinar_2024_1.jpg)
+![flyer](/images/webinar_2024_2.jpg)
 
 [Click here to register!](https://www.ticketsource.co.uk/metaproteomics)
