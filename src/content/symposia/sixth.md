@@ -13,4 +13,4 @@ The International Metaproteomics Symposium is the leading event in the field of 
  
 The symposium welcomes international scientists from every career stage and is characterised by its human dimension and promotion of high-quality interactions. The symposium is organized into sessions featuring brief presentations, aiming to provide ample opportunities for researchers in the field to present their work to a wide audience.
  
-Conference website will come soon.
+The website for the conference can be found at [https://ims6.sciencesconf.org](https://ims6.sciencesconf.org).
