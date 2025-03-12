@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-const board = [
+const board2024 = [
   {name: "Tim Van Den Bossche", role: "Co-Administrator"},
   {name: "Benoît Kunath", role: "Co-Administrator"},
   {name: "Jana Seifert", role: "Secretary"},
@@ -15,13 +15,31 @@ const board = [
   {name: "Magnus Arntzen", role: "Symposium organizer (next symposium)"},
   {name: "Pratik Jagtap", role: "Education"},
   {name: "Leyuan Li", role: "International correspondence (Asia)"},
-  {name: "Phil Pope", role: "International correspondence (Africa)"},
+  {name: "Phil Pope", role: "International correspondence (Oceania)"},
   {name: "Dirk Benndorf", role: "Scientific Advisor (automatically re-elected for second term)"},
   {name: "Daniel Figeys", role: "Scientific Advisor (automatically re-elected for second term)"},
   {name: "Bob Hettich", role: "Scientific Advisor (automatically re-elected for second term)"},
   {name: "Paul Wilmes", role: "Scientific Advisor (automatically re-elected for second term)"},
   {name: "Nico Jehmlich", role: "Scientific Advisor (automatically re-elected for second term)"},
   {name: "Sergio Uzzau", role: "Scientific Advisor (automatically re-elected for second term)"},
+]
+
+const board2021 = [
+  {name: "Tim Van Den Bossche", role: "Co-Administrator"},
+  {name: "Benoît Kunath", role: "Co-Administrator"},
+  {name: "Jana Seifert", role: "Secretary"},
+  {name: "Jana Seifert", role: "Treasurer"},
+  {name: "Lucia Grenga", role: "Communication"},
+  {name: "Bart Mesuere", role: "Webmaster"},
+  {name: "Jean Armengaud", role: "Working Group Coordinator"},
+  {name: "Dirk Benndorf", role: "Scientific Advisor (automatically re-elected for second term)"},
+  {name: "Daniel Figeys", role: "Scientific Advisor (automatically re-elected for second term)"},
+  {name: "Bob Hettich", role: "Scientific Advisor (automatically re-elected for second term)"},
+  {name: "Paul Wilmes", role: "Scientific Advisor (automatically re-elected for second term)"},
+  {name: "Nico Jehmlich", role: "Scientific Advisor (automatically re-elected for second term)"},
+  {name: "Sergio Uzzau", role: "Scientific Advisor (automatically re-elected for second term)"},
+  {name: "Pratik Jagtap", role: "Education"},
+  {name: "Leyuan Li", role: "International correspondence (Asia)"}
 ]
 ---
 
@@ -34,7 +52,29 @@ const board = [
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-medium text-2xl text-gray-800">
-        Executive board
+        Executive board (February 2024 - January 2027)
+      </h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        board2024.map((teamMemberEntry) => (
+          <div class="group">
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800">
+                {teamMemberEntry.name}
+              </h2>
+              <h3 class="text-sm text-slate-500">
+                {teamMemberEntry.role}
+              </h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">
+        Executive board (October 2021 - January 2024)
       </h2>
       <p class="text-lg leading-relaxed text-slate-500">
         During the Metaproteomics Symposium in Luxembourg (september 27-29, 2021), the first formal board of the Metaproteomics Initiative was elected.
@@ -42,7 +82,7 @@ const board = [
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
-        board.map((teamMemberEntry) => (
+        board2021.map((teamMemberEntry) => (
           <div class="group">
             <div class="mt-4 text-center">
               <h2 class="text-lg text-gray-800">

@@ -6,6 +6,8 @@ summary: Sample handling - call for participants
 
 CAMPI 2 is a new Critical Assessment of MetaProteome Investigation (CAMPI) launched to establish a collaborative research program focused on methods for sample handling to preserve metaproteins function before microbiota analysis.
 
+**Note:** A preprint for CAMPI 2 is already available on [BioRXiv](https://www.biorxiv.org/content/10.1101/2025.01.31.635836v2).
+
 **Organizers**: Dirk Benndorf, Nico Jehmlich, Jean Armengaud, Robert Heyer, Felipe Bastida, Bob Hettich, Sergio Uzzau (“quarterback”), will coordinate the work of all volunteers from the Metaproteomics Initiative that would like to participate.
 
 **Participants**: Labs with interest in metaproteome analyses.
