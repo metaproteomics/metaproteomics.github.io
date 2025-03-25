@@ -9,7 +9,7 @@ As a first-time attendant of the International Metaproteomics Symposium I felt s
 
 On a personal note, it was my second time to Oslo, but due to the weather and poor visibility outside, we could’ve been anywhere else in the world, and frankly, it didn’t matter, since the meeting was exceptional. Thus, ample congratulations are due to the organizing committee and members of the metaproteomics initiative. 
 
-When I saw I was selected to be the last speaker I felt honored, yet a bit disappointed, as last speakers tend to get . Nonetheless, I was surprised by the number of people that remained till the end, and I was humbled to receive the Best Talk award. Luck of being last. Now I have a fancy Norwegian cheese cutter.
+When I saw I was selected to be the last speaker I felt honored, yet a bit disappointed, as last speakers tend to get happy. Nonetheless, I was surprised by the number of people that remained till the end, and I was humbled to receive the Best Talk award. Luck of being last. Now I have a fancy Norwegian cheese cutter.
 
 I’m looking forward to IMS7 in Germany next year and I’m sure it will be an awesome meeting. In the spirit of the IMS6 inspiring talk by Dr. Emma Timmins-Schiffman, can we please have IMS8 in Antarctica?
 
