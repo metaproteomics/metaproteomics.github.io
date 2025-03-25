@@ -18,6 +18,22 @@ const newsCollection = defineCollection({
   }),
 });
 
+const articleCollection = defineCollection({
+  schema: z.object({
+    draft: z.boolean().optional(),
+    title: z.string(),
+    //snippet: z.string(),
+    /*image: z.object({
+      src: z.string(),
+      alt: z.string(),
+    }),*/
+    publishDate: z.string().transform(str => new Date(str)),
+    //author: z.string().default('Astroship'),
+    //category: z.string(),
+    //tags: z.array(z.string()),
+  }),
+});
+
 const symposiaCollection = defineCollection({
   schema: z.object({
     draft: z.boolean().optional(),
@@ -45,4 +61,5 @@ export const collections = {
   'news': newsCollection,
   'symposia': symposiaCollection,
   'campi': campiCollection,
+  'articles': articleCollection
 };
