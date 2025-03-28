@@ -52,6 +52,7 @@ const campiCollection = defineCollection({
     title: z.string(),
     subTitle: z.string(),
     summary: z.string(),
+    biorxiv: z.string().optional()
   }),
 });
 

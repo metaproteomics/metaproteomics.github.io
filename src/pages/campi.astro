@@ -21,16 +21,48 @@ const campis = await getCollection("campi");
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
       <h2 class="font-medium text-2xl text-gray-800">About CAMPI</h2>
       <p class="text-lg leading-relaxed text-slate-500">
-        The Critical Assessment of Metaproteome Investigation (CAMPI) is a
-        series of studies that aim to evaluate and improve the state-of-the-art
-        in metaproteomics. These studies have been conducted over the years by a
-        large number of research groups. The goal of CAMPI is to identify the
-        strengths and limitations of current metaproteomics methods, and to
-        develop new strategies and approaches to better understand the proteins
-        present in a given environment. This overview page provides a summary of
-        past and current CAMPI studies, including their findings and
-        contributions to the field of metaproteomics.
+        The Critical Assessment of Metaproteome Investigation (CAMPI) is a series of studies that aim to evaluate and improve the state-of-the-art in metaproteomics. 
+        These studies have been conducted over the years by a large number of research groups. 
+        The goal of CAMPI is to identify the strengths and limitations of current metaproteomics methods, and to develop new strategies and approaches to better understand the proteins present in a given environment. 
+        This overview page provides a summary of past and current CAMPI studies, including their findings and contributions to the field of metaproteomics. 
       </p>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">Call for CAMPIs</h2>
+      <p class="text-slate-500">
+        As announced at the last IMS, 3 new CAMPIs are being launched and require your participation. 
+        You can find more information and a link for registration below.
+      </p>
+      <h3 class="font-medium text-xl text-gray-800">CAMPI_Quantification</h3>
+      <p class="text-slate-500">
+        Accurate quantification of peptides and proteins is essential for understanding biological processes, identifying biomarkers, and advancing diagnostics and therapeutic research.
+        This project invites mass spectrometry (MS) analytical laboratories and bioinformatics groups to evaluate the reproducibility and quantification capabilities of advanced MS platforms. 
+        Human fecal samples will be processed and spiked with a defined set of peptide standards at varying concentrations to assess response linearity, reproducibility and peptide/protein quantitation. 
+        These samples will be analyzed using standardized data-independent acquisition (DIA) protocols across multiple MS platforms.
+        With this project, we aim to harness the capabilities of advanced mass spectrometers for accurate and comprehensive quantification of peptides and proteins, ultimately revealing biological functions within complex biological matrices.
+      </p>
+      <h3 class="font-medium text-xl text-gray-800">CAMPI_Multi-omics</h3>
+      <p class="text-slate-500">
+        Integrated multi-omic approaches can provide a comprehensive evaluation of microbiomes but the range of omics methods and approaches each give somewhat distinct and sometimes confusing correlations.
+        This project will first take advantage of several existing datasets to benchmark multi-omics pipelines (from preanalytical methods to data generation and processing) and validate the findings on a newly generated and controlled dataset.
+        With this project, we aim to select the most suitable methods for meta-omics, establish best practices for integrated omics, and perform comparative analyses across microbiomes. 
+        Scientists from all fields of omics are strongly encouraged to participate in design and execution of CAMPI multi-omics.
+      </p>
+      <h3 class="font-medium text-xl text-gray-800">CAMPI_Proteins of Unknown Function (PUF)</h3>
+      <p class="text-slate-500">
+        Only about 50% of genes can be annotated from metagenomics data, with the rest of them spanning from pure unknown to some degrees of annotations and identifications in samples.
+        This project invites the community collect, mine, and collate metaproteome datasets for conserved PUFs (identified in more than one sample but with no annotation) in human gut microbiomes.
+        With this project, we aim to devise methods to extract information about conserved PUFs, notably relying on what metaproteomic analyses already provide and extend it with other methods to help characterize these conserved PUFs.
+      </p>
+
+      <div>
+        <span class="font-bold">Registration:</span> <a href="https://forms.gle/Y3GFUtbbao9RAjUz9" class="text-blue-500 underline">https://forms.gle/Y3GFUtbbao9RAjUz9</a>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-medium text-2xl text-gray-800">Previous and ongoing CAMPIs</h2>
     </div>
 
     <main class="mt-16">
@@ -43,9 +75,9 @@ const campis = await getCollection("campi");
               </div>
               <div>
                 <h3 class="font-semibold text-lg">{campi.data.title}</h3>{" "}
-                <p class="text-slate-500 mb-2 leading-relaxed">
+                <div class="text-slate-500 mb-2 leading-relaxed">
                   {campi.data.summary}
-                </p>
+                </div>
               </div>
             </a>
           ))

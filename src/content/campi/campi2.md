@@ -1,7 +1,8 @@
 ---
-title: CAMPI 2
-subTitle: "Sample handling - call for participants"
-summary: Sample handling - call for participants
+title: CAMPI 2 - in revision
+subTitle: "Sample handling "
+summary: Sample handling
+biorxiv: https://www.biorxiv.org/content/10.1101/2025.01.31.635836v2.abstract
 ---
 
 CAMPI 2 is a new Critical Assessment of MetaProteome Investigation (CAMPI) launched to establish a collaborative research program focused on methods for sample handling to preserve metaproteins function before microbiota analysis.
