@@ -28,6 +28,9 @@ Attending the IMS in Oslo was a fantastic experience! As a doctoral student, I h
 ### Travel grant, Benoit Kunath
 The IMS has quickly become one of the events I’m looking forward the most. [Learn more from Benoit’s experience](https://metaproteomics.org/articles/2025-03-25-award-winners-take-on-6th-metaproteomics-symposium/)
 
+### ISME Trailblazer Award, Grace DAngelo
+I was very excited to attend the IMS6 this year in Oslo and grateful for the opportunity to present my work. At the beginning of my PhD, I had a strong interest in learning metaproteomics and the personal goal of attending at least one IMS meeting. [Learn more from Grace's experience](https://metaproteomics.org/articles/2025-03-25-award-winners-take-on-6th-metaproteomics-symposium/)
+
 # Best Manuscript Award
 ![Best manuscript award](/images/2025_03_newsletter/best_manuscript_award.jpg)
 
