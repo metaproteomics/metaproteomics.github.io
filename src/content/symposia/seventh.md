@@ -16,7 +16,9 @@ The International Metaproteomics Symposium is the leading event in the field of 
 The symposium welcomes international scientists from every career stage and is characterised by its human dimension and promotion of high-quality interactions. The symposium is organized into sessions featuring brief presentations, aiming to provide ample opportunities for researchers in the field to present their work to a wide audience.
 
 **Location:** Dessau-Roßlau, Germany
+
 **Dates:** June 21 - 24, 2026
+
 **Topics:** Emerging methods, e.g. single protein sequencing, Microbiomes in health and disease, Environmental microbiomes, Microbiomes of human-made habitats (e.g. food, technical systems), Ancient proteins, Integrative multi-omics, bioinformatics, and modelling
 
 Stay tuned for the call for abstracts and registration details coming soon!
