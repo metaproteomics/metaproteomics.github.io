@@ -1,0 +1,966 @@
+{
+  "countries": [
+    {
+      "country": "Australia",
+      "labs": [
+        {
+          "name": "Immunoproteomics laboratory",
+          "website": "https://www.monash.edu/discovery-institute/purcell-lab",
+          "institute": "Monash University",
+          "city": "Clayton",
+          "groupLeader": "Prof. Anthony Purcell",
+          "country": "Australia"
+        },
+        {
+          "name": "Type 1 diabetes pathogenesis and therapy",
+          "website": "https://di.uq.edu.au/profile/1399/emma-hamilton-williams",
+          "institute": "University of Queensland",
+          "city": "Brisbane",
+          "groupLeader": "Dr. Emma Hamilton-Williams",
+          "country": "Australia"
+        }
+      ]
+    },
+    {
+      "country": "Austria",
+      "labs": [
+        {
+          "name": "Center for Microbiology and Environmental Systems Science",
+          "website": "",
+          "institute": "University of Vienna",
+          "city": "Vienna",
+          "groupLeader": "Prof. Wolfgang Wanek",
+          "country": "Austria"
+        },
+        {
+          "name": "Institute of Soil Research",
+          "website": "",
+          "institute": "University of Natural Resources and Life Sciences",
+          "city": "Vienna",
+          "groupLeader": "Prof. Sophie Zechmeister-Boltenstern",
+          "country": "Austria"
+        },
+        {
+          "name": "Systems Biology of Pain. Division of Pharmacology & Toxicology",
+          "website": "",
+          "institute": "University of Vienna",
+          "city": "Vienna",
+          "groupLeader": "Prof. Manuela Schmidt",
+          "country": "Austria"
+        }
+      ]
+    },
+    {
+      "country": "Belgium",
+      "labs": [
+        {
+          "name": "CompOmics",
+          "website": "https://www.compomics.com/",
+          "institute": "Ghent University",
+          "city": "Ghent",
+          "groupLeader": "Prof. Lennart Martens",
+          "country": "Belgium"
+        },
+        {
+          "name": "Computational Biology Group",
+          "website": "",
+          "institute": "Ghent University",
+          "city": "Ghent",
+          "groupLeader": "Prof. Peter Dawyndt",
+          "country": "Belgium"
+        },
+        {
+          "name": "Proteomics and microbiology",
+          "website": "",
+          "institute": "University of Mons",
+          "city": "Mons",
+          "groupLeader": "Prof. Ruddy Wattiez",
+          "country": "Belgium"
+        },
+        {
+          "name": "Puratos",
+          "website": "",
+          "institute": "Industry",
+          "city": "Brussels",
+          "groupLeader": "Dr. Azadeh Mohammadi",
+          "country": "Belgium"
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "labs": [
+        {
+          "name": "Bioinformatics of Proteomics and Network Biology lab",
+          "website": "",
+          "institute": "Ottawa",
+          "city": "",
+          "groupLeader": "Prof. Mathieu Lavallée-Adam",
+          "country": "Canada"
+        },
+        {
+          "name": "Cellular immunology and mass spectrometry laboratory",
+          "website": "",
+          "institute": "Health Canada",
+          "city": "Ottawa",
+          "groupLeader": "Dr. Xu Zhang",
+          "country": "Canada"
+        },
+        {
+          "name": "Energy Bioengineering Group",
+          "website": "https://ucalgary.ca/labs/ebg",
+          "institute": "University of Calgary",
+          "city": "Calgary",
+          "groupLeader": "Dr. Marc Strous",
+          "country": "Canada"
+        },
+        {
+          "name": "Northomics lab",
+          "website": "http://northomics.ca/",
+          "institute": "University of Ottawa",
+          "city": "Ottawa",
+          "groupLeader": "Prof. Daniel Figeys",
+          "country": "Canada"
+        }
+      ]
+    },
+    {
+      "country": "China",
+      "labs": [
+        {
+          "name": "Guomics Lab",
+          "website": "",
+          "institute": "Westlake University",
+          "city": "Hangzhou",
+          "groupLeader": "Dr. Tiannan Guo",
+          "country": "China"
+        },
+        {
+          "name": "Liang Qiao’s Research Group",
+          "website": "https://faculty.fudan.edu.cn/qiaoliang/zh_CN//",
+          "institute": "Fudan University",
+          "city": "Shanghai",
+          "groupLeader": "Prof. Liang Qiao",
+          "country": "China"
+        },
+        {
+          "name": "Liu’s lab",
+          "website": "",
+          "institute": "University of Chinese Academy and Sciences",
+          "city": "Shenzhen",
+          "groupLeader": "Prof. Siqi Liu",
+          "country": "China"
+        },
+        {
+          "name": "Key Laboratory of Biointeractions and Green Pest Control and Prevention, College of Plant Protection",
+          "website": "https://plant-en.njau.edu.cn/",
+          "institute": "Nanjing Agricultural University",
+          "city": "Nanjing",
+          "groupLeader": "Prof. Dr. Yuan Chao Wang",
+          "country": "China"
+        },
+        {
+          "name": "Proteome-level Microbial Systems Ecology",
+          "website": "",
+          "institute": "ProMiSE Lab",
+          "city": "",
+          "groupLeader": "Dr. Leyuan Li",
+          "country": "China"
+        },
+        {
+          "name": "Rumen microbiome group",
+          "website": "https://loop.frontiersin.org/people/255437",
+          "institute": "Institute of Animal Sciences, Chinese Academy of Agricultural Sciences",
+          "city": "Beijing",
+          "groupLeader": "Prof. Shengguo Zhao",
+          "country": "China"
+        },
+        {
+          "name": "Wastewater Treatment Biotechnology and Aquatic Environment Remediation",
+          "website": "",
+          "institute": "Nanjing University",
+          "city": "Nanjing",
+          "groupLeader": "Prof. Hongqiang Ren",
+          "country": "China"
+        },
+        {
+          "name": "High Efficient Separation and Characterization of Biomolecules",
+          "website": "http://www.proteomics.dicp.ac.cn/index.htm",
+          "institute": "Dalian Institute of Chemical Physics, Chinese Academy of Sciences, Dalian",
+          "city": "Liaoning",
+          "groupLeader": "Prof. Lihua Zhang",
+          "country": "China"
+        }
+      ]
+    },
+    {
+      "country": "Denmark",
+      "labs": [
+        {
+          "name": "Environmental Biology Monitoring",
+          "website": "",
+          "institute": "Aalborg University",
+          "city": "Aalborg",
+          "groupLeader": "Prof. Jeppe Lund Nielsen",
+          "country": "Denmark"
+        }
+      ]
+    },
+    {
+      "country": "Estonia",
+      "labs": [
+        {
+          "name": "Metagenomics and Analytics",
+          "website": "",
+          "institute": "Tftak",
+          "city": "Tallinn",
+          "groupLeader": "Ms. Jekaterina Kazantseva",
+          "country": "Estonia"
+        }
+      ]
+    },
+    {
+      "country": "Finland",
+      "labs": [
+        {
+          "name": "Computational Biomedicine",
+          "website": "https://elolab.utu.fi/",
+          "institute": "University of Turku",
+          "city": "Turku",
+          "groupLeader": "Prof. Laura Elo",
+          "country": "Finland"
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "labs": [
+        {
+          "name": "Micalis Institute",
+          "website": "http://www2.agroparistech.fr/Micalis-Microbiologie-de-l.html",
+          "institute": "INRAE, AgroParisTech, Universite Paris-Saclay",
+          "city": "Jouy-en-Josas",
+          "groupLeader": "Catherine Juste",
+          "country": "France"
+        },
+        {
+          "name": "PAPPSO proteomic facility",
+          "website": "http://pappso.inrae.fr/",
+          "institute": "INRAE",
+          "city": "Paris",
+          "groupLeader": "Céline Henry and Olivier Langella",
+          "country": "France"
+        },
+        {
+          "name": "Phylogene Mass Spec lab and dedicated Bioinformatics",
+          "website": "https://phylogene.com/",
+          "institute": "Phylogene",
+          "city": "Nîmes",
+          "groupLeader": "Mr. Gilbert Skorski",
+          "country": "France"
+        },
+        {
+          "name": "ProGenoMix platform",
+          "website": "https://www.ibisa.net/plateformes/progenomix-570.html",
+          "institute": "CEA",
+          "city": "Bagnols-sur-Cèze",
+          "groupLeader": "Dr. Jean Armengaud",
+          "country": "France"
+        },
+        {
+          "name": "Systems biology of microbial consortia",
+          "website": "http://www.toulouse-biotechnology-institute.fr/",
+          "institute": "Toulouse Biotechnology Institute",
+          "city": "Toulouse",
+          "groupLeader": "Dr. Guillermina Hernandez-Raquet",
+          "country": "France"
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "labs": [
+        {
+          "name": "Applied Bioinformatics Group",
+          "website": "http://kohlbacherlab.org/",
+          "institute": "University of Tübingen",
+          "city": "Tübingen",
+          "groupLeader": "Prof. Oliver Kohlbacher",
+          "country": "Germany"
+        },
+        {
+          "name": "BAM eScience Group",
+          "website": "http://www.esciencelab.de/",
+          "institute": "Federal Institute for Materials Research and Testing (BAM",
+          "city": "",
+          "groupLeader": "Dr. Thilo Muth",
+          "country": "Germany"
+        },
+        {
+          "name": "Chair of Bioprocess Engineering",
+          "website": "",
+          "institute": "Otto von Guericke University",
+          "city": "Magdeburg",
+          "groupLeader": "Prof. Udo Reichl",
+          "country": "Germany"
+        },
+        {
+          "name": "Department of Environmental Biotechnology",
+          "website": "",
+          "institute": "Helmholtz Centre for Environmental Research – UFZ",
+          "city": "Leipzig",
+          "groupLeader": "Prof. Lorenz Adrian",
+          "country": "Germany"
+        },
+        {
+          "name": "Functional Microbiology in Animal Science group",
+          "website": "",
+          "institute": "Stuttgart",
+          "city": "",
+          "groupLeader": "Prof. Jana Seifert",
+          "country": "Germany"
+        },
+        {
+          "name": "Data Analytics & Computational Statistics Group",
+          "website": "",
+          "institute": "HPI Potsdam",
+          "city": "",
+          "groupLeader": "Bernhard Renard",
+          "country": "Germany"
+        },
+        {
+          "name": "MF1 - Bioinformatics Group",
+          "website": "",
+          "institute": "RKI Berlin",
+          "city": "",
+          "groupLeader": "Stephan Fuchs",
+          "country": "Germany"
+        },
+        {
+          "name": "Microbial Communities",
+          "website": "",
+          "institute": "Magdeburg",
+          "city": "",
+          "groupLeader": "Dr. Dirk Benndorf",
+          "country": "Germany"
+        },
+        {
+          "name": "Microbial Proteomics",
+          "website": "https://microbialproteomics.uni-greifswald.de/en/",
+          "institute": "University of Greifswald",
+          "city": "Greifswald",
+          "groupLeader": "Prof. Katharina Riedel and Prof. Dörte Becher",
+          "country": "Germany"
+        },
+        {
+          "name": "Microbial Communities",
+          "website": "https://www.hs-anhalt.de/hochschule-anhalt/angewandte-biowissenschaften-und-prozesstechnik/forschung/forschungsgruppen/mikrobielle-gemeinschaften/start.html",
+          "institute": "Anhalt University of Applied Sciences",
+          "city": "Köthen",
+          "groupLeader": "Prof. Dirk Benndorf",
+          "country": "Germany"
+        },
+        {
+          "name": "Microbiome Biology",
+          "website": "https://www.ufz.de/index.php?en=44127",
+          "institute": "Helmholtz-Centre for Environmental Research - UFZ",
+          "city": "Leipzig",
+          "groupLeader": "Dr. Nico Jehmlich",
+          "country": "Germany"
+        },
+        {
+          "name": "Multidimensional omics data analysis",
+          "website": "",
+          "institute": "ISAS e.V.",
+          "city": "Dortmund",
+          "groupLeader": "Jun.-Prof. Robert Heyer",
+          "country": "Germany"
+        },
+        {
+          "name": "Proteomics and Signal Transduction",
+          "website": "https://www.biochem.mpg.de/mann",
+          "institute": "Ludwig Maximilians Uni Munich",
+          "city": "Munich",
+          "groupLeader": "Prof. Matthias Mann",
+          "country": "Germany"
+        },
+        {
+          "name": "Bavarian Center for Biomolecular Mass Spectrometry",
+          "website": "https://www.tcf.tum.de/baybioms/ludwig-group/",
+          "institute": "BayBioMS",
+          "city": "Freising",
+          "groupLeader": "Dr. Christina Ludwig",
+          "country": "Germany"
+        },
+        {
+          "name": "Proteomics and Spectroscopy",
+          "website": "",
+          "institute": "Robert Koch-Institute",
+          "city": "Berlin",
+          "groupLeader": "Dr. Peter Lasch",
+          "country": "Germany"
+        }
+      ]
+    },
+    {
+      "country": "Greece",
+      "labs": [
+        {
+          "name": "Laboratory of Comparative Physiology and Pathophysiology",
+          "website": "",
+          "institute": "University of Thessaly",
+          "city": "Karditsa",
+          "groupLeader": "Prof. Angeliki Katsafadou",
+          "country": "Greece"
+        }
+      ]
+    },
+    {
+      "country": "India",
+      "labs": [
+        {
+          "name": "Bioenergy group",
+          "website": "",
+          "institute": "Agharkar Research Institute",
+          "city": "Pune",
+          "groupLeader": "Dr. Prashant Dhakephalkar",
+          "country": "India"
+        },
+        {
+          "name": "Infection Bioengineering Group",
+          "website": "https://sites.google.com/view/infectionbioengineering",
+          "institute": "Indian Institute of Technology Indore",
+          "city": "Indore",
+          "groupLeader": "Dr. Hem Chandra Jha",
+          "country": "India"
+        },
+        {
+          "name": "Micro-omics Lab",
+          "website": "",
+          "institute": "CSIR-National Institute of Oceanography",
+          "city": "Goa",
+          "groupLeader": "Dr. Samir R. Damare",
+          "country": "India"
+        },
+        {
+          "name": "Department Of Neurochemistry",
+          "website": "",
+          "institute": "National Institute of Mental Health and Neurosciences",
+          "city": "Bengaluru",
+          "groupLeader": "Dr. Gokulakrishnan Kuppan",
+          "country": "India"
+        },
+        {
+          "name": "Clinical Proteomics Laboratory",
+          "website": "https://www.ils.res.in/scientists/amol-ratnakar-suryawanshi/",
+          "institute": "BRIC-Institute of Life Sciences",
+          "city": "Bhubaneswar",
+          "groupLeader": "Dr. Amol Ratnakar Suryawanshi",
+          "country": "India"
+        }
+      ]
+    },
+    {
+      "country": "Ireland",
+      "labs": [
+        {
+          "name": "Functional Environmental Microbiology",
+          "website": "",
+          "institute": "University of Galway",
+          "city": "Galway",
+          "groupLeader": "Dr. Florence Abram",
+          "country": "Ireland"
+        }
+      ]
+    },
+    {
+      "country": "Israel",
+      "labs": [
+        {
+          "name": "Lobel Lab",
+          "website": "",
+          "institute": "Bar-Ilan University",
+          "city": "Ramat Gan",
+          "groupLeader": "Dr. Lior Lobel",
+          "country": "Israel"
+        }
+      ]
+    },
+    {
+      "country": "Italy",
+      "labs": [
+        {
+          "name": "Center for Research and Education on the Microbiota",
+          "website": "",
+          "institute": "University of Sassari",
+          "city": "Sassari",
+          "groupLeader": "Prof. Sergio Uzzau",
+          "country": "Italy"
+        },
+        {
+          "name": "Human Microbiome",
+          "website": "https://www.ospedalebambinogesu.it/microbioma-umano-94861/",
+          "institute": "Bambino Gesù Children’s Hospital",
+          "city": "Rome",
+          "groupLeader": "Prof. Lorenza Putignani",
+          "country": "Italy"
+        },
+        {
+          "name": "Microbial proteomics - one health section",
+          "website": "",
+          "institute": "University of Milan",
+          "city": "Milan",
+          "groupLeader": "Prof. Alessio Soggiu",
+          "country": "Italy"
+        },
+        {
+          "name": "microbial biochemistry, proteomics and metabolic engineering",
+          "website": "",
+          "institute": "University of Torino",
+          "city": "Torino",
+          "groupLeader": "Prof. Enrica Pessione",
+          "country": "Italy"
+        }
+      ]
+    },
+    {
+      "country": "Japan",
+      "labs": [
+        {
+          "name": "Trans-Omics",
+          "website": "",
+          "institute": "Kitasato University",
+          "city": "Sagamihara",
+          "groupLeader": "Prof. Shin Kawano",
+          "country": "Japan"
+        }
+      ]
+    },
+    {
+      "country": "Luxemburg",
+      "labs": [
+        {
+          "name": "Biotechnologies and Environmental Analytics Platform",
+          "website": "http://www.list.lu/",
+          "institute": "Belvaux",
+          "city": "",
+          "groupLeader": "Dr. Jenny Renaut",
+          "country": "Luxemburg"
+        },
+        {
+          "name": "Genome Analysis",
+          "website": "",
+          "institute": "Luxembourg Centre for Systems Biomedicine",
+          "city": "Esch-sur-Alzette",
+          "groupLeader": "Dr. Patrick May",
+          "country": "Luxemburg"
+        },
+        {
+          "name": "Systems Ecology",
+          "website": "https://wwwen.uni.lu/lcsb/research/systems_ecology",
+          "institute": "University of Luxembourg",
+          "city": "Luxembourg",
+          "groupLeader": "Prof. Paul Wilmes",
+          "country": "Luxemburg"
+        }
+      ]
+    },
+    {
+      "country": "The Netherlands",
+      "labs": [
+        {
+          "name": "Center for Proteomics and Metabolomics",
+          "website": "http://cpm.lumc.nl/about-this-group-225",
+          "institute": "Leiden University Medical Center",
+          "city": "Leiden",
+          "groupLeader": "Prof. Magnus Palmblad",
+          "country": "The Netherlands"
+        },
+        {
+          "name": "Mass Spectrometry of Biomolecules",
+          "website": "",
+          "institute": "University of Amsterdam",
+          "city": "Amsterdam",
+          "groupLeader": "Dr. Gertjan Kramer",
+          "country": "The Netherlands"
+        },
+        {
+          "name": "Microbial proteomics lab",
+          "website": "",
+          "institute": "Delft University of Technology",
+          "city": "Delft",
+          "groupLeader": "Dr. Martin Pabst",
+          "country": "The Netherlands"
+        }
+      ]
+    },
+    {
+      "country": "Norway",
+      "labs": [
+        {
+          "name": "Microbial Ecology and Meta-Omics Group",
+          "website": "https://www.nmbu.no/en/research/groups/memo",
+          "institute": "NMBU",
+          "city": "Aas",
+          "groupLeader": "Assoc. Prof. Phil Pope and Dr. Magnus Arntzen",
+          "country": "Norway"
+        },
+        {
+          "name": "The Protein engineering and proteomics group",
+          "website": "",
+          "institute": "NMBU",
+          "city": "Aas",
+          "groupLeader": "Prof. Vincent Eijsink",
+          "country": "Norway"
+        }
+      ]
+    },
+    {
+      "country": "Romania",
+      "labs": [
+        {
+          "name": "Protein Chemistry Facility",
+          "website": "http://cristianvamunteanu.tk/",
+          "institute": "PCF",
+          "city": "",
+          "groupLeader": "Dr. Christian Munteanu",
+          "country": "Romania"
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "labs": [
+        {
+          "name": "Laboratory of Microbiology",
+          "website": "https://www.christieoleza-lab.com/",
+          "institute": "University of the Balearic Islands",
+          "city": "Palma",
+          "groupLeader": "Dr. Joseph Christie-Oleza",
+          "country": "Spain"
+        },
+        {
+          "name": "Microbiology and proteomics",
+          "website": "",
+          "institute": "IVAGRO",
+          "city": "",
+          "groupLeader": "Prof. Francisco Javier Fernández Acero",
+          "country": "Spain"
+        },
+        {
+          "name": "Microbiota in infant development",
+          "website": "https://cibm.ugr.es/pages/lineasdeinvestigacion",
+          "institute": "University of Granada",
+          "city": "Granada",
+          "groupLeader": "Dr. Antonio Suarez",
+          "country": "Spain"
+        },
+        {
+          "name": "Microorganism - Host Interaction. Human Proteome Project",
+          "website": "https://www.ucm.es/candida-en/investigation-group",
+          "institute": "Universidad Complutense de Madrid",
+          "city": "Madrid",
+          "groupLeader": "dr. Concha Gil",
+          "country": "Spain"
+        },
+        {
+          "name": "Molecular Oncology and Pathology Lab",
+          "website": "",
+          "institute": "Hospital Universitario La Paz",
+          "city": "Madrid",
+          "groupLeader": "Dr. Juan Ángel Fresno Vara",
+          "country": "Spain"
+        }
+      ]
+    },
+    {
+      "country": "Sweden",
+      "labs": [
+        {
+          "name": "Clinical microbiology",
+          "website": "https://www.gu.se/en/research/",
+          "institute": "Sahlgrenska University Hospital",
+          "city": "Gothenburg",
+          "groupLeader": "Assoc. Professor Roger Karlsson",
+          "country": "Sweden"
+        }
+      ]
+    },
+    {
+      "country": "Switzerland",
+      "labs": [
+        {
+          "name": "Bioinformatics and Proteogenomics Group",
+          "website": "https://www.sib.swiss/christian-ahrens-group",
+          "institute": "SIB Swiss Institute of Bioinformatics",
+          "city": "Wädenswil",
+          "groupLeader": "Dr. Christian Ahrens",
+          "country": "Switzerland"
+        },
+        {
+          "name": "Microbial Evogenomics Lab, Department of Plant and Microbial Biology",
+          "website": "https://www.botinst.uzh.ch/en/research/limnology/andrei/research.html",
+          "institute": "University of Zurich",
+          "city": "Zurich",
+          "groupLeader": "Dr. Adrian-Stefan Andrei",
+          "country": "Switzerland"
+        }
+      ]
+    },
+    {
+      "country": "Turkey",
+      "labs": [
+        {
+          "name": "Microbiomics",
+          "website": "",
+          "institute": "Istanbul University",
+          "city": "Istanbul",
+          "groupLeader": "Dr. Muzaffer Arıkan",
+          "country": "Turkey"
+        }
+      ]
+    },
+    {
+      "country": "United Kingdom",
+      "labs": [
+        {
+          "name": "Environmental Molecular Microbiology Group",
+          "website": "https://sites.google.com/sheffield.ac.uk/lidbury-ecophysiology-lab",
+          "institute": "University of Sheffield",
+          "city": "Sheffield",
+          "groupLeader": "Dr. Ian Lidbury",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "Graystock lab",
+          "website": "http://www.graystock.info/",
+          "institute": "Imperial College London",
+          "city": "Ascot",
+          "groupLeader": "Dr. Peter Graystock",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "Microbial Systems Engineering",
+          "website": "https://www.pandhalresearchgroup.co.uk/",
+          "institute": "The University of Sheffield",
+          "city": "Sheffield",
+          "groupLeader": "Dr. Jags Pandhal",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "Molecular Ecotoxicology and Environmental Proteomics",
+          "website": "https://www.stir.ac.uk/people/257410#research",
+          "institute": "University of Stirling",
+          "city": "Stirling",
+          "groupLeader": "Dr. Sabine Matallana Surget",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "Patil lab",
+          "website": "",
+          "institute": "University of Cambridge",
+          "city": "Cambridge",
+          "groupLeader": "Dr. Kiran Raosaheb Patil",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "Proteomics team",
+          "website": "https://www.ebi.ac.uk/about/people/juan-vizcaino",
+          "institute": "EMBL-EBI",
+          "city": "Hinxton",
+          "groupLeader": "Dr. Juan Antonio Vizcaino",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "Roslin Proteomics and Metabolomics Facility",
+          "website": "",
+          "institute": "University of Edinburgh",
+          "city": "Edinburgh",
+          "groupLeader": "Dr. Dominic Kurian",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "AI & Metaproteomics for Human Gut Health",
+          "website": "",
+          "institute": "Quadram Institute Bioscience",
+          "city": "Norwich",
+          "groupLeader": "Dr. Kai Cheng",
+          "country": "United Kingdom"
+        },
+        {
+          "name": "Quadram Institute",
+          "website": "https://quadram.ac.uk/people/daniel-figeys/",
+          "institute": "Quadram Institute",
+          "city": "Norwich",
+          "groupLeader": "Daniel Figeys",
+          "country": "United Kingdom"
+        }
+      ]
+    },
+    {
+      "country": "United States of America",
+      "labs": [
+        {
+          "name": "Bhatt lab",
+          "website": "http://bhattlab.com/",
+          "institute": "Stanford University",
+          "city": "Stanford",
+          "groupLeader": "Prof. Ami Bhatt",
+          "country": "United States of America"
+        },
+        {
+          "name": "Bioanalysis and Omics Center, Analytical Resources Core,",
+          "website": "https://www.research.colostate.edu/bio/",
+          "institute": "Colorado State University, Fort Collins",
+          "city": "CO",
+          "groupLeader": "Dr. Corey Broeckling",
+          "country": "United States of America"
+        },
+        {
+          "name": "Bioanalytical Mass Spectrometry",
+          "website": "https://www.ornl.gov/group/bioanalytical-mass-spectrometry",
+          "institute": "Oak Ridge National Laboratory, Oak Ridge",
+          "city": "TN",
+          "groupLeader": "Dr. Robert L. Hettich",
+          "country": "United States of America"
+        },
+        {
+          "name": "Biochemical and Exposure Science Group",
+          "website": "",
+          "institute": "NIST-Charleston, Charleston",
+          "city": "SC",
+          "groupLeader": "Dr. Benjamin Neely",
+          "country": "United States of America"
+        },
+        {
+          "name": "Bioinformatics lab",
+          "website": "https://homes.luddy.indiana.edu/yye",
+          "institute": "Indiana University, Bloomington",
+          "city": "IN",
+          "groupLeader": "Dr. Yuzhen Ye",
+          "country": "United States of America"
+        },
+        {
+          "name": "Biomolecular Pathways Integrated Research Core",
+          "website": "https://metaproteomics.org/groups/emsl.pnnl.gov",
+          "institute": "Pacific Northwest National Laboratory",
+          "city": "Richland",
+          "groupLeader": "Dr. Mary Lipton",
+          "country": "United States of America"
+        },
+        {
+          "name": "Functional and Systems Biology",
+          "website": "https://www.emsl.pnnl.gov/science/functional-and-systems-biology",
+          "institute": "Pacific Northwest National Laboratory, Richland",
+          "city": "WA",
+          "groupLeader": "Dr. Kristin Burnum-Johnson",
+          "country": "United States of America"
+        },
+        {
+          "name": "Computational Omics Lab",
+          "website": "",
+          "institute": "Indiana University, Bloomington",
+          "city": "IN",
+          "groupLeader": "Prof. Haixu Tang",
+          "country": "United States of America"
+        },
+        {
+          "name": "Gastrointestinal Barrier Function Laboratory",
+          "website": "",
+          "institute": "Mayo Clinic, Rochester",
+          "city": "MN",
+          "groupLeader": "Dr. Madhusudan Grover",
+          "country": "United States of America"
+        },
+        {
+          "name": "Griffin Research Group/Galaxy-P",
+          "website": "https://galaxyp.org/",
+          "institute": "University of Minnesota, Minneapolis",
+          "city": "MN",
+          "groupLeader": "Dr. Pratik Jagtap and Prof. Timothy Griffin",
+          "country": "United States of America"
+        },
+        {
+          "name": "Intestinal Regenerative Medicine Lab",
+          "website": "https://cvm.ncsu.edu/research/labs/clinical-sciences/intestinal-regenerative-medicine/",
+          "institute": "North Carolina State University, Raleigh",
+          "city": "NC",
+          "groupLeader": "Prof. Liara M. Gonzalez",
+          "country": "United States of America"
+        },
+        {
+          "name": "Kleiner Lab",
+          "website": "https://kleinerlab.cals.ncsu.edu/",
+          "institute": "North Carolina State University, Raleigh",
+          "city": "NC",
+          "groupLeader": "Dr. Manuel Kleiner",
+          "country": "United States of America"
+        },
+        {
+          "name": "Mass Spectrometry Core Facility",
+          "website": "",
+          "institute": "Arizona State University",
+          "city": "Tempe",
+          "groupLeader": "Prof. Tim Karr",
+          "country": "United States of America"
+        },
+        {
+          "name": "Nunn Lab- Environmental Proteomics",
+          "website": "http://environmentalproteomics.org/",
+          "institute": "University of Washington",
+          "city": "Seattle",
+          "groupLeader": "Prof. Brook Nunn",
+          "country": "United States of America"
+        },
+        {
+          "name": "Nutritional Immunology",
+          "website": "",
+          "institute": "Arkansas Children’s Nutrition Center, Little Rock",
+          "city": "AR",
+          "groupLeader": "Dr. Laxmi Yeruva",
+          "country": "United States of America"
+        },
+        {
+          "name": "Quantitative Molecular Biological Physics",
+          "website": "",
+          "institute": "National Center for Biothenology, Bethesda",
+          "city": "Maryland",
+          "groupLeader": "Dr. Yi-Kuo Yu",
+          "country": "United States of America"
+        },
+        {
+          "name": "RAW lab",
+          "website": "http://www.rawlab.com/",
+          "institute": "UNCC, Charlotte",
+          "city": "NC",
+          "groupLeader": "Dr. Richard Allen White III",
+          "country": "United States of America"
+        },
+        {
+          "name": "Saeed Lab",
+          "website": "https://saeedlab.cis.fiu.edu/",
+          "institute": "FIU, Miami",
+          "city": "FL",
+          "groupLeader": "Prof. Fahad Saeed",
+          "country": "United States of America"
+        },
+        {
+          "name": "Saito Lab",
+          "website": "https://metaproteomics.org/groups/Www.WHOI.edu/saitolab",
+          "institute": "Woods Hole Oceanographic Institution",
+          "city": "Massachusetts",
+          "groupLeader": "Prof. Mak Saito",
+          "country": "United States of America"
+        },
+        {
+          "name": "Wright Group – Chemical Biology of Microbiomes",
+          "website": "",
+          "institute": "Baylor University, Waco",
+          "city": "Texas",
+          "groupLeader": "Prof. Aaron Wright",
+          "country": "United States of America"
+        }
+      ]
+    }
+  ]
+}
