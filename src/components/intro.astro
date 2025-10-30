@@ -1,6 +1,5 @@
 ---
-// @ts-ignore
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import groupPicture from "assets/group.jpg";
 ---
 
@@ -62,13 +61,12 @@ import groupPicture from "assets/group.jpg";
     </p>
   </div>
   <div class="pt-16 pl-2 sm:order-1 hidden sm:block">
-    <Picture
+    <Image
       src={groupPicture}
       alt="Group picture"
       widths={[200, 400, 600]}
       sizes="(max-width: 600px) 100vw, 600px"
       loading="eager"
-      format="avif"
     />
   </div>
 </main>

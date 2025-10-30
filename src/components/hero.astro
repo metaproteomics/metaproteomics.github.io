@@ -1,21 +1,19 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 import heroImage from "assets/mpilogo.png";
 import Link from "@components/ui/link.astro";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 lg:order-1 hidden lg:block">
-    <Picture
+    <Image
       src={heroImage}
       alt="MPI logo"
       widths={[200, 400, 600]}
-      aspectRatio="4:4"
       sizes="(max-width: 400px) 100vw, 400px"
       loading="eager"
-      format="avif"
     />
   </div>
   <div>
@@ -28,7 +26,6 @@ import { Icon } from "astro-icon";
     </p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
       <Link
-        href="#"
         href="https://forms.gle/zAqJDPZNvf7vSoNi9"
         target="_blank"
         class="flex gap-1 items-center justify-center"
@@ -39,7 +36,7 @@ import { Icon } from "astro-icon";
       </Link>
       <Link
         size="lg"
-        style="outline"
+        variant="outline"
         rel="noopener"
         href="mailto:info@metaproteomics.org"
         class="flex gap-1 items-center justify-center"
