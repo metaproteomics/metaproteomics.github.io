@@ -8,13 +8,14 @@ import { Icon } from "astro-icon/components";
 <main
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 lg:order-1 hidden lg:block">
-    <Image
-      src={heroImage}
-      alt="MPI logo"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 400px) 100vw, 400px"
-      loading="eager"
-    />
+      <Image
+              src={heroImage}
+              alt="MPI logo"
+              widths={[400, 800, 1200]}
+              sizes="(max-width: 1024px) 50vw, 600px"
+              loading="eager"
+              class="max-w-[500px]"
+      />
   </div>
   <div>
     <h1
