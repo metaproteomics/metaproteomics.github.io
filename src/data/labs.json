@@ -115,6 +115,14 @@
           "country": "Canada"
         },
         {
+          "name": "Jabre Lab",
+          "website": "www.jabrelab.com",
+          "institute": "Mount Allison University",
+          "city": "New Brunswick",
+          "groupLeader": "Dr. Loay Jabre",
+          "country": "Canada"
+        },
+        {
           "name": "Northomics lab",
           "website": "http://northomics.ca/",
           "institute": "University of Ottawa",
@@ -353,6 +361,14 @@
           "country": "Germany"
         },
         {
+          "name": "Multidimensional omics-data analysis",
+          "website": "https://www.uni-bielefeld.de/fakultaeten/technische-fakultaet/forschung/ag-ueberblick/mod/",
+          "institute": "Bielefeld University",
+          "city": "Bielefeld",
+          "groupLeader": "Prof. Dr.-Ing. Robert Heyer",
+          "country": "Germany"
+        },
+        {
           "name": "Microbial Communities",
           "website": "https://www.hs-anhalt.de/hochschule-anhalt/angewandte-biowissenschaften-und-prozesstechnik/forschung/forschungsgruppen/mikrobielle-gemeinschaften/start.html",
           "institute": "Anhalt University of Applied Sciences",
@@ -405,6 +421,14 @@
     {
       "country": "Greece",
       "labs": [
+        {
+          "name": "Institute for Bio-innovation",
+          "website": "https://www.fleming.gr/research/ibi/staff-scientists/m-samiotaki",
+          "institute": "BSRC \"Al. Fleming'",
+          "city": "Athens",
+          "groupLeader": "Dr Martina Samiotaki",
+          "country": "Greece"
+        },
         {
           "name": "Laboratory of Comparative Physiology and Pathophysiology",
           "website": "",
@@ -631,6 +655,14 @@
     {
       "country": "Spain",
       "labs": [
+        {
+          "name": "Chemistry of Marine Products",
+          "website": "https://www.iim.csic.es/",
+          "institute": "Institute of Marine Research",
+          "city": "Vigo",
+          "groupLeader": "Dr. Mónica Carrera",
+          "country": "Spain"
+        },
         {
           "name": "Laboratory of Microbiology",
           "website": "https://www.christieoleza-lab.com/",
