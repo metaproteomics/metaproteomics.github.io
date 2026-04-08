@@ -3,33 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
-
-const menuitems = [
-  {
-    title: "Groups",
-    path: "/groups",
-  },
-  {
-    title: "CAMPI",
-    path: "/campi",
-  },
-  {
-    title: "Education",
-    path: "/education",
-  },
-  {
-    title: "Symposia",
-    path: "/symposia",
-  },
-  {
-    title: "About us",
-    path: "/about",
-  },
-  {
-    title: "News",
-    path: "/news",
-  },
-];
+import { navItems } from "@data/nav";
 ---
 
 <Container>
@@ -48,13 +22,13 @@ const menuitems = [
       <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
-            menuitems.map((item, index) => (
+            navItems.map((item, index) => (
               <>
                 {item.children && (
                   <Dropdown
                     title={item.title}
                     children={item.children}
-                    lastItem={index === menuitems.length - 1}
+                    lastItem={index === navItems.length - 1}
                   />
                 )}
 
