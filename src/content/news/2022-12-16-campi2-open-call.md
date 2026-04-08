@@ -1,6 +1,7 @@
 ---
 title: CAMPI 2 open call
 publishDate: "2022-12-16"
+description: "Open call for laboratories to join CAMPI 2, a community-wide assessment of sample handling and preservation methods for metaproteomics."
 ---
 
 Sample handling is one of the major challenges in metaproteomics research. Directly after sample collection, the taxonomic composition and the ecosystem functioning maybe be influenced by sample storage and transportation (including exposure to temperature, humidity, pH, O2, etc).

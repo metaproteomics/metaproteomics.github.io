@@ -1,6 +1,7 @@
 ---
 title: March 2023 Newsletter
 publishDate: "2023-03-24"
+description: "Newsletter with conference updates, monthly meeting summaries, and research highlights from the community ahead of the IMS 2023 symposium."
 ---
 
 ## From the co-administrators

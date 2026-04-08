@@ -1,6 +1,7 @@
 ---
 title: Commentary in Microbiome
 publishDate: "2021-12-21"
+description: "A commentary announcing the formation and goals of the Metaproteomics Initiative was published open access in the journal Microbiome."
 ---
 
 A commentary on the Metaproteomics Initiative was published in the journal **Microbiome**.

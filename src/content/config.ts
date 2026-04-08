@@ -12,6 +12,7 @@ const newsCollection = defineCollection({
       alt: z.string(),
     }),*/
     publishDate: z.string().transform(str => new Date(str)),
+    description: z.string().optional(),
     //author: z.string().default('Astroship'),
     //category: z.string(),
     //tags: z.array(z.string()),

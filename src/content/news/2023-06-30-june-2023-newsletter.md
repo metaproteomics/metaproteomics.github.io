@@ -1,6 +1,7 @@
 ---
 title: June 2023 Newsletter
 publishDate: "2023-06-30"
+description: "Newsletter with CAMPI 3 status updates, highlights from the IMS 2023 conference in Aveiro, and member research news."
 ---
 
 ## From the co-administrators

@@ -1,6 +1,7 @@
 ---
 title: May 2024 Newsletter
 publishDate: "2024-05-08"
+description: "Newsletter highlighting recent method developments, community progress, and an upcoming June webinar on CAMPI results."
 ---
 
 ## From the co-administrators

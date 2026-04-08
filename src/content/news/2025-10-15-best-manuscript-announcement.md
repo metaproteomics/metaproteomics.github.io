@@ -1,6 +1,7 @@
 ---
 title: Best Manuscript 2026
 publishDate: "2025-10-15"
+description: "Call for submissions for the Best Manuscript Award 2026, to be presented at the 7th International Metaproteomics Symposium in Dessau-Roßlau."
 ---
 
 # MPI Best Manuscript Award 2026

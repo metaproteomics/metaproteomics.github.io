@@ -1,6 +1,7 @@
 ---
 title: December 2022 Newsletter
 publishDate: "2022-12-22"
+description: "First community newsletter from the executive board, featuring updates on board activities, CAMPI progress, and news from the metaproteomics community."
 ---
 
 ## Welcome word from the co-administrators

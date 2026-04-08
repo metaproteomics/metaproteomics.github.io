@@ -1,6 +1,7 @@
 ---
 title: September 2024 Newsletter
 publishDate: "2024-09-20"
+description: "Newsletter announcing that IMS Oslo registrations are open and introducing the inaugural Best Manuscript Award for early career researchers."
 ---
 
 ## From the co-administrators

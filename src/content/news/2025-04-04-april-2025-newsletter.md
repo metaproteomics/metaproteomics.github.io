@@ -1,6 +1,7 @@
 ---
 title: April 2025 Newsletter
 publishDate: "2025-04-04"
+description: "Recap of the 6th IMS in Oslo with 79 participants from 18 countries, Best Manuscript Award highlights, and community updates."
 ---
 
 # Advancing Metaproteomics: Insights from the 6th International Symposium

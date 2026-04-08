@@ -1,6 +1,7 @@
 ---
 title: October 2023 Newsletter
 publishDate: "2023-10-23"
+description: "Newsletter announcing the community's switch from Basecamp to Slack, alongside CAMPI 3 updates and recent research highlights."
 ---
 
 ## From the co-administrators

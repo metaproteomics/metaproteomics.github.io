@@ -1,6 +1,7 @@
 ---
 title: Logo contest
 publishDate: "2021-04-26"
+description: "The Metaproteomics Initiative launched as an official EuPA initiative, with a call for members to submit logo designs for the new organization."
 ---
 
 We are delighted to announce the birth of the Metaproteomics Initiative, an official Initiative of the European Proteomics Association (EuPA)!

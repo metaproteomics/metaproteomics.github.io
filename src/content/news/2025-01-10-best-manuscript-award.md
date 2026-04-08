@@ -1,6 +1,7 @@
 ---
 title: Best Manuscript Award
 publishDate: "2025-01-10"
+description: "Announcing the first Best Manuscript Award winner, Dr. Alfredo Blakeley-Ruiz, for his metaproteomics study on dietary protein and gut microbiome function."
 ---
 
 ## The manuscript

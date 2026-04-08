@@ -1,6 +1,7 @@
 ---
 title: November 2025 Newsletter
 publishDate: "2025-11-07"
+description: "Newsletter announcing the CAMPI Webinar on December 15, 2025, and the 7th IMS in Dessau-Roßlau scheduled for June 2026."
 ---
 
 # Save the Date - New CAMPI Webinar
