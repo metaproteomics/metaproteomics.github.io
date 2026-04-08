@@ -19,7 +19,7 @@ The competition is solely intended for ECRs (PhD not yet obtained or awarded aft
 The applicant must have made a significant contribution to the publication as (joint) first or (joint) last author. The publication must be an original research article. Review articles are not eligible; however, short communications and methods papers are welcome. The manuscript must be accepted by a journal or available on a preprint server at the time of submission to the competition. Eligible manuscripts must not have been available on a preprint server or accepted before November 1, 2024, and must be in English.
 
 ## How to apply
-A complete application needs to be sent by email to info@metaproteomics.org before **March 1, 2026**.
+A complete application needs to be sent by email to info@metaproteomics.org before <span style="color: red;">March 1, 2026</span>.
 
 The application should include:
 * PDF file of the manuscript (including the supplementary information, if it applies).
