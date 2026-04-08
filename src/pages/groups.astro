@@ -18,45 +18,72 @@ const totalCountries = countries.length;
       </Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16"> 
-      <p class="text-lg leading-relaxed text-slate-500">
-        This page lists all laboratories that joined the Metaproteomics
-        Initiative. Currently, {totalLabs} labs in {totalCountries} countries joined.
-      </p>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Want your lab on this list? Become a member and add your lab <a
+    <div class="grid lg:grid-cols-2 items-start gap-8 lg:gap-16 mt-16">
+      <div>
+        <p class="text-lg leading-relaxed text-slate-600">
+          The Metaproteomics Initiative brings together research groups from around the world
+          who are dedicated to advancing the field of metaproteomics. Our members include
+          laboratories specializing in wet-lab methods, mass spectrometry, and bioinformatics,
+          united by a shared goal of understanding microbial communities through their protein
+          content.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-slate-500">
+          <div class="flex items-center gap-2">
+            <span class="font-semibold text-slate-800">{totalLabs}</span> member laboratories
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-semibold text-slate-800">{totalCountries}</span> countries represented
+          </div>
+        </div>
+      </div>
+
+      <div class="border border-slate-200 rounded-xl p-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-3">Join the Initiative</h2>
+        <p class="text-slate-500 mb-6">
+          Want your lab on this list? Become a member and add your lab to the
+          Metaproteomics Initiative.
+        </p>
+        <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSdZUBIRB1QzDkcyzA1H1PWCUmucne3JVWcBwPucNzUGDTDFXQ/viewform"
-          class="font-medium hover:underline">here</a
-        >!
-      </p>
+          class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors">
+          Add your lab
+        </a>
+      </div>
     </div>
 
-    <div class="grid md:grid-cols-1 gap-1 mx-auto max-w-4xl mt-8">
+    <div class="mt-12">
       {countries.map((c) => (
-        <Fragment>
-          <h2 class="font-medium text-2xl text-gray-800">{c.country}</h2>
-          <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <div class="mt-12">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold">
+              {c.country}
+            </span>
+            <div class="flex-1 border-t border-slate-200"></div>
+          </div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {c.labs && c.labs.map((lab) => {
               const hasWebsite = !!(lab.website && lab.website.trim());
               const place = [lab.institute, lab.city].filter(Boolean).join(", ");
               return (
-                <li>
+                <div class="border border-slate-200 rounded-xl p-5 flex flex-col gap-1">
                   {hasWebsite ? (
-                    <a class="font-medium hover:underline" href={lab.website}>{lab.name}</a>
+                    <a class="font-semibold text-gray-900 hover:underline" href={lab.website}>
+                      {lab.name}
+                    </a>
                   ) : (
-                    <span class="font-medium">{lab.name}</span>
+                    <span class="font-semibold text-gray-900">{lab.name}</span>
                   )}
-                  {place ? (
-                    <> ({place})</>
-                  ) : null}
-                  {lab.groupLeader ? (
-                    <>, led by {lab.groupLeader}</>
-                  ) : null}
-                </li>
+                  {place && (
+                    <p class="text-sm text-slate-500">{place}</p>
+                  )}
+                  {lab.groupLeader && (
+                    <p class="text-sm text-slate-400">{lab.groupLeader}</p>
+                  )}
+                </div>
               );
             })}
-          </ul>
-        </Fragment>
+          </div>
+        </div>
       ))}
     </div>
   </Container>

@@ -18,7 +18,7 @@ const campis = await getCollection("campi");
       </Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+    <div class="flex flex-col gap-3  mt-16">
       <h2 class="font-medium text-2xl text-gray-800">About CAMPI</h2>
       <p class="text-lg leading-relaxed text-slate-500">
         The Critical Assessment of Metaproteome Investigation (CAMPI) is a series of studies that aim to evaluate and improve the state-of-the-art in metaproteomics. 
@@ -28,7 +28,7 @@ const campis = await getCollection("campi");
       </p>
     </div>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+    <div class="flex flex-col gap-3  mt-16">
       <h2 class="font-medium text-2xl text-gray-800">CAMPI Webinar 2025</h2>
       <p class="text-lg leading-relaxed text-slate-500">
         On 15 December 2025, the Metaproteomics Initiative held a webinar to discuss the upcoming CAMPI studies and to provide an overview of the grand challenges in metaproteomics.
@@ -40,7 +40,7 @@ const campis = await getCollection("campi");
       </div>
     </div>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+    <div class="flex flex-col gap-3  mt-16">
       <h2 class="font-medium text-2xl text-gray-800">Call for CAMPIs</h2>
       <p class="text-slate-500">
         As announced at the last IMS, 3 new CAMPIs are being launched and require your participation. 
@@ -73,12 +73,12 @@ const campis = await getCollection("campi");
       </div>
     </div>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+    <div class="flex flex-col gap-3  mt-16">
       <h2 class="font-medium text-2xl text-gray-800">Previous and ongoing CAMPIs</h2>
     </div>
 
     <main class="mt-16">
-      <ul class="grid gap-4 max-w-4xl mx-auto">
+      <ul class="grid gap-4">
         {
           campis.map((campi, index) => (
             <a href={`/campi/${campi.slug}`} class="flex gap-4 items-start">
