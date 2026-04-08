@@ -66,7 +66,7 @@ The footer currently has `my-20` with two lines of centered text and no visual a
 | `news.astro` | `<main class="grid lg:grid-cols-2 ... pt-16 pb-8 md:pt-12 md:pb-12">` | `<section class="grid lg:grid-cols-2 ... py-24">` |
 | `news.astro` inner | `<main class="mt-16">` | `<div class="mt-16">` |
 | `logos.astro` | `<div class="mt-12">` | `<div class="py-24">` |
-| `cta.astro` | no outer wrapper, inner box has `mt-20` | wrap content in `<section class="py-24">`, remove `mt-20` from inner box |
+| `cta.astro` | no outer wrapper, inner box has `mt-20 mx-auto max-w-5xl` (1024px) | wrap content in `<section class="py-24">`, remove `mt-20 mx-auto max-w-5xl` from inner box so it spans the full Container width (1280px) matching all other sections |
 | `footer.astro` | `<footer class="my-20">` | `<footer class="py-10 border-t border-slate-200">` |
 
 ## Out of Scope
