@@ -1,7 +1,7 @@
 ---
 title: CAMPI 1
 subTitle: "A Multi-Lab Comparison of Established Workflows"
-summary: A Multi-Lab Comparison of Established Workflows
+summary: The first community-driven, multi-lab comparison in metaproteomics, evaluating the effect of sample preparation, mass spectrometry, and bioinformatic analysis across labs. Variability at the peptide level was predominantly due to wet-lab workflows, while similar functional profiles were obtained across workflows — demonstrating the robustness of present-day metaproteomics research.
 ---
 
 Metaproteomics has matured into a powerful tool to assess functional interactions in microbial communities. While many metaproteomic workflows are available, the impact of method choice on results remains unclear.

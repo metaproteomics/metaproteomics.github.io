@@ -1,7 +1,7 @@
 ---
 title: CAMPI 2 - in revision
 subTitle: "Sample handling "
-summary: Sample handling
+summary: A comparative assessment of proteome sample stability after sample collection, focusing on the impact of sample treatment and storage conditions (temperature, humidity, pH) on the resulting proteome profile. Participants applied their preferred stabilization methods under a real-world stress-test including uncontrolled-temperature shipment, with the goal of establishing a standard procedure for sample handling in metaproteomics.
 biorxiv: https://www.biorxiv.org/content/10.1101/2025.01.31.635836v2.abstract
 ---
 
