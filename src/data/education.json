@@ -1,0 +1,31 @@
+{
+  "tutorials": [
+    { "title": "Metaproteomics tutorial using Galaxy-P", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html" },
+    { "title": "Integrative meta-omics using Galaxy-P", "url": "https://galaxyproject.eu/posts/2020/04/14/integrative-meta-omics/" },
+    { "title": "Unipept", "url": "https://www.sciencedirect.com/science/article/abs/pii/S1874391917301896" },
+    { "title": "MetaProteomeAnalyzer", "url": "http://www.mpa.ovgu.de/index.php/tutorials/" },
+    { "title": "MetaQuantome, data creation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html" },
+    { "title": "MetaQuantome, functional annotation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-function/tutorial.html" },
+    { "title": "MetaQuantome, taxonomic annotation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-taxonomy/tutorial.html" },
+    { "title": "Ocean Protein Portal", "url": "https://proteinportal.whoi.edu/about" },
+    { "title": "iMetaLab (Northomics Lab)", "url": "https://wiki.imetalab.ca/" },
+    { "title": "Clinical Metaproteomic Workflows within Galaxy, database generation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-database-generation/tutorial.html" },
+    { "title": "Clinical Metaproteomic Workflows within Galaxy, discovery module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-discovery/tutorial.html" },
+    { "title": "Clinical Metaproteomic Workflows within Galaxy, verification module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-verification/tutorial.html" },
+    { "title": "Clinical Metaproteomic Workflows within Galaxy, quantitation module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-quantitation/tutorial.html" },
+    { "title": "Clinical Metaproteomic Workflows within Galaxy, interpretation module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-interpretation/tutorial.html" }
+  ],
+  "lectures": [
+    { "title": "Metaproteomics to Investigate Functional Interactions in Microbiota", "url": "https://www.youtube.com/watch?v=4xv46IFWNxo", "speaker": "Dr. Manuel Kleiner" },
+    { "title": "Systems Ecology of the Human Gut Microbiome", "url": "https://www.youtube.com/watch?v=QR9pX5nBnGE", "speaker": "Dr. Paul Wilmes" },
+    { "title": "Complexity in Ocean MetaProteomics: 20,000 Spectral Counts under the Sea.", "url": "https://www.youtube.com/watch?v=MGJmdqBQlfM", "speaker": "Dr. Mak Saito" },
+    { "title": "Metaproteomics @ GTN Smörgåsbord", "url": "https://www.youtube.com/watch?v=3_yaPp-RCFw", "speaker": "Dr. Pratik Jagtap" },
+    { "title": "New Pathways for Old Metals", "url": "https://www.youtube.com/watch?v=ohmtTWCD4mw", "speaker": "Dr. Nadia Szeinbaum" },
+    { "title": "What can the tiniest organisms teach us about the vast ocean?", "url": "https://www.youtube.com/watch?v=1w0DQ5L7SaU", "speaker": "Dr. Brook L. Nunn" },
+    { "title": "pepFunk: an R shiny app and workflow for peptide-centric functional analysis of metaproteomic microbiome data", "url": "https://www.youtube.com/watch?v=ze2bAOQsRKI", "speaker": "Dr. Caitlin Simopoulos" },
+    { "title": "Designer Fibre for Beneficial Microbes: A Path to Microbiome Modulation", "url": "https://www.youtube.com/watch?v=PVUjh-MlmFk", "speaker": "Dr. Phil Pope" },
+    { "title": "Metaproteomics session at TSMC 2021", "url": "https://www.youtube.com/watch?v=axXB6ihcva0", "speaker": "Dr. Pratik Jagtap, Dr. Bob Hettich, and Dr. Mak Saito" },
+    { "title": "ECCMID 2021 TV: Fireplace Chat", "url": "https://www.youtube.com/watch?v=S_D5vBMPHg8", "speaker": "Prof. Dr. Daniel Figeys" },
+    { "title": "Protein-based stable isotope probing (Protein-SIP) metaproteomics", "url": "https://www.youtube.com/watch?v=8GuAxFIMlSE", "speaker": "Prof. Dr. Manuel Kleiner" }
+  ]
+}

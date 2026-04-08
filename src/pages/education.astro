@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import educationData from "@data/education.json";
 ---
 
 <Layout title="Education">
@@ -11,12 +12,12 @@ import Sectionhead from "@components/sectionhead.astro";
       <Fragment slot="desc">Educational resources for metaproteomics.</Fragment>
     </Sectionhead>
 
-    
+
 
     <div class="grid md:grid-cols-1 gap-1 mx-auto max-w-4xl mt-16">
       <h2 class="font-medium text-2xl text-gray-800">The Microbiologist&apos;s Guide to Metaproteomics</h2>
       <p class="mb-2">
-        The Metaproteomics Initiative has developed a comprehensive review to make metaproteomics more accessible to both microbiome and proteomics researchers. 
+        The Metaproteomics Initiative has developed a comprehensive review to make metaproteomics more accessible to both microbiome and proteomics researchers.
         This guide presents key principles, state-of-the-art methodologies, and analytical workflows, covering experimental design, sample preparation, mass spectrometry techniques, data analysis strategies, and statistical approaches.
         To ensure clarity and broad accessibility, we invited experts to draft sections, followed by iterative internal reviews. Microbiome researchers new to metaproteomics provided additional feedback, helping refine the text for a wider audience.
       </p>
@@ -26,195 +27,21 @@ import Sectionhead from "@components/sectionhead.astro";
 
       <h2 class="font-medium text-2xl text-gray-800">Tutorials</h2>
       <ul class="list-disc list-inside mb-8 leading-relaxed">
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html"
-            class="font-medium hover:underline"
-            >Metaproteomics tutorial using Galaxy-P</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://galaxyproject.eu/posts/2020/04/14/integrative-meta-omics/"
-            class="font-medium hover:underline"
-            >Integrative meta-omics using Galaxy-P</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.sciencedirect.com/science/article/abs/pii/S1874391917301896"
-            class="font-medium hover:underline">Unipept</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://www.mpa.ovgu.de/index.php/tutorials/"
-            class="font-medium hover:underline">MetaProteomeAnalyzer</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html"
-            class="font-medium hover:underline">MetaQuantome, data creation</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-function/tutorial.html"
-            class="font-medium hover:underline"
-            >MetaQuantome, functional annotation</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-taxonomy/tutorial.html"
-            class="font-medium hover:underline"
-            >MetaQuantome, taxonomic annotation</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://proteinportal.whoi.edu/about"
-            class="font-medium hover:underline">Ocean Protein Portal</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://wiki.imetalab.ca/"
-            class="font-medium hover:underline"
-            >iMetaLab (Northomics Lab)</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-database-generation/tutorial.html"
-            class="font-medium hover:underline"
-            >Clinical Metaproteomic Workflows within Galaxy, database generation</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-discovery/tutorial.html"
-            class="font-medium hover:underline"
-            >Clinical Metaproteomic Workflows within Galaxy, discovery module</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-verification/tutorial.html"
-            class="font-medium hover:underline"
-            >Clinical Metaproteomic Workflows within Galaxy, verification module</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-quantitation/tutorial.html"
-            class="font-medium hover:underline"
-            >Clinical Metaproteomic Workflows within Galaxy, quantitation module</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-interpretation/tutorial.html"
-            class="font-medium hover:underline"
-            >Clinical Metaproteomic Workflows within Galaxy, interpretation module</a
-          >
-        </li>
+        {educationData.tutorials.map((item) => (
+          <li>
+            <a href={item.url} class="font-medium hover:underline">{item.title}</a>
+          </li>
+        ))}
       </ul>
 
       <h2 class="font-medium text-2xl text-gray-800">Lectures</h2>
       <ul class="list-disc list-inside mb-8 leading-relaxed">
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=4xv46IFWNxo"
-            class="font-medium hover:underline"
-            >“Metaproteomics to Investigate Functional Interactions in
-            Microbiota”</a
-          >
-          by Dr. Manuel Kleiner
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=QR9pX5nBnGE"
-            class="font-medium hover:underline"
-            >“Systems Ecology of the Human Gut Microbiome”</a
-          >
-          by Dr. Paul Wilmes
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=MGJmdqBQlfM"
-            class="font-medium hover:underline"
-            >“Complexity in Ocean MetaProteomics: 20,000 Spectral Counts under
-            the Sea.”</a
-          >
-          by Dr. Mak Saito
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=3_yaPp-RCFw"
-            class="font-medium hover:underline"
-            >“Metaproteomics @ GTN Smörgåsbord”</a
-          >
-          by Dr. Pratik Jagtap
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=ohmtTWCD4mw"
-            class="font-medium hover:underline">“New Pathways for Old Metals”</a
-          >
-          by Dr. Nadia Szeinbaum
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=1w0DQ5L7SaU"
-            class="font-medium hover:underline"
-            >“What can the tiniest organisms teach us about the vast ocean?”</a
-          >
-          by Dr. Brook L. Nunn
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=ze2bAOQsRKI"
-            class="font-medium hover:underline"
-            >“pepFunk: an R shiny app and workflow for peptide-centric
-            functional analysis of metaproteomic microbiome data”</a
-          >
-          by Dr. Caitlin Simopoulos
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=PVUjh-MlmFk"
-            class="font-medium hover:underline"
-            >"Designer Fibre for Beneficial Microbes: A Path to Microbiome
-            Modulation"</a
-          >
-          by Dr. Phil Pope
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=axXB6ihcva0"
-            class="font-medium hover:underline"
-            >“Metaproteomics session at TSMC 2021”</a
-          >
-          by Dr. Pratik Jagtap, Dr. Bob Hettich, and Dr. Mak Saito
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=S_D5vBMPHg8"
-            class="font-medium hover:underline"
-            >“ECCMID 2021 TV: Fireplace Chat”</a
-          >
-          by Prof. Dr. Daniel Figeys
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=8GuAxFIMlSE"
-            class="font-medium hover:underline"
-            >“Protein-based stable isotope probing (Protein-SIP) metaproteomics”</a
-          >
-          by Prof. Dr. Manuel Kleiner
-        </li>
+        {educationData.lectures.map((item) => (
+          <li>
+            <a href={item.url} class="font-medium hover:underline">&ldquo;{item.title}&rdquo;</a>
+            {" "}by {item.speaker}
+          </li>
+        ))}
       </ul>
 
       <p class="mb-4">
