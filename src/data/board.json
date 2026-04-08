@@ -1,0 +1,69 @@
+{
+  "terms": [
+    {
+      "label": "Executive board (February 2024 - January 2027)",
+      "members": [
+        { "name": "Tim Van Den Bossche", "role": "Co-Administrator" },
+        { "name": "Benoît Kunath", "role": "Co-Administrator" },
+        { "name": "Jana Seifert", "role": "Secretary" },
+        { "name": "Lucia Grenga", "role": "Communication" },
+        { "name": "Pieter Verschaffelt", "role": "Webmaster" },
+        { "name": "Madita Brauer", "role": "Early Career Researcher representative" },
+        { "name": "Jean Armengaud", "role": "Symposium organizer (latest symposium)" },
+        { "name": "Phil Pope", "role": "Symposium organizer (next symposium)" },
+        { "name": "Magnus Arntzen", "role": "Symposium organizer (next symposium)" },
+        { "name": "Pratik Jagtap", "role": "Education" },
+        { "name": "Leyuan Li", "role": "International correspondence (Asia)" },
+        { "name": "Phil Pope", "role": "International correspondence (Oceania)" },
+        { "name": "Dirk Benndorf", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Daniel Figeys", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Bob Hettich", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Paul Wilmes", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Nico Jehmlich", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Sergio Uzzau", "role": "Scientific Advisor (automatically re-elected for second term)" }
+      ]
+    },
+    {
+      "label": "Executive board (October 2021 - January 2024)",
+      "description": "During the Metaproteomics Symposium in Luxembourg (september 27-29, 2021), the first formal board of the Metaproteomics Initiative was elected.",
+      "members": [
+        { "name": "Tim Van Den Bossche", "role": "Co-Administrator" },
+        { "name": "Benoît Kunath", "role": "Co-Administrator" },
+        { "name": "Jana Seifert", "role": "Secretary" },
+        { "name": "Jana Seifert", "role": "Treasurer" },
+        { "name": "Lucia Grenga", "role": "Communication" },
+        { "name": "Bart Mesuere", "role": "Webmaster" },
+        { "name": "Jean Armengaud", "role": "Working Group Coordinator" },
+        { "name": "Dirk Benndorf", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Daniel Figeys", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Bob Hettich", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Paul Wilmes", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Nico Jehmlich", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Sergio Uzzau", "role": "Scientific Advisor (automatically re-elected for second term)" },
+        { "name": "Pratik Jagtap", "role": "Education" },
+        { "name": "Leyuan Li", "role": "International correspondence (Asia)" }
+      ]
+    }
+  ],
+  "foundingMembers": [
+    "Magnus Arntzen",
+    "Jean Armengaud",
+    "Dörte Becher",
+    "Dirk Benndorf",
+    "Vincent Eijsink",
+    "Céline Henry",
+    "Robert Hettich",
+    "Pratik Jagtap",
+    "Nico Jehmlich",
+    "Catherine Juste",
+    "Benoit Kunath",
+    "Bart Mesuere",
+    "Thilo Muth",
+    "Phil Pope",
+    "Jana Seifert",
+    "Alessandro Tanca",
+    "Sergio Uzzau",
+    "Tim Van Den Bossche",
+    "Paul Wilmes"
+  ]
+}
