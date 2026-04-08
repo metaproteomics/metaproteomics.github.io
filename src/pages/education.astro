@@ -14,49 +14,86 @@ import educationData from "@data/education.json";
 
 
 
-    <div class="grid md:grid-cols-1 gap-1  mt-16">
-      <h2 class="font-medium text-2xl text-gray-800">The Microbiologist&apos;s Guide to Metaproteomics</h2>
-      <p class="mb-2">
-        The Metaproteomics Initiative has developed a comprehensive review to make metaproteomics more accessible to both microbiome and proteomics researchers.
-        This guide presents key principles, state-of-the-art methodologies, and analytical workflows, covering experimental design, sample preparation, mass spectrometry techniques, data analysis strategies, and statistical approaches.
-        To ensure clarity and broad accessibility, we invited experts to draft sections, followed by iterative internal reviews. Microbiome researchers new to metaproteomics provided additional feedback, helping refine the text for a wider audience.
-      </p>
-      <p class="mb-8">
-        You can read the full review, published in iMeta, <a class="underline font-bold" href="https://onlinelibrary.wiley.com/doi/10.1002/imt2.70031">here</a>. Prefer a version yet with easy-to-navigate section numbers? Access the identical preprint <a class="underline font-bold" href="https://chemrxiv.org/engage/chemrxiv/article-details/677ce36781d2151a022d3935">here</a>.
-      </p>
+    <div class="mt-16">
+      <div class="grid lg:grid-cols-2 items-start gap-8 lg:gap-16">
+        <div>
+          <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold">Featured resource</span>
+          <h2 class="font-medium text-2xl text-gray-800 mt-2">The Microbiologist&apos;s Guide to Metaproteomics</h2>
+          <p class="text-lg leading-relaxed text-slate-600 mt-4">
+            The Metaproteomics Initiative has developed a comprehensive review to make
+            metaproteomics more accessible to both microbiome and proteomics researchers.
+            This guide presents key principles, state-of-the-art methodologies, and analytical
+            workflows, covering experimental design, sample preparation, mass spectrometry
+            techniques, data analysis strategies, and statistical approaches.
+            To ensure clarity and broad accessibility, we invited experts to draft sections,
+            followed by iterative internal reviews. Microbiome researchers new to metaproteomics
+            provided additional feedback, helping refine the text for a wider audience.
+          </p>
+        </div>
 
-      <h2 class="font-medium text-2xl text-gray-800">Tutorials</h2>
-      <ul class="list-disc list-inside mb-8 leading-relaxed">
+        <div class="border border-slate-200 rounded-xl p-8 flex flex-col gap-4">
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Read the guide</h3>
+          <p class="text-slate-500 leading-relaxed">
+            Published open access in <span class="font-medium text-gray-700">iMeta</span>.
+            Also available as a preprint with easy-to-navigate section numbers.
+          </p>
+          <div class="grid grid-cols-2 gap-3">
+            <a
+              href="https://onlinelibrary.wiley.com/doi/10.1002/imt2.70031"
+              class="flex items-center justify-center bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors">
+              Read in iMeta
+            </a>
+            <a
+              href="https://chemrxiv.org/engage/chemrxiv/article-details/677ce36781d2151a022d3935"
+              class="flex items-center justify-center border border-slate-300 text-slate-700 px-5 py-2.5 rounded hover:bg-slate-50 transition-colors">
+              Access preprint
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 mt-16 mb-6">
+        <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold shrink-0">Tutorials</span>
+        <div class="flex-1 border-t border-slate-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {educationData.tutorials.map((item) => (
-          <li>
-            <a href={item.url} class="font-medium hover:underline">{item.title}</a>
-          </li>
+          <a href={item.url} class="border border-slate-200 rounded-xl p-5 flex flex-col gap-1 hover:border-slate-400 transition-colors">
+            <span class="font-semibold text-gray-900 leading-snug">{item.title}</span>
+          </a>
         ))}
-      </ul>
+      </div>
 
-      <h2 class="font-medium text-2xl text-gray-800">Lectures</h2>
-      <ul class="list-disc list-inside mb-8 leading-relaxed">
+      <div class="flex items-center gap-4 mt-16 mb-6">
+        <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold shrink-0">Lectures</span>
+        <div class="flex-1 border-t border-slate-200"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {educationData.lectures.map((item) => (
-          <li>
-            <a href={item.url} class="font-medium hover:underline">&ldquo;{item.title}&rdquo;</a>
-            {" "}by {item.speaker}
-          </li>
+          <a href={item.url} class="border border-slate-200 rounded-xl p-5 flex flex-col gap-1 hover:border-slate-400 transition-colors">
+            <span class="font-semibold text-gray-900 leading-snug">{item.title}</span>
+            <span class="text-sm text-slate-500">{item.speaker}</span>
+          </a>
         ))}
-      </ul>
+      </div>
 
-      <p class="mb-4">
-        If you have additional metaproteomics tutorials or lectures you'd like
-        to share, please contact
-        <a
-          href="mailto:info@metaproteomics.org"
-          class="font-medium hover:underline">info@metaproteomics.org</a
-        >. For tutorials and lectures on (single-species) proteomics, please
-        visit the
-        <a
-          href="https://www.proteomics-academy.org//online-education"
-          class="font-medium hover:underline">Proteomics Academy website</a
-        >.
-      </p>
+      <div class="mt-8 pt-8 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4">
+        <p class="text-slate-600">
+          Have additional tutorials or lectures to share with the community?
+        </p>
+        <div class="flex flex-wrap items-center gap-4">
+          <a
+            href="https://www.proteomics-academy.org//online-education"
+            class="text-sm text-slate-500 hover:text-slate-800 transition-colors">
+            Visit Proteomics Academy →
+          </a>
+          <a
+            href="mailto:info@metaproteomics.org"
+            class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors">
+            Contact us
+          </a>
+        </div>
+      </div>
     </div>
   </Container>
 </Layout>
