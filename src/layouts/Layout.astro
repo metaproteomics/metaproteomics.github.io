@@ -1,10 +1,15 @@
 ---
+/**
+ * Layout
+ * The main page layout that wraps every page with navbar, footer, and SEO metadata.
+ */
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource/inter/variable.css";
 
 export interface Props {
+  /** The page title used in HTML head and metadata */
   title: string;
 }
 

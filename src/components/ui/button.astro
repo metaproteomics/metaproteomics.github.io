@@ -1,9 +1,18 @@
 ---
+/**
+ * Button
+ * A styled button component for interactive actions throughout the site.
+ */
 interface Props {
+  /** Button size: "md" (small) or "lg" (large) */
   size?: "md" | "lg";
+  /** If true, makes the button full-width */
   block?: boolean;
+  /** Visual style: "outline" or "primary" */
   style?: "outline" | "primary" | "inverted";
+  /** Additional CSS classes to apply */
   class?: string;
+  /** Additional HTML attributes */
   [x: string]: any;
 }
 
