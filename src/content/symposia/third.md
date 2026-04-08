@@ -5,6 +5,7 @@ date: December 3-5, 2018
 sortDate: "2018-12-03"
 photo: /images/leipzig.jpg
 caption: "Photo credit: Yves Rötting on wikimedia"
+description: "Focused on integrating metaproteomics into multi-omics pipelines, this edition at UFZ Leipzig brought together 75+ researchers for sessions spanning microbiome biology, bioinformatics, and the first CAMPI collaborative study."
 ---
 
 The last decade has shown that insights into ecosystem functioning of microbial communities are optimal studied when multiple Omics techniques are integrated. Thus, the focus was chosen as **Microbiome Research and Integrating Metaproteomics into a Multi-Omics Pipeline**.

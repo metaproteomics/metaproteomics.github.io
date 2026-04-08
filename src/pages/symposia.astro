@@ -41,34 +41,31 @@ symposia.sort(function (a, b) {
       </p>
     </div>
     <main class="mt-16">
-      <ul class="grid gap-16 ">
+      <ul class="grid gap-10">
         {
           symposia.map((symposium, index) => (
             <li>
-              <a href={`/symposia/${symposium.slug}`}>
-                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
-                  {symposium.data.photo && (
-                    <img
-                      src={symposium.data.photo}
-                      alt={symposium.data.caption ?? ''}
-                      class="w-full rounded-md"
-                      loading={index <= 2 ? "eager" : "lazy"}
-                      decoding={index <= 2 ? "sync" : "async"}
-                    />
+              <a href={`/symposia/${symposium.slug}`} class="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-10 items-start hover:opacity-80 transition-opacity">
+                {symposium.data.photo && (
+                  <img
+                    src={symposium.data.photo}
+                    alt={symposium.data.caption ?? ''}
+                    class="w-full rounded-lg object-cover aspect-video"
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    decoding={index <= 2 ? "sync" : "async"}
+                  />
+                )}
+                <div>
+                  <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                    {symposium.data.location}
+                  </span>
+                  <h2 class="text-2xl font-semibold leading-snug tracking-tight mt-1">
+                    {symposium.data.title}
+                  </h2>
+                  <span class="text-sm text-gray-400 mt-2 block">{symposium.data.date}</span>
+                  {symposium.data.description && (
+                    <p class="text-slate-500 leading-relaxed mt-3">{symposium.data.description}</p>
                   )}
-                  <div>
-                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
-                      {symposium.data.location}
-                    </span>
-
-                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
-                      {symposium.data.title}
-                    </h2>
-
-                    <div class="flex gap-2 mt-3">
-                      <span class="text-gray-400">{symposium.data.date}</span>
-                    </div>
-                  </div>
                 </div>
               </a>
             </li>

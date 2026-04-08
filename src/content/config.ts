@@ -43,6 +43,7 @@ const symposiaCollection = defineCollection({
     location: z.string(),
     photo: z.string().optional(),
     caption: z.string().optional(),
+    description: z.string().optional(),
   }),
 });
 

@@ -6,6 +6,7 @@ date: September 27-29, 2021
 sortDate: "2021-09-27"
 photo: /images/luxembourg.jpg
 caption: "Photo credit: Wolfgang Staudt on wikimedia"
+description: "Hosted in Luxembourg, this symposium provided a platform for researchers to share the latest results in metaproteomics, discuss technological innovations, and present newly developed bioinformatic tools across all career stages."
 ---
 
 Metaproteomics is the large-scale characterisation of the entire protein complement of a microbiota directly from an environment at a given point in time.  Research examining environmental and human-associated microbiomes via multi-omics is expending rapidly. Especially, functional meta-omic approaches such as metaproteomics are currently employed intensively and provide a more comprehensive picture of multiple environments and their associated microbial communities than what could be done previously.

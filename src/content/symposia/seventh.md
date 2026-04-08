@@ -5,6 +5,7 @@ date: June 21–24, 2026
 sortDate: "2026-06-21"
 photo: /images/dessau.jpg
 caption: "Photo credit: M_H.DE"
+description: "The upcoming seventh symposium in Dessau-Roßlau, Germany offers four days of talks and networking across topics including emerging methods, microbiomes in health and disease, environmental microbiomes, and integrative multi-omics."
 ---
 
 We are thrilled to announce the Metaproteomics Symposium 2026, taking place from June 21–24, 2026, in Dessau-Roßlau, Germany!

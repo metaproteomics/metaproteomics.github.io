@@ -5,6 +5,7 @@ date: June 14-16, 2017
 sortDate: "2017-06-14"
 photo: /images/sardinia.jpg
 caption: "Photo credit: Arianta on flickr"
+description: "Held in Sardinia, Italy, the second symposium gathered over 50 participants from 13 countries for four plenary sessions covering new methods, health, environmental biotechnology, and bioinformatics, alongside workshops on leading analysis platforms."
 ---
 
 The second edition of the International Metaproteomics Symposium, entitled "*What can we learn about microbial communities and their functions?*", took place in Alghero (Sardinia, Italy) in June 14-16, 2017. The event was organized by Porto Conte Ricerche, a research center belonging to the Science and Technology Park of Sardinia, in collaboration with the Universities of Ghent (Belgium), Magdeburg (Germany) and Luxemburg (Luxemburg), and funded by the Autonomous Region of Sardinia through the Sardegna Ricerche agency.

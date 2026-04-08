@@ -5,6 +5,7 @@ date: February 8-9, 2016
 sortDate: "2016-02-08"
 photo: /images/magdeburg.jpg
 caption: "Photo credit: Oliver Brauns on pixabay"
+description: "The inaugural symposium brought together researchers to address the key challenges in metaproteomics, featuring hands-on workshops on data analysis tools and sessions covering new methods, environmental biotechnology, and bioinformatics."
 ---
 
 The first symposium took place under the name of "*Symposium on Advances and Applications in Metaproteomics*".

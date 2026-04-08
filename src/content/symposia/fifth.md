@@ -5,6 +5,7 @@ date: April 25-27, 2023
 sortDate: "2023-04-25"
 photo: /images/avignon.jpg
 caption: "Photo credit: Yann de Fareins"
+description: "Held in the historic city of Avignon, France, the fifth edition welcomed international scientists to exchange results, network, and explore rapidly advancing microbiome functional analysis methods and tools."
 ---
 
 Metaproteomics is beginning to dramatically advance our understanding of microbiome functioning through analyzing the spatio-temporal expression of microbial genes and dynamics within a microbial consortium.
