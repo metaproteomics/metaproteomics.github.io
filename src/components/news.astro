@@ -1,7 +1,7 @@
 ---
 /**
  * News
- * Displays the 5 latest published news posts with an embedded Twitter/X timeline.
+ * Displays the 5 latest published news posts with a link to the X/Twitter profile.
  * Usage: Appears on the homepage to highlight recent announcements and social media activity.
  */
 import { Icon } from "astro-icon/components";
@@ -21,47 +21,59 @@ publishedBlogEntries = publishedBlogEntries
   .slice(0, 5);
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-12">
-  <div class="mt-16 md:mt-0">
+<section
+  class="grid lg:grid-cols-2 items-start pt-16 pb-8 md:pt-12 md:pb-12 gap-8 lg:gap-16">
+  <div class="w-full">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       The latest news
     </h2>
-    <main class="mt-16">
-      <ul class="grid gap-4 max-w-4xl mx-auto">
-        {
-          publishedBlogEntries.map((blogPostEntry, index) => (
+    <ul class="grid gap-4 mt-8">
+      {
+        publishedBlogEntries.map((blogPostEntry) => (
+          <li>
             <a
               href={`/news/${blogPostEntry.slug}`}
-              class="flex gap-4 items-start">
-              <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+              class="flex gap-4 items-start hover:opacity-80 transition-opacity">
+              <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
                 <Icon class="text-white" name="bx:bxs-news" />
               </div>
               <div>
                 <h3 class="font-semibold text-lg">
                   {blogPostEntry.data.title}
-                </h3>{" "}
+                </h3>
                 <p class="text-slate-500 mb-2 leading-relaxed">
                   {blogPostEntry.data.publishDate.toDateString()}
                 </p>
               </div>
             </a>
-          ))
-        }
-      </ul>
-    </main>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 
-  <div class="py-6 sm:order-1 hidden sm:block">
-    <a
-      class="twitter-timeline"
-      data-width="500"
-      data-height="500"
-      data-dnt="true"
-      href="https://twitter.com/MetaP_Init?ref_src=twsrc%5Etfw"
-      >Tweets by MetaP_Init</a
-    >
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"
-    ></script>
+  <div class="sm:order-1 hidden sm:block w-full">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mb-8">
+      Follow us on X
+    </h2>
+    <div class="border border-slate-200 rounded-xl p-8 max-w-sm w-full text-center">
+      <div class="flex justify-center mb-4">
+        <div class="bg-black rounded-full p-3 w-12 h-12 flex items-center justify-center">
+          <Icon class="text-white w-6 h-6" name="bx:bxl-twitter" />
+        </div>
+      </div>
+      <p class="text-slate-500 mb-6">
+        Stay up to date with the latest metaproteomics news and community
+        updates from the Metaproteomics Initiative.
+      </p>
+      <a
+        href="https://twitter.com/MetaP_Init"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors">
+        <Icon class="text-white w-4 h-4" name="bx:bxl-twitter" />
+        @MetaP_Init
+      </a>
+    </div>
   </div>
-</main>
+</section>

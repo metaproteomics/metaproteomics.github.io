@@ -4,14 +4,21 @@
  * Renders the "Supported by" section with EuPA, HUPO, and Elixir organization logos.
  * Usage: Displays on the homepage to highlight organizational partnerships and endorsements.
  */
-import { Icon } from "astro-icon/components";
 ---
 
-<div class="mt-12">
-  <h2 class="text-center text-slate-500">Supported by</h2>
-  <div class="flex gap-8 md:gap-20 items-center justify-center mt-10 flex-wrap">
-    <img src="/images/eupalogo.png" alt="EuPA logo" class="h-[150px]">
-    <img src="/images/hupologo.jpg" alt="hupo logo" class="h-[150px]">
-    <img src="/images/elixirlogo.png" alt="Elixir logo" class="h-[150px]">
+<div class="py-12 mt-4">
+  <p class="text-center text-xs font-semibold uppercase tracking-widest text-slate-400 mb-8">
+    Supported by
+  </p>
+  <div class="flex gap-12 md:gap-20 items-center justify-center flex-wrap">
+    <a href="https://eupa.org/" target="_blank" rel="noopener noreferrer" aria-label="EuPA">
+      <img src="/images/eupalogo.png" alt="EuPA logo" class="h-[60px] object-contain opacity-70 hover:opacity-100 transition-opacity" />
+    </a>
+    <a href="https://hupo.org/" target="_blank" rel="noopener noreferrer" aria-label="HUPO">
+      <img src="/images/hupologo.jpg" alt="HUPO logo" class="h-[60px] object-contain opacity-70 hover:opacity-100 transition-opacity" />
+    </a>
+    <a href="https://elixir-europe.org/" target="_blank" rel="noopener noreferrer" aria-label="Elixir">
+      <img src="/images/elixirlogo.png" alt="Elixir logo" class="h-[60px] object-contain opacity-70 hover:opacity-100 transition-opacity" />
+    </a>
   </div>
 </div>

@@ -1,0 +1,153 @@
+<h2>Design — Section 1 of 3: Spacing System</h2>
+<p class="subtitle">Before vs. After — vertical rhythm across all homepage sections</p>
+
+<div class="split">
+
+  <div class="mockup">
+    <div class="mockup-header">Before (current)</div>
+    <div class="mockup-body" style="font-family:sans-serif;font-size:11px;padding:12px;">
+
+      <div style="background:#1a1a2e;color:white;padding:5px 10px;border-radius:3px;margin-bottom:0;">Navbar</div>
+
+      <div style="border-left:3px solid #f59e0b;padding:8px 10px;background:#fffbeb;margin-bottom:0;">
+        <div style="font-size:9px;color:#92400e;font-weight:600;">ManuscriptAnnouncement — uses &lt;main&gt; tag ⚠</div>
+        <div style="height:4px;background:#fcd34d;border-radius:2px;margin-top:4px;width:80%;"></div>
+        <div style="height:4px;background:#fcd34d;border-radius:2px;margin-top:3px;width:60%;"></div>
+      </div>
+
+      <div style="border-left:3px solid #ef4444;padding:8px 10px;background:#fef2f2;margin-top:0;">
+        <div style="font-size:9px;color:#991b1b;font-weight:600;">Hero — pt-16 pb-8 / md:pt-12 md:pb-24 — uses &lt;main&gt; tag ⚠</div>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <div style="width:50px;height:50px;background:#fca5a5;border-radius:3px;flex-shrink:0;"></div>
+          <div style="flex:1;">
+            <div style="height:7px;background:#333;border-radius:2px;margin-bottom:3px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;width:90%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-left:3px solid #ef4444;padding:8px 10px;background:#fef2f2;margin-top:4px;">
+        <div style="font-size:9px;color:#991b1b;font-weight:600;">Intro — pt-16 pb-8 / md:pt-12 md:pb-24 — uses &lt;main&gt; tag ⚠</div>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <div style="flex:2;">
+            <div style="height:6px;background:#333;border-radius:2px;margin-bottom:3px;width:70%;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;margin-bottom:2px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;width:80%;"></div>
+          </div>
+          <div style="flex:1;height:40px;background:#fca5a5;border-radius:3px;"></div>
+        </div>
+      </div>
+
+      <div style="border-left:3px solid #ef4444;padding:8px 10px;background:#fef2f2;margin-top:4px;">
+        <div style="font-size:9px;color:#991b1b;font-weight:600;">News — pt-16 pb-8 / md:pt-12 md:pb-12 — uses &lt;main&gt; tag ⚠</div>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <div style="flex:1;">
+            <div style="height:4px;background:#ccc;border-radius:2px;margin-bottom:2px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;margin-bottom:2px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;width:70%;"></div>
+          </div>
+          <div style="flex:1;height:40px;background:#fca5a5;border-radius:3px;"></div>
+        </div>
+      </div>
+
+      <div style="padding:8px 10px;margin-top:4px;background:#f9fafb;">
+        <div style="font-size:9px;color:#6b7280;font-weight:600;">Logos — mt-12 only, no vertical padding</div>
+        <div style="display:flex;gap:6px;margin-top:5px;justify-content:center;">
+          <div style="width:28px;height:16px;background:#d1d5db;border-radius:2px;"></div>
+          <div style="width:28px;height:16px;background:#d1d5db;border-radius:2px;"></div>
+          <div style="width:28px;height:16px;background:#d1d5db;border-radius:2px;"></div>
+        </div>
+      </div>
+
+      <div style="padding:8px 10px;margin-top:4px;background:#111;border-radius:3px;">
+        <div style="font-size:9px;color:#9ca3af;text-align:center;">CTA — mt-20 offset</div>
+      </div>
+
+      <div style="padding:6px 10px;margin-top:4px;text-align:center;">
+        <div style="font-size:9px;color:#9ca3af;">Footer — my-20 (tiny text only)</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="mockup">
+    <div class="mockup-header">After (proposed)</div>
+    <div class="mockup-body" style="font-family:sans-serif;font-size:11px;padding:12px;">
+
+      <div style="background:#1a1a2e;color:white;padding:5px 10px;border-radius:3px;margin-bottom:0;">Navbar</div>
+
+      <div style="border-left:3px solid #3b82f6;padding:8px 10px;background:#eff6ff;margin-bottom:0;">
+        <div style="font-size:9px;color:#1d4ed8;font-weight:600;">ManuscriptAnnouncement — &lt;div&gt;, full-width banner</div>
+        <div style="height:4px;background:#93c5fd;border-radius:2px;margin-top:4px;width:80%;"></div>
+        <div style="height:4px;background:#93c5fd;border-radius:2px;margin-top:3px;width:60%;"></div>
+      </div>
+
+      <div style="border-left:3px solid #10b981;padding:8px 10px;background:#ecfdf5;margin-top:0;">
+        <div style="font-size:9px;color:#065f46;font-weight:600;">Hero — py-24 — &lt;section&gt; ✓</div>
+        <div style="display:flex;gap:8px;margin-top:6px;align-items:center;">
+          <div style="width:36px;height:36px;background:#6ee7b7;border-radius:3px;flex-shrink:0;"></div>
+          <div style="flex:1;">
+            <div style="height:7px;background:#333;border-radius:2px;margin-bottom:3px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;width:90%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-left:3px solid #10b981;padding:8px 10px;background:#ecfdf5;margin-top:8px;">
+        <div style="font-size:9px;color:#065f46;font-weight:600;">Intro — py-24 — &lt;section&gt; ✓</div>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <div style="flex:2;">
+            <div style="height:6px;background:#333;border-radius:2px;margin-bottom:3px;width:70%;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;margin-bottom:2px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;width:80%;"></div>
+          </div>
+          <div style="flex:1;height:40px;background:#6ee7b7;border-radius:3px;"></div>
+        </div>
+      </div>
+
+      <div style="border-left:3px solid #10b981;padding:8px 10px;background:#ecfdf5;margin-top:8px;">
+        <div style="font-size:9px;color:#065f46;font-weight:600;">News — py-24 — &lt;section&gt; ✓</div>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <div style="flex:1;">
+            <div style="height:4px;background:#ccc;border-radius:2px;margin-bottom:2px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;margin-bottom:2px;"></div>
+            <div style="height:4px;background:#ccc;border-radius:2px;width:70%;"></div>
+          </div>
+          <div style="flex:1;height:40px;background:#6ee7b7;border-radius:3px;"></div>
+        </div>
+      </div>
+
+      <div style="border-left:3px solid #10b981;padding:8px 10px;background:#ecfdf5;margin-top:8px;">
+        <div style="font-size:9px;color:#065f46;font-weight:600;">Logos — py-24 — consistent with others ✓</div>
+        <div style="display:flex;gap:6px;margin-top:5px;justify-content:center;">
+          <div style="width:28px;height:16px;background:#6ee7b7;border-radius:2px;"></div>
+          <div style="width:28px;height:16px;background:#6ee7b7;border-radius:2px;"></div>
+          <div style="width:28px;height:16px;background:#6ee7b7;border-radius:2px;"></div>
+        </div>
+      </div>
+
+      <div style="padding:8px 10px;margin-top:8px;background:#111;border-radius:3px;">
+        <div style="font-size:9px;color:#9ca3af;text-align:center;">CTA — py-24</div>
+      </div>
+
+      <div style="padding:12px 10px;margin-top:8px;border-top:2px solid #e5e7eb;text-align:center;">
+        <div style="font-size:9px;color:#9ca3af;">Footer — py-10, top border ✓</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top:20px;background:#f0fdf4;border-radius:8px;padding:16px;">
+  <h3 style="margin-bottom:8px;color:#065f46;">What changes</h3>
+  <ul style="margin:0;padding-left:20px;color:#444;line-height:1.9;font-size:13px;">
+    <li>All sections: replace per-section <code>pt-X pb-Y md:pt-X md:pb-Y</code> with a single <code>py-24</code></li>
+    <li>Logos section gets <code>py-24</code> to match (currently only <code>mt-12</code>)</li>
+    <li>CTA section gets <code>py-24</code> (currently <code>mt-20</code> offset only)</li>
+    <li>All component <code>&lt;main&gt;</code> tags → <code>&lt;section&gt;</code> (semantically correct)</li>
+    <li>ManuscriptAnnouncement <code>&lt;main&gt;</code> → <code>&lt;div&gt;</code></li>
+  </ul>
+</div>
+
+<p style="margin-top:20px;color:#6b7280;font-size:13px;">Does this spacing approach look right? Let me know in the terminal and I'll show Section 2 (logo + footer).</p>

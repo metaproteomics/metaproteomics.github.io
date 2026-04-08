@@ -10,46 +10,60 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 lg:order-1 hidden lg:block">
-    <Image
-      src={heroImage}
-      alt="MPI logo"
-      widths={[400, 800, 1200]}
-      sizes="(max-width: 1024px) 50vw, 600px"
-      loading="eager"
-      class="max-w-[500px]"
-    />
+<div class="w-full bg-slate-50">
+  <div class="max-w-screen-xl mx-auto px-5">
+    <section
+      class="grid lg:grid-cols-2 place-items-center pt-16 pb-12 md:pt-12 md:pb-20">
+      <div class="py-6 lg:order-1 hidden lg:flex lg:justify-center">
+        <Image
+          src={heroImage}
+          alt="MPI logo"
+          widths={[200, 400, 600]}
+          sizes="(max-width: 1024px) 30vw, 280px"
+          loading="eager"
+          class="max-w-[280px]"
+        />
+      </div>
+      <div>
+        <h1
+          class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+          Welcome to the Metaproteomics Initiative!
+        </h1>
+        <p class="text-lg mt-4 text-slate-600 max-w-xl">
+          We promote dissemination of metaproteomics fundamentals, advancements, and applications through collaborative networking in microbiome research.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <Link
+            href="https://forms.gle/zAqJDPZNvf7vSoNi9"
+            target="_blank"
+            class="flex gap-1 items-center justify-center"
+            rel="noopener">
+            <Icon class="text-white w-5 h-5" name="bx:bxs-user-plus" />
+            Become a member
+          </Link>
+          <Link
+            size="lg"
+            variant="outline"
+            rel="noopener"
+            href="mailto:info@metaproteomics.org"
+            class="flex gap-1 items-center justify-center"
+            target="_blank">
+            <Icon class="text-black w-4 h-4" name="bx:bx-mail-send" />
+            Contact us
+          </Link>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-slate-500">
+          <div class="flex items-center gap-2">
+            <span class="font-semibold text-slate-800">300+</span> Members worldwide
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-semibold text-slate-800">30+</span> Countries represented
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="font-semibold text-slate-800">7</span> International symposia
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-  <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Welcome to the Metaproteomics Initiative!
-    </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      We promote dissemination of metaproteomics fundamentals, advancements, and applications through collaborative networking in microbiome research.
-    </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="https://forms.gle/zAqJDPZNvf7vSoNi9"
-        target="_blank"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-user-plus" />
-
-        Become a member
-      </Link>
-      <Link
-        size="lg"
-        variant="outline"
-        rel="noopener"
-        href="mailto:info@metaproteomics.org"
-        class="flex gap-1 items-center justify-center"
-        target="_blank">
-        <Icon class="text-black w-4 h-4" name="bx:bx-mail-send" />
-        Contact us
-      </Link>
-    </div>
-  </div>
-</main>
+</div>

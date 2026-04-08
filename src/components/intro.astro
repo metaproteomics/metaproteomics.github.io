@@ -1,33 +1,58 @@
 ---
 /**
  * Intro
- * Renders the "What is metaproteomics?" section with descriptive text and a group photo.
+ * Renders the "What is metaproteomics?" and "A vibrant community" sections.
+ * Each section uses an asymmetric two-column layout (text wider, image narrower).
  * Usage: Appears on the homepage to explain metaproteomics and the initiative community.
  */
 import { Image } from "astro:assets";
 import groupPicture from "assets/group.jpg";
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-top pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="mt-16 md:mt-0">
+<section
+  class="grid lg:grid-cols-[3fr_2fr] items-start gap-8 lg:gap-16 pt-16 pb-8 md:pt-12 md:pb-12">
+  <div>
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       What is metaproteomics?
     </h2>
     <p class="text-lg mt-4 text-slate-600">
-      Metaproteomics - an expansion of proteomics-methodologies to study the protein 
-      inventory of microbial communities – provides a valuable tool linking the taxonomic 
-      profile of a microbial community to its dynamic function. Introduced twenty years 
-      ago, metaproteomics is today used for various applications in biomedicine, biotechnology, 
+      Metaproteomics - an expansion of proteomics-methodologies to study the protein
+      inventory of microbial communities – provides a valuable tool linking the taxonomic
+      profile of a microbial community to its dynamic function. Introduced twenty years
+      ago, metaproteomics is today used for various applications in biomedicine, biotechnology,
       and environmental science. For instance, metaproteomics approaches are now used for the
       identification of pathogenic microbial biomarkers and the study of poorly characterized
       microbiomes like the plant root-associated and aquatic microbiomes. Reflecting the broad
       and increasing field of applications, the portfolio of metaproteomics workflows has
-      substantially diversified over the years and now offers a broad range of building blocks 
-      of different wet-lab, data acquisition, and data processing procedures, meeting the demands 
+      substantially diversified over the years and now offers a broad range of building blocks
+      of different wet-lab, data acquisition, and data processing procedures, meeting the demands
       of its growing community.
     </p>
-    <h2 class="text-4xl mt-8 lg:text-5xl font-bold lg:tracking-tight">
+  </div>
+  <div class="hidden sm:flex sm:justify-center sm:items-center lg:self-center">
+    <Image
+      src={groupPicture}
+      alt="Group picture"
+      widths={[200, 400]}
+      sizes="(max-width: 600px) 100vw, 380px"
+      loading="eager"
+      class="rounded-lg object-cover w-full max-w-[380px]"
+    />
+  </div>
+</section>
+
+<section
+  class="grid lg:grid-cols-[2fr_3fr] items-start gap-8 lg:gap-16 pt-4 pb-8 md:pt-4 md:pb-24">
+  <div class="hidden sm:flex sm:justify-center sm:items-center lg:self-center order-last lg:order-first">
+    <div class="rounded-lg bg-slate-100 w-full max-w-[320px] aspect-[4/3] flex flex-col items-center justify-center gap-2 text-slate-400">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3 21h18M3 3h18M3 12h18" />
+      </svg>
+      <span class="text-sm font-medium">Image placeholder</span>
+    </div>
+  </div>
+  <div>
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
       A vibrant community
     </h2>
     <p class="text-lg mt-4 text-slate-600">
@@ -65,13 +90,4 @@ import groupPicture from "assets/group.jpg";
       >.
     </p>
   </div>
-  <div class="pt-16 pl-2 sm:order-1 hidden sm:block">
-    <Image
-      src={groupPicture}
-      alt="Group picture"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 600px) 100vw, 600px"
-      loading="eager"
-    />
-  </div>
-</main>
+</section>
