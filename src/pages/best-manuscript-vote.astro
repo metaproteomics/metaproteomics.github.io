@@ -1,0 +1,100 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+---
+
+<Layout title="Vote for the Best Manuscript Award 2026">
+  <Container>
+    <div class="mt-16">
+      <div class="flex items-center gap-2 text-sm mb-3">
+        <span class="text-blue-400 uppercase tracking-wider font-semibold">Best Manuscript Award 2026</span>
+      </div>
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight lg:leading-tight max-w-3xl">
+        Vote for the Best Manuscript Award 2026
+      </h1>
+      <hr class="border-slate-200 mt-10" />
+    </div>
+
+    <div class="grid lg:grid-cols-2 items-start gap-8 lg:gap-16 mt-10">
+      <div>
+        <p class="text-lg leading-relaxed text-slate-600">
+          It's time to vote for the best manuscript in the field of metaproteomics!
+        </p>
+        <p class="text-lg leading-relaxed text-slate-600 mt-4">
+          Following the call for the best manuscript of the year, we have received a number of manuscripts.
+          All manuscripts have now been evaluated by our scientific committee, who have selected the three
+          finalists. Now it's up to you, the metaproteomics community, to vote for your favorite.
+        </p>
+
+        <h2 class="text-xl font-semibold text-slate-900 mt-8 mb-4">Finalists</h2>
+        <p class="text-slate-500 mb-4">Please find here the finalists' manuscripts (order according to submission date):</p>
+        <ol class="flex flex-col gap-3">
+          <li class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-black text-white text-sm font-semibold shrink-0">1</span>
+            <span class="text-slate-800">Hellwig et al.</span>
+            <a href="/images/best_manuscript_award_2026/Manuscript1_Hellwig.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-800 font-medium">(PDF)</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-black text-white text-sm font-semibold shrink-0">2</span>
+            <span class="text-slate-800">Hinzke et al.</span>
+            <a href="/images/best_manuscript_award_2026/Manuscript2_Hinzke.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-800 font-medium">(PDF)</a>
+            <a href="/images/best_manuscript_award_2026/Manuscript2_Supplementary.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-800 font-medium">(Supplementary)</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-black text-white text-sm font-semibold shrink-0">3</span>
+            <span class="text-slate-800">Van den Bossche et al.</span>
+            <a href="/images/best_manuscript_award_2026/Manuscript3_VanDenBossche.pdf" target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600 hover:text-blue-800 font-medium">(PDF)</a>
+          </li>
+        </ol>
+
+        <div class="mt-8 border-l-4 border-blue-400 bg-blue-50 rounded-r-lg px-4 py-3 text-sm text-slate-700">
+          <p class="mb-2">
+            <strong>Please note</strong> that each member has only one vote and that only members of the
+            Metaproteomics Initiative can vote. The voting system will be open until
+            <strong>May 6, 2026, 12:00 noon (CET)</strong>.
+          </p>
+          <p>
+            Not yet a member?
+            <a
+              href="https://forms.gle/zAqJDPZNvf7vSoNi9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-blue-600 hover:text-blue-800 font-semibold">
+              Sign up
+            </a>
+            and secure your chance to vote for the Best Manuscript.
+          </p>
+        </div>
+
+        <p class="mt-6 text-sm text-slate-500">
+          If you have any questions or problems, please contact us at
+          <a href="mailto:info@metaproteomics.org" class="text-blue-600 hover:text-blue-800">
+            info@metaproteomics.org
+          </a>.
+        </p>
+      </div>
+
+      <div class="border border-slate-200 rounded-xl p-8">
+        <h2 class="text-xl font-semibold text-gray-800 mb-3">Cast your vote</h2>
+        <p class="text-slate-500 mb-2">
+          Ready to vote? Use the form below to select your favorite manuscript. You will need to be a
+          Metaproteomics Initiative member to participate.
+        </p>
+        <p class="text-slate-500 mb-6">
+          Voting closes on <span class="font-semibold text-slate-800">May 6, 2026 at 12:00 noon (CET)</span>.
+        </p>
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors">
+          Go to the voting form
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-slate-200">
+      <a href="/" class="text-sm text-slate-500 hover:text-slate-800 transition-colors">
+        &larr; Back to homepage
+      </a>
+    </div>
+  </Container>
+</Layout>

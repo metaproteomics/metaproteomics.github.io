@@ -1,7 +1,7 @@
 ---
 /**
  * News
- * Displays the 5 latest published news posts with a link to the X/Twitter profile.
+ * Displays the 5 latest published news posts with a link to the LinkedIn profile.
  * Usage: Appears on the homepage to highlight recent announcements and social media activity.
  */
 import { Icon } from "astro-icon/components";
@@ -54,26 +54,44 @@ publishedBlogEntries = publishedBlogEntries
 
   <div class="sm:order-1 hidden sm:block w-full">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mb-8">
-      Follow us on X
+      Follow us
     </h2>
-    <div class="border border-slate-200 rounded-xl p-8 max-w-sm w-full text-center">
-      <div class="flex justify-center mb-4">
-        <div class="bg-black rounded-full p-3 w-12 h-12 flex items-center justify-center">
-          <Icon class="text-white w-6 h-6" name="bx:bxl-twitter" />
+    <div class="flex flex-col gap-4">
+      <div class="border border-slate-200 rounded-xl p-6 flex items-center gap-5">
+        <div class="bg-[#0A66C2] rounded-full p-3 w-12 h-12 flex items-center justify-center shrink-0">
+          <Icon class="text-white w-6 h-6" name="bx:bxl-linkedin" />
         </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-slate-800">LinkedIn</p>
+          <p class="text-slate-500 text-sm">Metaproteomics Initiative</p>
+        </div>
+        <a
+          href="https://www.linkedin.com/company/metaproteomics-initiative/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 bg-[#0A66C2] text-white px-4 py-2 rounded text-sm hover:bg-[#004182] transition-colors shrink-0">
+          Follow
+        </a>
       </div>
-      <p class="text-slate-500 mb-6">
-        Stay up to date with the latest metaproteomics news and community
-        updates from the Metaproteomics Initiative.
-      </p>
-      <a
-        href="https://twitter.com/MetaP_Init"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors">
-        <Icon class="text-white w-4 h-4" name="bx:bxl-twitter" />
-        @MetaP_Init
-      </a>
+
+      <div class="border border-slate-200 rounded-xl p-6 flex items-center gap-5">
+        <div class="bg-[#0085FF] rounded-full p-3 w-12 h-12 flex items-center justify-center shrink-0">
+          <svg class="w-6 h-6 fill-white" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg">
+            <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+          </svg>
+        </div>
+        <div class="flex-1 min-w-0">
+          <p class="font-semibold text-slate-800">BlueSky</p>
+          <p class="text-slate-500 text-sm">@metap-init.bsky.social</p>
+        </div>
+        <a
+          href="https://bsky.app/profile/metap-init.bsky.social"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 bg-[#0085FF] text-white px-4 py-2 rounded text-sm hover:bg-[#0066CC] transition-colors shrink-0">
+          Follow
+        </a>
+      </div>
     </div>
   </div>
 </section>
