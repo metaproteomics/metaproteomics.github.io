@@ -1,31 +1,147 @@
 {
   "tutorials": [
-    { "title": "Metaproteomics tutorial using Galaxy-P", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html" },
-    { "title": "Integrative meta-omics using Galaxy-P", "url": "https://galaxyproject.eu/posts/2020/04/14/integrative-meta-omics/" },
-    { "title": "Unipept", "url": "https://www.sciencedirect.com/science/article/abs/pii/S1874391917301896" },
-    { "title": "MetaProteomeAnalyzer", "url": "http://www.mpa.ovgu.de/index.php/tutorials/" },
-    { "title": "MetaQuantome, data creation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html" },
-    { "title": "MetaQuantome, functional annotation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-function/tutorial.html" },
-    { "title": "MetaQuantome, taxonomic annotation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-taxonomy/tutorial.html" },
-    { "title": "Ocean Protein Portal", "url": "https://proteinportal.whoi.edu/about" },
-    { "title": "iMetaLab (Northomics Lab)", "url": "https://wiki.imetalab.ca/" },
-    { "title": "Clinical Metaproteomic Workflows within Galaxy, database generation", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-database-generation/tutorial.html" },
-    { "title": "Clinical Metaproteomic Workflows within Galaxy, discovery module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-discovery/tutorial.html" },
-    { "title": "Clinical Metaproteomic Workflows within Galaxy, verification module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-verification/tutorial.html" },
-    { "title": "Clinical Metaproteomic Workflows within Galaxy, quantitation module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-quantitation/tutorial.html" },
-    { "title": "Clinical Metaproteomic Workflows within Galaxy, interpretation module", "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-interpretation/tutorial.html" }
+    {
+      "title": "Metaproteomics tutorial using Galaxy-P",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaproteomics/tutorial.html",
+      "description": "Demonstrates how to identify expressed proteins from complex bacterial communities by matching mass spectrometry data to metagenomic sequences, then performing taxonomy and functional analysis using SearchGUI, PeptideShaker, and Unipept within Galaxy."
+    },
+    {
+      "title": "Integrative meta-omics using Galaxy-P",
+      "url": "https://galaxyproject.eu/posts/2020/04/14/integrative-meta-omics/",
+      "description": "Covers integrated workflows for combining metagenomics, metatranscriptomics, and metaproteomics data in Galaxy, enabling analysis of functional potential, expressed proteins, and metabolic pathways in complex microbial communities."
+    },
+    {
+      "title": "Unipept",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S1874391917301896",
+      "description": "Introduces the Unipept command-line interface for analyzing complex protein data from microbial ecosystems, covering protein inference, taxonomic origin determination, and functional annotation of identified peptides."
+    },
+    {
+      "title": "MetaProteomeAnalyzer",
+      "url": "http://www.mpa.ovgu.de/index.php/tutorials/",
+      "description": "Guides users through metaproteomics data analysis using MPA software, covering MS/MS spectrum processing, protein identification, taxonomic and functional annotation, and visualization with an interactive graphical interface."
+    },
+    {
+      "title": "MetaQuantome, data creation",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-data-creation/tutorial.html",
+      "description": "Guides users through preparing metaproteomics mass spectrometry data for analysis with metaQuantome, covering peptide identification, quantification, and functional and taxonomic annotation using Galaxy tools."
+    },
+    {
+      "title": "MetaQuantome, functional annotation",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-function/tutorial.html",
+      "description": "Teaches functional and quantitative analysis of metaproteomic data using metaQuantome, covering how to process peptide-level quantitation data to identify differentially expressed functions and generate visualizations like bar plots and volcano plots."
+    },
+    {
+      "title": "MetaQuantome, taxonomic annotation",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/metaquantome-taxonomy/tutorial.html",
+      "description": "Covers metaQuantome's taxonomy workflow for analyzing metaproteomics data, teaching how to generate taxonomic composition bar plots, detect differentially expressed taxa with volcano plots, and perform statistical analysis across conditions."
+    },
+    {
+      "title": "Ocean Protein Portal",
+      "url": "https://proteinportal.whoi.edu/about",
+      "description": "A data sharing platform for ocean metaproteomics that enables researchers to discover where specific proteins occur in oceanic environments through search, sequence alignment tools, and taxonomic analysis of microbial protein sources."
+    },
+    {
+      "title": "iMetaLab (Northomics Lab)",
+      "url": "https://wiki.imetalab.ca/",
+      "description": "A wiki-based knowledge base documenting MetaLab, a suite of bioinformatics tools for metaproteomic analysis, with guides, FAQs, quick-start tutorials, and technical reference materials for different software versions."
+    },
+    {
+      "title": "Clinical Metaproteomic Workflows within Galaxy, database generation",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-database-generation/tutorial.html",
+      "description": "Teaches how to generate a customized protein sequence database for clinical metaproteomics by downloading, merging, and reducing microbial and human protein databases using the MetaNovo tool."
+    },
+    {
+      "title": "Clinical Metaproteomic Workflows within Galaxy, discovery module",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-discovery/tutorial.html",
+      "description": "Teaches how to identify microbial peptides and proteins from mass spectrometry data by searching MS/MS spectra against a protein database using SearchGUI, PeptideShaker, and MaxQuant."
+    },
+    {
+      "title": "Clinical Metaproteomic Workflows within Galaxy, verification module",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-verification/tutorial.html",
+      "description": "Teaches how to verify microbial peptides identified in proteomic studies using PepQuery2, then create a verified protein database for use in downstream quantification analysis."
+    },
+    {
+      "title": "Clinical Metaproteomic Workflows within Galaxy, quantitation module",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-quantitation/tutorial.html",
+      "description": "Teaches how to perform protein quantitation using MaxQuant to extract and measure microbial and human protein abundance, supporting biomarker discovery and differential expression studies."
+    },
+    {
+      "title": "Clinical Metaproteomic Workflows within Galaxy, interpretation module",
+      "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-data-interpretation/tutorial.html",
+      "description": "Teaches how to interpret clinical metaproteomics data using MSstats for statistical analysis on MaxQuant output, identifying differentially expressed proteins through normalization, statistical modeling, and visualization."
+    },
+    {
+      "title": "Proteomics Academy",
+      "url": "https://www.proteomics-academy.org/online-education",
+      "description": "A curated collection of tutorials and lectures covering (single-species) proteomics, offering a broad educational foundation in mass spectrometry, data analysis, and protein identification workflows."
+    }
   ],
   "lectures": [
-    { "title": "Metaproteomics to Investigate Functional Interactions in Microbiota", "url": "https://www.youtube.com/watch?v=4xv46IFWNxo", "speaker": "Dr. Manuel Kleiner" },
-    { "title": "Systems Ecology of the Human Gut Microbiome", "url": "https://www.youtube.com/watch?v=QR9pX5nBnGE", "speaker": "Dr. Paul Wilmes" },
-    { "title": "Complexity in Ocean MetaProteomics: 20,000 Spectral Counts under the Sea.", "url": "https://www.youtube.com/watch?v=MGJmdqBQlfM", "speaker": "Dr. Mak Saito" },
-    { "title": "Metaproteomics @ GTN Smörgåsbord", "url": "https://www.youtube.com/watch?v=3_yaPp-RCFw", "speaker": "Dr. Pratik Jagtap" },
-    { "title": "New Pathways for Old Metals", "url": "https://www.youtube.com/watch?v=ohmtTWCD4mw", "speaker": "Dr. Nadia Szeinbaum" },
-    { "title": "What can the tiniest organisms teach us about the vast ocean?", "url": "https://www.youtube.com/watch?v=1w0DQ5L7SaU", "speaker": "Dr. Brook L. Nunn" },
-    { "title": "pepFunk: an R shiny app and workflow for peptide-centric functional analysis of metaproteomic microbiome data", "url": "https://www.youtube.com/watch?v=ze2bAOQsRKI", "speaker": "Dr. Caitlin Simopoulos" },
-    { "title": "Designer Fibre for Beneficial Microbes: A Path to Microbiome Modulation", "url": "https://www.youtube.com/watch?v=PVUjh-MlmFk", "speaker": "Dr. Phil Pope" },
-    { "title": "Metaproteomics session at TSMC 2021", "url": "https://www.youtube.com/watch?v=axXB6ihcva0", "speaker": "Dr. Pratik Jagtap, Dr. Bob Hettich, and Dr. Mak Saito" },
-    { "title": "ECCMID 2021 TV: Fireplace Chat", "url": "https://www.youtube.com/watch?v=S_D5vBMPHg8", "speaker": "Prof. Dr. Daniel Figeys" },
-    { "title": "Protein-based stable isotope probing (Protein-SIP) metaproteomics", "url": "https://www.youtube.com/watch?v=8GuAxFIMlSE", "speaker": "Prof. Dr. Manuel Kleiner" }
+    {
+      "title": "Metaproteomics to Investigate Functional Interactions in Microbiota",
+      "url": "https://www.youtube.com/watch?v=4xv46IFWNxo",
+      "speaker": "Dr. Manuel Kleiner",
+      "description": "An overview of how metaproteomics reveals the molecular phenotypes of microorganisms in situ, with examples from plant-associated microbiomes and diet-microbiota interactions in the mammalian gut."
+    },
+    {
+      "title": "Systems Ecology of the Human Gut Microbiome",
+      "url": "https://www.youtube.com/watch?v=QR9pX5nBnGE",
+      "speaker": "Dr. Paul Wilmes",
+      "description": "Explores the use of systems biology and metaproteomic approaches to unravel fundamental ecological relationships within microbial populations of the human gut microbiome."
+    },
+    {
+      "title": "Complexity in Ocean MetaProteomics: 20,000 Spectral Counts under the Sea",
+      "url": "https://www.youtube.com/watch?v=MGJmdqBQlfM",
+      "speaker": "Dr. Mak Saito",
+      "description": "Discusses the unique challenges posed by the biological diversity of ocean samples in metaproteomics, and presents approaches for analyzing microbial protein expression and nutrient cycling in marine environments."
+    },
+    {
+      "title": "Metaproteomics @ GTN Smörgåsbord",
+      "url": "https://www.youtube.com/watch?v=3_yaPp-RCFw",
+      "speaker": "Dr. Pratik Jagtap",
+      "description": "A recorded lecture from the Galaxy Training Network Smörgåsbord event, covering end-to-end metaproteomics workflows in Galaxy including peptide identification, taxonomic analysis, and functional annotation."
+    },
+    {
+      "title": "New Pathways for Old Metals",
+      "url": "https://www.youtube.com/watch?v=ohmtTWCD4mw",
+      "speaker": "Dr. Nadia Szeinbaum",
+      "description": "Presents metaproteomic insights into microbial metal cycling, revealing novel metabolic pathways through which microorganisms transform metals in their environment."
+    },
+    {
+      "title": "What can the tiniest organisms teach us about the vast ocean?",
+      "url": "https://www.youtube.com/watch?v=1w0DQ5L7SaU",
+      "speaker": "Dr. Brook L. Nunn",
+      "description": "Explores how ocean metaproteomics reveals how marine microorganisms adapt to their surroundings through protein expression, with insights into biogeochemical cycling and nutrient utilization at ocean scale."
+    },
+    {
+      "title": "pepFunk: an R shiny app and workflow for peptide-centric functional analysis of metaproteomic microbiome data",
+      "url": "https://www.youtube.com/watch?v=ze2bAOQsRKI",
+      "speaker": "Dr. Caitlin Simopoulos",
+      "description": "Introduces pepFunk, an R Shiny application for peptide-centric functional enrichment analysis of metaproteomic data, using a KEGG-annotated peptide database and a gene set variation analysis-inspired approach."
+    },
+    {
+      "title": "Designer Fibre for Beneficial Microbes: A Path to Microbiome Modulation",
+      "url": "https://www.youtube.com/watch?v=PVUjh-MlmFk",
+      "speaker": "Dr. Phil Pope",
+      "description": "Presents research on microbiota-directed dietary fibers tailored to stimulate specific beneficial gut microbes, with multi-omic evidence including metaproteomics showing both targeted and wider community-level metabolic effects."
+    },
+    {
+      "title": "Metaproteomics session at TSMC 2021",
+      "url": "https://www.youtube.com/watch?v=axXB6ihcva0",
+      "speaker": "Dr. Pratik Jagtap, Dr. Bob Hettich, and Dr. Mak Saito",
+      "description": "A panel session at the 2021 Tri-Society Mass Spectrometry Conference covering recent advances, open challenges, and future directions in metaproteomics across gut microbiome and ocean research."
+    },
+    {
+      "title": "ECCMID 2021 TV: Fireplace Chat",
+      "url": "https://www.youtube.com/watch?v=S_D5vBMPHg8",
+      "speaker": "Prof. Dr. Daniel Figeys",
+      "description": "A fireside discussion on clinical applications of metaproteomics, covering how mass spectrometry-based approaches can characterize host-microbiome interactions in the context of infectious and inflammatory diseases."
+    },
+    {
+      "title": "Protein-based stable isotope probing (Protein-SIP) metaproteomics",
+      "url": "https://www.youtube.com/watch?v=8GuAxFIMlSE",
+      "speaker": "Prof. Dr. Manuel Kleiner",
+      "description": "Explains the protein-SIP technique for tracking isotope incorporation rates in microbial communities, enabling quantitative measurement of carbon and nitrogen fluxes and substrate assimilation pathways in complex microbiomes."
+    }
   ]
 }

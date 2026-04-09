@@ -58,9 +58,15 @@ import educationData from "@data/education.json";
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {educationData.tutorials.map((item) => (
-          <a href={item.url} class="border border-slate-200 rounded-xl p-5 flex flex-col gap-1 hover:border-slate-400 transition-colors">
-            <span class="font-semibold text-gray-900 leading-snug">{item.title}</span>
-          </a>
+          <div class="border border-slate-200 rounded-xl p-5 flex flex-col gap-2">
+            <a href={item.url} class="font-semibold text-gray-900 leading-snug hover:underline">{item.title}</a>
+            {item.description && <span class="text-sm text-slate-500 leading-relaxed">{item.description}</span>}
+            <div class="mt-auto pt-3">
+              <a href={item.url} class="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-slate-800 transition-colors">
+                Learn more →
+              </a>
+            </div>
+          </div>
         ))}
       </div>
 
@@ -70,10 +76,16 @@ import educationData from "@data/education.json";
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {educationData.lectures.map((item) => (
-          <a href={item.url} class="border border-slate-200 rounded-xl p-5 flex flex-col gap-1 hover:border-slate-400 transition-colors">
-            <span class="font-semibold text-gray-900 leading-snug">{item.title}</span>
-            <span class="text-sm text-slate-500">{item.speaker}</span>
-          </a>
+          <div class="border border-slate-200 rounded-xl p-5 flex flex-col gap-2">
+            <a href={item.url} class="font-semibold text-gray-900 leading-snug hover:underline">{item.title}</a>
+            <span class="text-sm font-medium text-blue-500">{item.speaker}</span>
+            {item.description && <span class="text-sm text-slate-500 leading-relaxed">{item.description}</span>}
+            <div class="mt-auto pt-3">
+              <a href={item.url} class="inline-flex items-center gap-1 text-sm text-slate-500 hover:text-slate-800 transition-colors">
+                Learn more →
+              </a>
+            </div>
+          </div>
         ))}
       </div>
 
@@ -82,11 +94,6 @@ import educationData from "@data/education.json";
           Have additional tutorials or lectures to share with the community?
         </p>
         <div class="flex flex-wrap items-center gap-4">
-          <a
-            href="https://www.proteomics-academy.org//online-education"
-            class="text-sm text-slate-500 hover:text-slate-800 transition-colors">
-            Visit Proteomics Academy →
-          </a>
           <a
             href="mailto:info@metaproteomics.org"
             class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors">
