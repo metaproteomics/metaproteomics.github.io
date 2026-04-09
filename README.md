@@ -1,20 +1,20 @@
 # metaproteomics.org
 
-This repository contains the code for [metaproteomics.org](https://metaproteomics.org). This is an Astro site, hosted by GitHub Pages. When pushing to the main branch, the new website is automatically deployed.
+This repository contains the code for [metaproteomics.org](https://metaproteomics.org). This is an Astro v6 site, hosted by GitHub Pages. When pushing to the main branch, the new website is automatically deployed.
 
 For local development, first run `yarn install` to install the dependencies, then run `yarn dev` to run a local instance of the website.
 
-## Research Groups page: data-driven rendering
+## Data-driven pages
 
-- Source data lives at `src/data/labs.json`.
-- The page `src/pages/groups.astro` renders all countries and labs from this JSON and automatically displays the total number of labs and countries.
-- To add or edit a lab, edit `src/data/labs.json` directly and commit. The site will rebuild automatically.
+Several pages are driven by JSON files in `src/data/`. Edit the relevant JSON file and commit — the site rebuilds automatically.
 
-### JSON schema (strict)
+### Research Groups (`groups.astro` → `src/data/labs.json`)
 
-Each lab entry uses explicit fields. `website` is optional and may be an empty string.
+Renders all countries and labs, including automatic totals for labs and countries.
 
-```
+Each lab entry:
+
+```json
 {
   "countries": [
     {
@@ -22,7 +22,7 @@ Each lab entry uses explicit fields. `website` is optional and may be an empty s
       "labs": [
         {
           "name": "Lab or Group Name",
-          "website": "https://example.com", // optional, can be empty
+          "website": "https://example.com",
           "institute": "University or Institute",
           "city": "City (optionally incl. state/region)",
           "country": "Country Name",
@@ -34,11 +34,13 @@ Each lab entry uses explicit fields. `website` is optional and may be an empty s
 }
 ```
 
-Rendering is handled in `groups.astro`. The page formats each item as:
+- `website` is optional; if empty or missing, the name renders as plain text instead of a link.
+- Each entry renders as: `<a>name</a> (institute, city), led by groupLeader`
 
-```
-<a>name</a> (institute, city), led by groupLeader
-```
+### About / Board (`about.astro` → `src/data/board.json`)
 
-- If `website` is empty or missing, the name is shown as plain text instead of a link.
-- Totals (labs and countries) are computed automatically from the JSON.
+Renders board terms and founding members. Each term has a `label`, an optional `description`, and a list of `members` with `name` and `role` fields. Founding members have `name` and `institution` fields.
+
+### Education (`education.astro` → `src/data/education.json`)
+
+Renders tutorials and recorded lectures. Each tutorial has `title`, `url`, and `description`. Each lecture additionally has a `speaker` field.
