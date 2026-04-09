@@ -6,12 +6,7 @@ description: "Newsletter announcing the CAMPI Webinar on December 15, 2025, and 
 
 # Save the Date - New CAMPI Webinar
 
-Monday, Dec 15, 2025
-9–11 a.m. EST / 3–5 p.m. CET (7:30–9:30 p.m. Mumbai / 10 p.m.–12 a.m. Shangai)
-
-[Register here](https://events.teams.microsoft.com/event/e23fb22e-5837-4e80-a66a-346f5a3d152e@eec01f8e-737f-43e3-9ed5-f8a59913bd82) for the webinar.
-
-If you'd like to be part of an upcoming CAMPI, you can already [express your interest here](https://docs.google.com/forms/d/e/1FAIpQLSfJt1n02EhPcrtGHd3YyQiVsVsWKYIKjG9KIua4AYUx9RhrWQ/viewform)!
+Monday, Dec 15, 2025 at 9–11 a.m. EST / 3–5 p.m. CET (7:30–9:30 p.m. Mumbai / 10 p.m.–12 a.m. Shangai). [Register here](https://events.teams.microsoft.com/event/e23fb22e-5837-4e80-a66a-346f5a3d152e@eec01f8e-737f-43e3-9ed5-f8a59913bd82) for the webinar. If you'd like to be part of an upcoming CAMPI, you can already [express your interest here](https://docs.google.com/forms/d/e/1FAIpQLSfJt1n02EhPcrtGHd3YyQiVsVsWKYIKjG9KIua4AYUx9RhrWQ/viewform)!
 
 ![CAMPI summary](/images/11_2025_newsletter/campi_webinar.png)
 
