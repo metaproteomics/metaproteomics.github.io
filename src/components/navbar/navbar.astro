@@ -5,7 +5,6 @@
  * Usage: Included in the main layout to provide site-wide navigation across all pages.
  */
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { navItems } from "@data/nav";
@@ -50,10 +49,6 @@ import { navItems } from "@data/nav";
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" variant="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div>
       </MenuItems>
     </Astronav>
   </header>

@@ -65,6 +65,12 @@ const makeTitle = title
       img {
         content-visibility: auto;
       }
+
+      /* Prevent horizontal overflow causing white gap on mobile */
+      html,
+      body {
+        overflow-x: hidden;
+      }
     </style>
   </body>
 </html>
