@@ -45,7 +45,7 @@ symposia.sort(function (a, b) {
         {
           symposia.map((symposium, index) => (
             <li>
-              <a href={`/symposia/${symposium.slug}`} class="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-10 items-start hover:opacity-80 transition-opacity">
+              <a href={`/symposia/${symposium.id}`} class="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-10 items-start hover:opacity-80 transition-opacity">
                 {symposium.data.photo && (
                   <img
                     src={symposium.data.photo}

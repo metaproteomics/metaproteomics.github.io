@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
@@ -7,13 +7,13 @@ import Sectionhead from "@components/sectionhead.astro";
 export async function getStaticPaths() {
   const campis = await getCollection("campi");
   return campis.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 const { status, summary, biorxiv, doi, publication, openAccess, organizers, authors, contact, citation, citationUrl, callStatus } = entry.data;
 
