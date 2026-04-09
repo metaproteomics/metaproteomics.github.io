@@ -6,6 +6,7 @@ sortDate: "2025-01-13"
 photo: /images/norway.jpg
 caption: "Photo credit: Mikita Karasiou"
 description: "A winter meeting in Oslo, Norway, bringing together international researchers to showcase the latest findings in metaproteomics, discuss cutting-edge technological advancements, and introduce newly developed bioinformatic tools."
+website: "https://ims6.sciencesconf.org"
 ---
 
 Building of the immense success of the previous symposia, we are delighted to extend a warm welcome to you for the sixth International Metaproteomics Symposium. This edition will be held as a winter meeting in the picturesque city of Oslo, Norway in January 2025.
@@ -14,4 +15,3 @@ The International Metaproteomics Symposium is the leading event in the field of 
  
 The symposium welcomes international scientists from every career stage and is characterised by its human dimension and promotion of high-quality interactions. The symposium is organized into sessions featuring brief presentations, aiming to provide ample opportunities for researchers in the field to present their work to a wide audience.
  
-The website for the conference can be found at [https://ims6.sciencesconf.org](https://ims6.sciencesconf.org).
