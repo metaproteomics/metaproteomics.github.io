@@ -2,6 +2,9 @@
 title: CAMPI 3
 subTitle: "CAMPI 3 has launched!"
 summary: An assessment of bioinformatic workflows for protein assignment and peptide spectral matching quality, evaluating the impact of key decision points on taxonomic and functional annotation across users with varying levels of expertise and experience in metaproteomics.
+status: "Active"
+contact: "pjagtap@umn.edu, peterssl@ornl.gov, benoit.kunath@uni.lu"
+callStatus: open
 ---
 
 CAMPI3, the latest study initiated by the Metaproteomics Initiative, has been launched.

@@ -54,7 +54,17 @@ const campiCollection = defineCollection({
     title: z.string(),
     subTitle: z.string(),
     summary: z.string(),
-    biorxiv: z.string().optional()
+    status: z.string().optional(),
+    biorxiv: z.string().optional(),
+    doi: z.string().optional(),
+    publication: z.string().optional(),
+    organizers: z.array(z.string()).optional(),
+    authors: z.array(z.string()).optional(),
+    citation: z.string().optional(),
+    citationUrl: z.string().optional(),
+    openAccess: z.boolean().optional(),
+    callStatus: z.enum(["open", "closed", "none"]).optional().default("none"),
+    contact: z.string().optional(),
   }),
 });
 

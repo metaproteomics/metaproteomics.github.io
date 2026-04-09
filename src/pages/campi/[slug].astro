@@ -4,7 +4,6 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
 
-// Generate a new path for every collection entry
 export async function getStaticPaths() {
   const campis = await getCollection("campi");
   return campis.map((entry) => ({
@@ -13,9 +12,22 @@ export async function getStaticPaths() {
   }));
 }
 
-// Get the entry directly from the prop on render
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const { status, summary, biorxiv, doi, publication, openAccess, organizers, authors, contact, citation, citationUrl, callStatus } = entry.data;
+
+const statusColors: Record<string, string> = {
+  "Published": "bg-green-50 text-green-700",
+  "In revision": "bg-amber-50 text-amber-700",
+  "Active": "bg-blue-50 text-blue-700",
+};
+const statusClass = status ? (statusColors[status] ?? "bg-slate-100 text-slate-600") : "";
+
+const hasLeftColumn = !!(organizers?.length || authors?.length || contact);
+const hasRightColumn = !!(biorxiv || (doi && publication) || citation);
+const hasInfoSection = hasLeftColumn || hasRightColumn;
+const hasBody = (entry.body ?? "").trim().length > 0;
 ---
 
 <Layout title={entry.data.title}>
@@ -26,14 +38,169 @@ const { Content } = await entry.render();
     </Sectionhead>
   </Container>
 
-  <div class="mx-auto prose prose-lg mt-6 max-w-3xl">
-    <Content />
-  </div>
-  <div class="text-center mt-8">
-    <a
-      href="/campi"
-      class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition"
-      >← Back to CAMPI</a
-    >
-  </div>
+  <Container>
+    <!-- About section -->
+    <div class="mt-10">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold shrink-0">
+          About
+        </span>
+        <div class="flex-1 border-t border-slate-200"></div>
+        {status && (
+          <span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold shrink-0 ${statusClass}`}>
+            {status}
+          </span>
+        )}
+        {callStatus === "open" && (
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold shrink-0 bg-green-50 text-green-700">
+            Call open
+          </span>
+        )}
+        {callStatus === "closed" && (
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold shrink-0 bg-slate-100 text-slate-500">
+            Call closed
+          </span>
+        )}
+      </div>
+      <p class="text-lg leading-relaxed text-slate-500">{summary}</p>
+    </div>
+
+    <!-- Key info: organizers / contact (left) + publication / preprint (right) -->
+    {hasInfoSection && (
+      <div class={`grid gap-8 mt-10 ${hasLeftColumn && hasRightColumn ? "lg:grid-cols-[2fr_1fr]" : ""}`}>
+        {hasLeftColumn && (
+          <div class="flex flex-col gap-8">
+            {organizers && organizers.length > 0 && (
+              <div>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold shrink-0">
+                    Organizers
+                  </span>
+                  <div class="flex-1 border-t border-slate-200"></div>
+                </div>
+                <ul class="flex flex-col gap-1">
+                  {organizers.map((name) => (
+                    <li class="text-slate-500">{name}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {authors && authors.length > 0 && (
+              <div>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold shrink-0">
+                    Authors
+                  </span>
+                  <div class="flex-1 border-t border-slate-200"></div>
+                </div>
+                <ul class="grid grid-cols-2 gap-x-6 gap-y-1">
+                  {authors.map((name) => (
+                    <li class="text-slate-500">{name}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            {contact && (
+              <div>
+                <div class="flex items-center gap-4 mb-4">
+                  <span class="text-blue-400 uppercase tracking-wider text-sm font-semibold shrink-0">
+                    Contact
+                  </span>
+                  <div class="flex-1 border-t border-slate-200"></div>
+                </div>
+                <p class="text-slate-500 leading-relaxed">{contact}</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {hasRightColumn && (
+          <div class="flex flex-col gap-6">
+            {doi && publication && (
+              <div class="border border-slate-200 rounded-xl p-8 flex flex-col gap-4">
+                <div class="flex items-start justify-between gap-3">
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">Published in</p>
+                    <p class="font-semibold text-gray-800">{publication}</p>
+                  </div>
+                  {openAccess && (
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-50 text-green-700 shrink-0">
+                      Open Access
+                    </span>
+                  )}
+                </div>
+                <a
+                  href={doi}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors text-sm font-medium">
+                  Read the article →
+                </a>
+              </div>
+            )}
+            {biorxiv && (
+              <div class="border border-slate-200 rounded-xl p-8 flex flex-col gap-4">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-1">Preprint</p>
+                  <p class="font-semibold text-gray-800">Available on bioRxiv</p>
+                </div>
+                <a
+                  href={biorxiv}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-black text-white px-5 py-2.5 rounded hover:bg-gray-800 transition-colors text-sm font-medium">
+                  Read on bioRxiv →
+                </a>
+              </div>
+            )}
+            {citation && (
+              <div class="border border-slate-200 rounded-xl p-8 flex flex-col gap-3">
+                <div class="flex items-center justify-between gap-4">
+                  <p class="text-xs font-semibold uppercase tracking-widest text-slate-400">Cite as</p>
+                  <button
+                    data-citation={citationUrl ? `${citation} ${citationUrl}` : citation}
+                    onclick="
+                      navigator.clipboard.writeText(this.dataset.citation);
+                      const prev = this.textContent;
+                      this.textContent = 'Copied!';
+                      setTimeout(() => this.textContent = prev, 2000);
+                    "
+                    class="text-xs font-medium text-slate-400 hover:text-slate-700 transition-colors shrink-0">
+                    Copy
+                  </button>
+                </div>
+                <p class="text-sm text-slate-500 leading-relaxed">{citation}</p>
+                {citationUrl && (
+                  <a
+                    href={citationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-slate-400 underline hover:text-slate-700 transition-colors break-all">
+                    {citationUrl}
+                  </a>
+                )}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    )}
+
+    <!-- Detailed content from markdown -->
+    {hasBody && (
+      <div class="border-t border-slate-200 mt-10 pt-10">
+        <div class="prose prose-lg max-w-none">
+          <Content />
+        </div>
+      </div>
+    )}
+
+    <div class="mt-8">
+      <a
+        href="/campi"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition">
+        ← Back to CAMPI
+      </a>
+    </div>
+  </Container>
 </Layout>
