@@ -1,0 +1,38 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Link from "@components/ui/link.astro";
+import checklistUrl from "@assets/reporting_checklist.pdf?url";
+---
+
+<Layout title="Standardization">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Standardization</Fragment>
+      <Fragment slot="desc">Reporting checklist</Fragment>
+    </Sectionhead>
+
+    <div class="mt-12 max-w-3xl mx-auto text-lg leading-relaxed text-slate-600">
+      <p>
+        This reporting checklist was developed by the Metaproteomics Initiative
+        to support more transparent, reproducible, and reusable metaproteomics
+        research. It summarizes the key information that should be reported
+        across the experimental, analytical, and data-sharing workflow. If you
+        use this checklist, please cite the associated manuscript: Van Den
+        Bossche, T. et al. The need for standardization and improved open
+        (meta)data practices in metaproteomics. 2026. Preprint available on
+        <a
+          href="https://doi.org/10.26434/chemrxiv-2025-tm1ms"
+          class="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer">ChemRxiv</a>
+      </p>
+    </div>
+    <div class="mt-8 max-w-3xl mx-auto flex justify-center">
+      <Link href={checklistUrl} size="md" download="reporting_checklist.pdf">
+        Download Reporting Checklist
+      </Link>
+    </div>
+  </Container>
+</Layout>

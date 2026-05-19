@@ -16,6 +16,7 @@ export const navItems: NavItem[] = [
   { title: "Groups", path: "/groups" },
   { title: "CAMPI", path: "/campi" },
   { title: "Education", path: "/education" },
+  { title: "Standardization", path: "/standardization" },
   { title: "Symposia", path: "/symposia" },
   { title: "About us", path: "/about" },
   { title: "News", path: "/news" },
