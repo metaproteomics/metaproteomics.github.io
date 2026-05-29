@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metaproteomics Initiative — Impact Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:#0e1a2b; --ink-mid:#3a4d63; --ink-soft:#7a8fa8; --rule:#d8e3ef;
+      --bg:#f2f6fb; --surface:#ffffff;
+      --blue:#1258a8; --blue-lt:#e8f0fb; --teal:#0f8f6e; --teal-lt:#e5f6f1;
+      --amber:#c46a00; --amber-lt:#fdf0e0; --red:#c0362c;
+      --shadow-sm:0 1px 4px rgba(14,26,43,.07); --shadow:0 3px 12px rgba(14,26,43,.09);
+      --r:10px;
+    }
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',sans-serif; font-size:15px; background:var(--bg); color:var(--ink); min-height:100vh; }
+
+    .header { background:var(--ink); color:#fff; padding:0 2rem; display:flex; align-items:center; justify-content:space-between; height:64px; position:sticky; top:0; z-index:100; box-shadow:0 2px 16px rgba(0,0,0,.25); }
+    .header-brand { display:flex; align-items:center; gap:12px; }
+    .header-monogram { width:36px; height:36px; background:linear-gradient(135deg,var(--teal),#0fcf9c); border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'DM Serif Display',serif; font-size:15px; color:#fff; letter-spacing:.5px; flex-shrink:0; }
+    .header-name { font-size:.85rem; font-weight:500; letter-spacing:.3px; }
+    .header-name span { color:rgba(255,255,255,.45); font-weight:300; margin-left:6px; }
+    .header-updated { font-size:.72rem; color:rgba(255,255,255,.38); font-weight:300; }
+
+    .nav-wrap { background:var(--surface); border-bottom:1px solid var(--rule); padding:0 2rem; overflow-x:auto; }
+    .nav { display:flex; max-width:1160px; margin:0 auto; }
+    .nav-tab { padding:.85rem 1.25rem; font-size:.85rem; font-weight:500; color:var(--ink-soft); border-bottom:2px solid transparent; cursor:pointer; white-space:nowrap; background:none; border-top:none; border-left:none; border-right:none; transition:color .15s,border-color .15s; display:flex; align-items:center; gap:6px; }
+    .nav-tab:hover { color:var(--blue); }
+    .nav-tab.active { color:var(--blue); border-bottom-color:var(--blue); }
+    .nav-tab.soon { color:#ccd; cursor:default; }
+    .nav-tab .tab-badge { background:var(--blue-lt); color:var(--blue); font-size:.68rem; padding:1px 6px; border-radius:20px; font-weight:600; }
+    .nav-tab.soon .tab-badge { background:#f0f0f4; color:#aab; }
+
+    .main { max-width:1160px; margin:0 auto; padding:2rem; }
+    .section { display:none; }
+    .section.active { display:block; }
+    .section-intro { margin-bottom:1.75rem; }
+    .section-intro h2 { font-family:'DM Serif Display',serif; font-size:1.5rem; color:var(--ink); margin-bottom:.3rem; }
+    .section-intro p { color:var(--ink-soft); font-size:.88rem; font-weight:300; }
+
+    .stat-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-bottom:1.75rem; }
+    .stat-card { background:var(--surface); border-radius:var(--r); padding:1.4rem 1.6rem; box-shadow:var(--shadow-sm); border-top:3px solid transparent; transition:box-shadow .2s,transform .2s; }
+    .stat-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); }
+    .stat-card.blue { border-top-color:var(--blue); }
+    .stat-card.teal { border-top-color:var(--teal); }
+    .stat-card.amber { border-top-color:var(--amber); }
+    .stat-val { font-family:'DM Serif Display',serif; font-size:2.6rem; line-height:1; }
+    .stat-card.blue .stat-val { color:var(--blue); }
+    .stat-card.teal .stat-val { color:var(--teal); }
+    .stat-card.amber .stat-val { color:var(--amber); }
+    .stat-label { font-size:.82rem; color:var(--ink-soft); margin-top:6px; font-weight:400; }
+    .stat-sub { font-size:.72rem; color:#b0bcc8; margin-top:3px; }
+
+    .card { background:var(--surface); border-radius:var(--r); padding:1.5rem; box-shadow:var(--shadow-sm); margin-bottom:1.25rem; }
+    .card-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; flex-wrap:wrap; gap:.75rem; }
+    .card-title { font-size:.88rem; font-weight:600; color:var(--ink-mid); text-transform:uppercase; letter-spacing:.8px; }
+    .chart-wrap { position:relative; height:320px; }
+
+    .legend { display:flex; flex-wrap:wrap; gap:14px; }
+    .legend-item { display:flex; align-items:center; gap:6px; font-size:.78rem; color:var(--ink-soft); }
+    .legend-dot { width:11px; height:11px; border-radius:3px; flex-shrink:0; }
+    .legend-line { width:22px; height:3px; border-radius:2px; flex-shrink:0; position:relative; }
+    .legend-line::after { content:''; position:absolute; width:7px; height:7px; border-radius:50%; background:inherit; top:50%; left:50%; transform:translate(-50%,-50%); }
+
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.25rem; }
+
+    /* Publication cards */
+    .pub-list { display:flex; flex-direction:column; gap:1rem; }
+    .pub-card { background:var(--surface); border-radius:var(--r); box-shadow:var(--shadow-sm); padding:1.25rem 1.5rem; display:grid; grid-template-columns:1fr 140px; gap:1.25rem; align-items:start; transition:box-shadow .2s,transform .15s; border-left:4px solid transparent; }
+    .pub-card:hover { box-shadow:var(--shadow); transform:translateY(-1px); }
+    .pub-pillar-tag { display:inline-flex; align-items:center; gap:5px; font-size:.68rem; font-weight:600; padding:2px 9px; border-radius:20px; margin-bottom:7px; }
+    .pub-pillar-dot { width:7px; height:7px; border-radius:50%; }
+    .pub-type-note { font-size:.66rem; color:var(--ink-soft); margin-left:6px; font-weight:400; text-transform:uppercase; letter-spacing:.4px; }
+    .pub-title { font-size:.95rem; font-weight:600; line-height:1.4; color:var(--ink); margin-bottom:5px; }
+    .pub-meta { font-size:.8rem; color:var(--ink-soft); margin-bottom:8px; }
+    .pub-meta strong { color:var(--ink-mid); }
+    .pub-doi { font-size:.75rem; color:var(--blue); text-decoration:none; word-break:break-all; }
+    .pub-doi:hover { text-decoration:underline; }
+    .pub-sparkline-wrap { margin-top:10px; height:48px; position:relative; }
+    .pub-metric { text-align:right; }
+    .pub-cit-num { font-family:'DM Serif Display',serif; font-size:2.4rem; line-height:1; color:var(--blue); }
+    .pub-cit-label { font-size:.72rem; color:var(--ink-soft); margin-top:3px; }
+    .pub-per-year { margin-top:8px; font-size:.78rem; color:var(--teal); font-weight:500; }
+    .pub-per-year span { color:var(--ink-soft); font-weight:400; }
+
+    .spinner { display:inline-block; width:22px; height:22px; border:2px solid var(--rule); border-top-color:var(--blue); border-radius:50%; animation:spin .7s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .fetch-err { font-size:.75rem; color:var(--red); }
+
+    /* Membership */
+    .mem-highlight { display:flex; align-items:baseline; gap:10px; margin-bottom:.5rem; }
+    .mem-big { font-family:'DM Serif Display',serif; font-size:3rem; color:var(--teal); line-height:1; }
+    .mem-unit { font-size:1rem; color:var(--ink-soft); font-weight:300; }
+
+    .coming-soon { background:var(--surface); border-radius:var(--r); padding:3.5rem 2rem; text-align:center; box-shadow:var(--shadow-sm); border:2px dashed var(--rule); }
+    .coming-soon-icon { font-size:2.5rem; margin-bottom:.75rem; opacity:.4; }
+    .coming-soon h3 { font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--ink); margin-bottom:.4rem; }
+    .coming-soon p { font-size:.85rem; color:var(--ink-soft); font-weight:300; }
+
+    .footer { text-align:center; padding:2rem; font-size:.75rem; color:#b0bcc8; font-weight:300; }
+    .footer a { color:var(--blue); text-decoration:none; }
+    .footer a:hover { text-decoration:underline; }
+
+    @media (max-width:720px) {
+      .main { padding:1.25rem; }
+      .stat-grid { grid-template-columns:1fr; }
+      .two-col { grid-template-columns:1fr; }
+      .pub-card { grid-template-columns:1fr; }
+      .pub-metric { text-align:left; display:flex; align-items:center; gap:1rem; }
+      .header-updated { display:none; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-brand">
+    <div class="header-monogram">MPI</div>
+    <div><div class="header-name">Metaproteomics Initiative <span>Impact Dashboard</span></div></div>
+  </div>
+  <div class="header-updated" id="lastUpdated">Loading…</div>
+</header>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <button class="nav-tab active" onclick="showTab('overview', this)">Overview</button>
+    <button class="nav-tab" onclick="showTab('publications', this)">Publications <span class="tab-badge" id="pubCount">—</span></button>
+    <button class="nav-tab" onclick="showTab('membership', this)">Membership</button>
+    <button class="nav-tab soon" title="Coming soon">Outreach <span class="tab-badge">soon</span></button>
+  </nav>
+</div>
+
+<main class="main">
+
+  <!-- ── OVERVIEW ── -->
+  <section class="section active" id="sec-overview">
+    <div class="section-intro">
+      <h2>Five years of community-driven progress</h2>
+      <p>Live citation data via OpenAlex · Membership figures from the MPI roadmap</p>
+    </div>
+
+    <!-- 3 stat cards -->
+    <div class="stat-grid">
+      <div class="stat-card teal">
+        <div class="stat-val">416</div>
+        <div class="stat-label">Members worldwide</div>
+        <div class="stat-sub">35 countries represented</div>
+      </div>
+      <div class="stat-card blue">
+        <div class="stat-val">155</div>
+        <div class="stat-label">Research groups</div>
+        <div class="stat-sub">across the globe</div>
+      </div>
+      <div class="stat-card amber">
+        <div class="stat-val" id="totalPubs">—</div>
+        <div class="stat-label">Publications</div>
+        <div class="stat-sub">peer-reviewed + preprints</div>
+      </div>
+    </div>
+
+    <!-- Main chart -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Document &amp; citation trends</div>
+        <div class="legend" id="chartLegend"></div>
+      </div>
+      <div class="chart-wrap"><canvas id="mainChart"></canvas></div>
+    </div>
+
+    <!-- Map card on overview - full width, no side list -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Geographic distribution</div>
+        <div style="font-size:.78rem; color:var(--ink-soft);">35 countries · hover for details</div>
+      </div>
+      <div style="position:relative;">
+        <svg id="worldMapOverview" style="width:100%; display:block;"></svg>
+        <div id="mapTooltipOverview" style="
+          position:absolute; display:none; pointer-events:none;
+          background:var(--ink); color:#fff; border-radius:6px;
+          padding:6px 10px; font-size:.78rem; font-weight:500;
+          box-shadow:0 4px 12px rgba(0,0,0,.2); white-space:nowrap;
+          transform:translate(-50%,-110%);
+        "></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PUBLICATIONS ── -->
+  <section class="section" id="sec-publications">
+    <div class="section-intro">
+      <h2>Publications</h2>
+      <p>Citation counts fetched live from OpenAlex on each page load · grouped by Initiative pillar</p>
+    </div>
+    <div class="pub-list" id="pubList"></div>
+  </section>
+
+  <!-- ── MEMBERSHIP ── -->
+  <section class="section" id="sec-membership">
+    <div class="section-intro">
+      <h2>Membership growth</h2>
+      <p>Growth of the MPI member community since the Initiative's launch in 2021</p>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-header"><div class="card-title">Members over time</div></div>
+        <div class="chart-wrap" style="height:260px;"><canvas id="membershipChart"></canvas></div>
+      </div>
+      <div class="card" style="display:flex; flex-direction:column; justify-content:center; padding:2rem;">
+        <div class="stat-label" style="font-size:.8rem; text-transform:uppercase; letter-spacing:.8px; margin-bottom:.75rem;">Current membership</div>
+        <div class="mem-highlight"><div class="mem-big">416</div><div class="mem-unit">members</div></div>
+        <div style="font-size:.85rem; color:var(--ink-soft); font-weight:300; line-height:1.7; margin-top:.75rem;">
+          <div>📍 <strong style="color:var(--ink);">35</strong> countries represented</div>
+          <div>🔬 <strong style="color:var(--ink);">155</strong> research groups</div>
+          <div>🏛️ <strong style="color:var(--ink);">7</strong> international symposia held</div>
+          <div>📈 <strong style="color:var(--ink);">~3×</strong> growth since 2021</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map card with full country list -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Geographic distribution</div>
+        <div style="font-size:.78rem; color:var(--ink-soft);">35 countries · hover for details</div>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 280px; gap:1.5rem; align-items:start;">
+        <div style="position:relative;">
+          <svg id="worldMap" style="width:100%; display:block;"></svg>
+          <div id="mapTooltip" style="
+            position:absolute; display:none; pointer-events:none;
+            background:var(--ink); color:#fff; border-radius:6px;
+            padding:6px 10px; font-size:.78rem; font-weight:500;
+            box-shadow:0 4px 12px rgba(0,0,0,.2); white-space:nowrap;
+            transform:translate(-50%,-110%);
+          "></div>
+        </div>
+        <div>
+          <div style="font-size:.75rem; font-weight:600; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.8px; margin-bottom:.75rem;">All countries</div>
+          <div id="countryBars" style="max-height:340px; overflow-y:auto; padding-right:4px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OUTREACH (coming soon) ── -->
+  <section class="section" id="sec-outreach">
+    <div class="coming-soon"><div class="coming-soon-icon">🎙️</div><h3>Outreach &amp; Conference presence</h3><p>Workshops, posters, and invited talks will be tracked here in a future update.</p></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  Citation data from <a href="https://openalex.org/" target="_blank">OpenAlex</a> ·
+  Metaproteomics Initiative · <a href="https://metaproteomics.org" target="_blank">metaproteomics.org</a>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   CONFIG — edit this block to update the dashboard
+   ▸ Add a paper: copy a block in `publications`, fill the fields,
+     set `pillar` to a key from PILLARS, set `type`.
+   ▸ Update membership: add an entry to `membership`.
+   ▸ Update research groups count: change the stat card in HTML above.
+═══════════════════════════════════════════════════════════ */
+
+const CONTACT_EMAIL = 'benoit.kunath@lih.lu';
+
+const PILLARS = {
+  collaboration:   { label: 'Communication & Collaboration', color: '#1258a8' },
+  education:       { label: 'Education & Outreach',           color: '#c46a00' },
+  standardization: { label: 'Standardization',                color: '#0f8f6e' },
+};
+
+const CONFIG = {
+  publications: [
+    { id:'mpi-launch', shortTitle:'MPI Launch Commentary',
+      title:'The Metaproteomics Initiative: a coordinated approach for propelling the functional characterization of microbiomes',
+      authors:'Van Den Bossche et al.', journal:'Microbiome', year:2021,
+      doi:'10.1186/s40168-021-01176-w', type:'peer-reviewed', pillar:'collaboration' },
+
+    { id:'campi-1', shortTitle:'CAMPI-1',
+      title:'Critical Assessment of MetaProteome Investigation (CAMPI): a multi-laboratory comparison of established workflows',
+      authors:'Kunath et al.', journal:'Nature Communications', year:2021,
+      doi:'10.1038/s41467-021-27542-8', type:'peer-reviewed', pillar:'collaboration' },
+
+    { id:'campi-2', shortTitle:'CAMPI-2',
+      title:'Critical Assessment of MetaProteome Investigation 2 (CAMPI-2): multi-laboratory assessment of sample processing methods to stabilize fecal microbiome for functional analysis',
+      authors:'Tanca et al.', journal:'Microbiome', year:2025,
+      doi:'10.1186/s40168-025-02248-x', type:'peer-reviewed', pillar:'collaboration' },
+
+    { id:'microbio-guide', shortTitle:"Microbiologist's Guide",
+      title:"The microbiologist's guide to metaproteomics",
+      authors:'Van Den Bossche et al.', journal:'iMeta', year:2025,
+      doi:'10.1002/imt2.70031', type:'peer-reviewed', pillar:'education' },
+
+    { id:'one-health', shortTitle:'One Health Perspective',
+      title:'Metaproteomics in the One Health framework for unraveling microbial effectors in microbiomes',
+      authors:'Heyer et al.', journal:'Microbiome', year:2025,
+      doi:'10.1186/s40168-025-02119-5', type:'peer-reviewed', pillar:'education' },
+
+    { id:'non-metaprot', shortTitle:"Non-Metaproteomics Researchers' View",
+      title:"A Non-Metaproteomics Researchers' View on Metaproteomics in Microbiome Research",
+      authors:'Aho et al.', journal:'PROTEOMICS', year:2025,
+      doi:'10.1002/pmic.202500019', type:'peer-reviewed', pillar:'education' },
+
+    { id:'standardisation', shortTitle:'Standardisation & Open Data',
+      title:'The need for standardisation and improved open (meta)data practices in metaproteomics',
+      authors:'Van Den Bossche et al.', journal:'ChemRxiv (preprint)', year:2025,
+      doi:'10.26434/chemrxiv-2025-tm1ms', type:'preprint', pillar:'standardization' },
+
+    { id:'five-years', shortTitle:'Five Years of MPI',
+      title:'The Metaproteomics Initiative: Five Years of Community-Driven Progress',
+      authors:'Van Den Bossche & Kunath et al.', journal:'Microbiome', year:2026,
+      doi:'10.26434/chemrxiv.15000318/v1', type:'preprint',
+      pillar:'collaboration' },
+
+    // ── TEMPLATE FOR NEW PAPERS ──
+    // { id:'unique-id', shortTitle:'Short name', title:'Full title',
+    //   authors:'Author et al.', journal:'Journal', year:2026,
+    //   doi:'10.xxxx/xxxx', type:'peer-reviewed',
+    //   pillar:'collaboration' /* or 'education' / 'standardization' */ },
+  ],
+
+  membership: [
+    { year:2021, members:124, groups:53  },
+    { year:2022, members:162, groups:73  },
+    { year:2023, members:243, groups:105 },
+    { year:2024, members:318, groups:125 },
+    { year:2025, members:395, groups:153 },
+    { year:2026, members:416, groups:155 },
+  ],
+};
+
+/* ─── OpenAlex API ─── */
+const OA_BASE = 'https://api.openalex.org/works/doi:';
+const SELECT_FIELDS = 'id,doi,title,publication_year,cited_by_count,counts_by_year';
+
+async function fetchOpenAlex(doi) {
+  try {
+    const mailto = CONTACT_EMAIL ? `&mailto=${encodeURIComponent(CONTACT_EMAIL)}` : '';
+    const r = await fetch(`${OA_BASE}${encodeURIComponent(doi)}?select=${SELECT_FIELDS}${mailto}`);
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
+
+function parseCountsByYear(arr) {
+  const byYear = {};
+  if (!arr) return byYear;
+  for (const item of arr) {
+    if (item.year >= 2021) byYear[item.year] = item.cited_by_count;
+  }
+  return byYear;
+}
+
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.font.size = 12;
+Chart.defaults.color = '#7a8fa8';
+
+/* ─── Tabs ─── */
+function showTab(name, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  const map = { overview:'sec-overview', publications:'sec-publications', membership:'sec-membership', outreach:'sec-outreach' };
+  const el = document.getElementById(map[name]); if (el) el.classList.add('active');
+  if (btn && !btn.classList.contains('soon')) btn.classList.add('active');
+}
+
+/* ─── Year range ─── */
+function yearRange() {
+  const years = [];
+  const end = Math.max(new Date().getFullYear(), ...CONFIG.publications.map(p => p.year));
+  for (let y = 2021; y <= end; y++) years.push(y);
+  return years;
+}
+
+let cachedCitationData = {};
+
+/* ─── Publication cards ─── */
+function buildPubCards() {
+  const list = document.getElementById('pubList');
+  document.getElementById('pubCount').textContent = CONFIG.publications.length;
+  document.getElementById('totalPubs').textContent = CONFIG.publications.length;
+
+  CONFIG.publications.forEach(pub => {
+    const pillar = PILLARS[pub.pillar];
+    const typeNote = pub.type === 'preprint' ? 'Preprint' : (pub.type === 'under-review' ? 'Under review' : 'Peer-reviewed');
+    const card = document.createElement('div');
+    card.className = 'pub-card';
+    card.style.borderLeftColor = pillar.color;
+    card.innerHTML = `
+      <div>
+        <span class="pub-pillar-tag" style="background:${pillar.color}1a; color:${pillar.color};">
+          <span class="pub-pillar-dot" style="background:${pillar.color};"></span>${pillar.label}
+        </span><span class="pub-type-note">${typeNote}</span>
+        <div class="pub-title">${pub.title}</div>
+        <div class="pub-meta"><strong>${pub.authors}</strong> · ${pub.journal} · ${pub.year}</div>
+        <a class="pub-doi" href="https://doi.org/${pub.doi}" target="_blank">doi.org/${pub.doi}</a>
+      </div>
+      <div class="pub-metric">
+        <div class="pub-cit-num" id="cit-${pub.id}"><span class="spinner"></span></div>
+        <div class="pub-cit-label">citations</div>
+      </div>`;
+    list.appendChild(card);
+  });
+}
+
+/* ─── Sparklines ─── */
+function buildSparkline(pubId, byYear, color) {
+  const years = yearRange();
+  const ctx = document.getElementById(`spark-${pubId}`); if (!ctx) return;
+  const existing = Chart.getChart(ctx); if (existing) existing.destroy();
+  new Chart(ctx, {
+    type: 'bar',
+    data: { labels: years, datasets: [{ data: years.map(y => byYear[y] || 0), backgroundColor: color + 'aa', borderColor: color, borderWidth: 1, borderRadius: 3 }] },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { title: i => `${i[0].label}`, label: c => ` ${c.parsed.y} citation${c.parsed.y !== 1 ? 's' : ''}` } } },
+      scales: { x: { display: false }, y: { display: false, min: 0 } } }
+  });
+}
+
+/* ─── Main chart ─── */
+let mainChartInstance = null;
+
+function renderMainChart() {
+  const years = yearRange();
+  const ctx = document.getElementById('mainChart');
+  const legendEl = document.getElementById('chartLegend');
+  if (mainChartInstance) mainChartInstance.destroy();
+
+  /* Stacked bars: one dataset per pillar, value = number of publications that year */
+  const pillarDatasets = Object.entries(PILLARS).map(([key, p]) => ({
+    type: 'bar',
+    label: p.label,
+    data: years.map(y => CONFIG.publications.filter(pub => pub.pillar === key && pub.year === y).length),
+    backgroundColor: p.color + 'dd',
+    borderColor: p.color,
+    borderWidth: 1,
+    borderRadius: 3,
+    stack: 'pubs',
+    yAxisID: 'yDocs',
+    order: 2,
+  }));
+
+  /* Cumulative citation line */
+  let cum = 0;
+  const cumCit = years.map(y => {
+    const yearCit = CONFIG.publications.reduce((s, p) => s + ((cachedCitationData[p.id]?.byYear || {})[y] || 0), 0);
+    cum += yearCit;
+    return cum;
+  });
+
+  /* Legend */
+  legendEl.innerHTML =
+    Object.values(PILLARS).map(p =>
+      `<div class="legend-item"><div class="legend-dot" style="background:${p.color};"></div>${p.label}</div>`
+    ).join('') +
+    `<div class="legend-item">
+       <div style="width:22px;height:3px;background:#0e1a2b;border-radius:2px;position:relative;flex-shrink:0;">
+         <div style="position:absolute;width:7px;height:7px;border-radius:50%;background:#0e1a2b;top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+       </div>
+       Cumulative citations
+     </div>`;
+
+  mainChartInstance = new Chart(ctx, {
+    data: {
+      labels: years,
+      datasets: [
+        ...pillarDatasets,
+        {
+          type: 'line',
+          label: 'Cumulative citations',
+          data: cumCit,
+          borderColor: '#0e1a2b',
+          backgroundColor: '#0e1a2b',
+          tension: 0.35,
+          pointRadius: 4,
+          pointBackgroundColor: '#0e1a2b',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          yAxisID: 'yCit',
+          order: 1,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            afterBody: (items) => {
+              const year = items[0]?.label;
+              const totalCit = CONFIG.publications.reduce((s,p)=>s+((cachedCitationData[p.id]?.byYear||{})[parseInt(year)]||0),0);
+              return totalCit > 0 ? [`New citations in ${year}: ${totalCit}`] : [];
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { color: 'rgba(0,0,0,.04)' }, stacked: true },
+        yDocs: { type: 'linear', position: 'left', title: { display: true, text: 'Documents' }, min: 0, ticks: { stepSize: 1 }, grid: { color: 'rgba(0,0,0,.04)' }, stacked: true },
+        yCit: { type: 'linear', position: 'right', title: { display: true, text: 'Cumulative citations' }, min: 0, grid: { drawOnChartArea: false } }
+      }
+    }
+  });
+}
+
+/* ─── Membership chart ─── */
+function buildMembershipChart() {
+  new Chart(document.getElementById('membershipChart'), {
+    type: 'line',
+    data: {
+      labels: CONFIG.membership.map(d => d.year),
+      datasets: [
+        {
+          label: 'Members',
+          data: CONFIG.membership.map(d => d.members),
+          borderColor: '#0f8f6e',
+          backgroundColor: 'rgba(15,143,110,.08)',
+          fill: true,
+          tension: .4,
+          pointRadius: 5,
+          pointBackgroundColor: '#0f8f6e',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          yAxisID: 'yMembers',
+        },
+        {
+          label: 'Research groups',
+          data: CONFIG.membership.map(d => d.groups),
+          borderColor: '#1258a8',
+          backgroundColor: 'rgba(18,88,168,.06)',
+          fill: true,
+          tension: .4,
+          pointRadius: 5,
+          pointBackgroundColor: '#1258a8',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          yAxisID: 'yGroups',
+          borderDash: [5, 3],
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          align: 'end',
+          labels: { boxWidth: 12, boxHeight: 12, borderRadius: 3, useBorderRadius: true, font: { size: 12 }, color: '#7a8fa8' }
+        },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        x: { grid: { color: 'rgba(0,0,0,.04)' } },
+        yMembers: {
+          type: 'linear', position: 'left',
+          title: { display: true, text: 'Members', color: '#0f8f6e', font: { size: 11 } },
+          ticks: { color: '#0f8f6e', stepSize: 50 },
+          grid: { color: 'rgba(0,0,0,.04)' },
+          min: 0,
+        },
+        yGroups: {
+          type: 'linear', position: 'right',
+          title: { display: true, text: 'Research groups', color: '#1258a8', font: { size: 11 } },
+          ticks: { color: '#1258a8', stepSize: 25 },
+          grid: { drawOnChartArea: false },
+          min: 0,
+        }
+      }
+    }
+  });
+}
+
+/* ─── Main fetch ─── */
+async function loadAllCitations() {
+  const currentYear = new Date().getFullYear();
+  const results = await Promise.all(CONFIG.publications.map(pub => fetchOpenAlex(pub.doi)));
+  let anySuccess = false;
+
+  results.forEach((data, idx) => {
+    const pub = CONFIG.publications[idx];
+    if (data && typeof data.cited_by_count === 'number') {
+      anySuccess = true;
+      const byYear = parseCountsByYear(data.counts_by_year);
+      const count = data.cited_by_count;
+      cachedCitationData[pub.id] = { count, byYear };
+
+      const citEl = document.getElementById(`cit-${pub.id}`);
+      if (citEl) citEl.textContent = count.toLocaleString();
+    } else {
+      cachedCitationData[pub.id] = { count: 0, byYear: {} };
+      const citEl = document.getElementById(`cit-${pub.id}`);
+      if (citEl) citEl.innerHTML = '<span class="fetch-err">N/A</span>';
+    }
+  });
+
+  renderMainChart();
+
+  document.getElementById('lastUpdated').textContent =
+    (anySuccess ? 'Live data · ' : 'Failed to load · ') +
+    'Updated ' + new Date().toLocaleString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
+
+/* ─── Country group data with ISO numeric codes ─── */
+const COUNTRY_GROUPS = {
+  840: { name:'USA',          groups:33 },
+  276: { name:'Germany',      groups:19 },
+  826: { name:'United Kingdom', groups:13 },
+  250: { name:'France',       groups:8  },
+  724: { name:'Spain',        groups:8  },
+  380: { name:'Italy',        groups:7  },
+  36:  { name:'Australia',    groups:6  },
+  124: { name:'Canada',       groups:5  },
+  756: { name:'Switzerland',  groups:5  },
+  156: { name:'China',        groups:5  },
+  752: { name:'Sweden',       groups:4  },
+  208: { name:'Denmark',      groups:4  },
+  356: { name:'India',        groups:4  },
+  528: { name:'Netherlands',  groups:3  },
+  578: { name:'Norway',       groups:3  },
+  372: { name:'Ireland',      groups:3  },
+  56:  { name:'Belgium',      groups:2  },
+  40:  { name:'Austria',      groups:2  },
+  442: { name:'Luxembourg',   groups:2  },
+  300: { name:'Greece',       groups:2  },
+  376: { name:'Israel',       groups:2  },
+  246: { name:'Finland',      groups:1  },
+  682: { name:'Saudi Arabia', groups:1  },
+  792: { name:'Turkey',       groups:1  },
+  152: { name:'Chile',        groups:1  },
+  818: { name:'Egypt',        groups:1  },
+  642: { name:'Romania',      groups:1  },
+  620: { name:'Portugal',     groups:1  },
+  702: { name:'Singapore',    groups:1  },
+  233: { name:'Estonia',      groups:1  },
+  364: { name:'Iran',         groups:1  },
+  410: { name:'South Korea',  groups:1  },
+  710: { name:'South Africa', groups:1  },
+  360: { name:'Indonesia',    groups:1  },
+  392: { name:'Japan',        groups:1  },
+};
+
+/* ─── World map (shared drawing function) ─── */
+function drawMap(svgEl, tooltipEl, world) {
+  const W = svgEl.parentElement.clientWidth || 600;
+  const H = Math.round(W * 0.52);
+  svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  svgEl.setAttribute('height', H);
+
+  const projection = d3.geoNaturalEarth1()
+    .scale(W / 6.1)
+    .translate([W / 2, H / 2]);
+  const path = d3.geoPath().projection(projection);
+  const svg = d3.select(svgEl);
+  const countries = topojson.feature(world, world.objects.countries);
+  const maxGroups = Math.max(...Object.values(COUNTRY_GROUPS).map(d => d.groups));
+  const rScale = d3.scaleSqrt().domain([0, maxGroups]).range([0, 18]);
+
+  svg.selectAll('path.country')
+    .data(countries.features)
+    .join('path')
+    .attr('class','country')
+    .attr('d', path)
+    .attr('fill', d => COUNTRY_GROUPS[+d.id] ? 'var(--teal-lt)' : '#e8eef4')
+    .attr('stroke', '#fff')
+    .attr('stroke-width', 0.4)
+    .style('cursor', d => COUNTRY_GROUPS[+d.id] ? 'pointer' : 'default')
+    .on('mousemove', function(event, d) {
+      const info = COUNTRY_GROUPS[+d.id]; if (!info) return;
+      const [mx, my] = d3.pointer(event);
+      tooltipEl.style.display = 'block';
+      tooltipEl.style.left = `${mx}px`;
+      tooltipEl.style.top  = `${my}px`;
+      tooltipEl.innerHTML = `<strong>${info.name}</strong> · ${info.groups} group${info.groups > 1 ? 's' : ''}`;
+    })
+    .on('mouseleave', () => { tooltipEl.style.display = 'none'; });
+
+  const bubbleData = countries.features
+    .filter(d => COUNTRY_GROUPS[+d.id])
+    .map(d => {
+      const c = projection(d3.geoCentroid(d));
+      return { ...COUNTRY_GROUPS[+d.id], cx: c[0], cy: c[1] };
+    })
+    .filter(d => d.cx && d.cy && isFinite(d.cx) && isFinite(d.cy));
+
+  svg.selectAll('circle.bubble')
+    .data(bubbleData)
+    .join('circle')
+    .attr('class','bubble')
+    .attr('cx', d => d.cx).attr('cy', d => d.cy)
+    .attr('r', d => Math.max(4, rScale(d.groups)))
+    .attr('fill', 'var(--teal)').attr('fill-opacity', 0.75)
+    .attr('stroke', '#fff').attr('stroke-width', 1)
+    .style('cursor','pointer')
+    .on('mousemove', function(event, d) {
+      const [mx, my] = d3.pointer(event);
+      tooltipEl.style.display = 'block';
+      tooltipEl.style.left = `${mx}px`;
+      tooltipEl.style.top  = `${my}px`;
+      tooltipEl.innerHTML = `<strong>${d.name}</strong> · ${d.groups} group${d.groups > 1 ? 's' : ''}`;
+    })
+    .on('mouseleave', () => { tooltipEl.style.display = 'none'; });
+}
+
+async function buildWorldMap() {
+  let world;
+  try {
+    const r = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
+    world = await r.json();
+  } catch {
+    return;
+  }
+
+  /* Draw on overview tab */
+  const svgOv = document.getElementById('worldMapOverview');
+  const ttOv  = document.getElementById('mapTooltipOverview');
+  if (svgOv && ttOv) drawMap(svgOv, ttOv, world);
+
+  /* Draw on membership tab */
+  const svgMem = document.getElementById('worldMap');
+  const ttMem  = document.getElementById('mapTooltip');
+  if (svgMem && ttMem) drawMap(svgMem, ttMem, world);
+
+  buildCountryBars();
+}
+
+function buildCountryBars() {
+  const container = document.getElementById('countryBars');
+  if (!container) return;
+  const sorted = Object.values(COUNTRY_GROUPS).sort((a,b) => b.groups - a.groups);
+  const max = sorted[0].groups;
+  container.innerHTML = sorted.map(d => `
+    <div style="margin-bottom:8px;">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3px;">
+        <span style="font-size:.75rem;color:var(--ink-mid);font-weight:500;">${d.name}</span>
+        <span style="font-size:.72rem;color:var(--ink-soft);flex-shrink:0;margin-left:6px;">${d.groups}</span>
+      </div>
+      <div style="height:5px;background:var(--rule);border-radius:3px;overflow:hidden;">
+        <div style="height:100%;width:${(d.groups/max*100).toFixed(1)}%;background:var(--teal);border-radius:3px;"></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+/* ─── Init ─── */
+buildPubCards();
+buildMembershipChart();
+renderMainChart();
+loadAllCitations();
+buildWorldMap();
+</script>
+</body>
+</html>
