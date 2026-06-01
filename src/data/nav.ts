@@ -19,6 +19,6 @@ export const navItems: NavItem[] = [
   { title: "Standardization", path: "/standardization" },
   { title: "Symposia", path: "/symposia" },
   { title: "About us", path: "/about" },
-  { title: "Dashboard", path: "/mpi-impact-dashboard.html" },
+  { title: "Dashboard", path: "/dashboard" },
   { title: "News", path: "/news" },
 ];
