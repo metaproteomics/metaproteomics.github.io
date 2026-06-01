@@ -14,11 +14,11 @@ export interface NavItem {
 
 export const navItems: NavItem[] = [
   { title: "Groups", path: "/groups" },
-  { title: "Impact", path: "/mpi-impact-dashboard.html" },
   { title: "CAMPI", path: "/campi" },
   { title: "Education", path: "/education" },
   { title: "Standardization", path: "/standardization" },
   { title: "Symposia", path: "/symposia" },
   { title: "About us", path: "/about" },
+  { title: "Dashboard", path: "/mpi-impact-dashboard.html" },
   { title: "News", path: "/news" },
 ];
