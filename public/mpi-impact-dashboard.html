@@ -105,6 +105,10 @@
     .coming-soon h3 { font-family:'DM Serif Display',serif; font-size:1.2rem; color:var(--ink); margin-bottom:.4rem; }
     .coming-soon p { font-size:.85rem; color:var(--ink-soft); font-weight:300; }
 
+    .sort-btn { border:none; background:none; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:.78rem; font-weight:500; color:var(--ink-soft); padding:.4rem .85rem; border-radius:6px; transition:background .15s,color .15s; }
+    .sort-btn.active { background:var(--surface); color:var(--blue); box-shadow:var(--shadow-sm); }
+    .sort-btn:hover:not(.active) { color:var(--blue); }
+
     .footer { text-align:center; padding:2rem; font-size:.75rem; color:#b0bcc8; font-weight:300; }
     .footer a { color:var(--blue); text-decoration:none; }
     .footer a:hover { text-decoration:underline; }
@@ -132,8 +136,8 @@
 <div class="nav-wrap">
   <nav class="nav">
     <button class="nav-tab active" onclick="showTab('overview', this)">Overview</button>
-    <button class="nav-tab" onclick="showTab('publications', this)">Publications <span class="tab-badge" id="pubCount">—</span></button>
     <button class="nav-tab" onclick="showTab('membership', this)">Membership</button>
+    <button class="nav-tab" onclick="showTab('publications', this)">Publications <span class="tab-badge" id="pubCount">—</span></button>
     <button class="nav-tab soon" title="Coming soon">Outreach <span class="tab-badge">soon</span></button>
   </nav>
 </div>
@@ -166,15 +170,6 @@
       </div>
     </div>
 
-    <!-- Main chart -->
-    <div class="card">
-      <div class="card-header">
-        <div class="card-title">Document &amp; citation trends</div>
-        <div class="legend" id="chartLegend"></div>
-      </div>
-      <div class="chart-wrap"><canvas id="mainChart"></canvas></div>
-    </div>
-
     <!-- Map card on overview - full width, no side list -->
     <div class="card">
       <div class="card-header">
@@ -192,6 +187,15 @@
         "></div>
       </div>
     </div>
+
+    <!-- Main chart -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Document &amp; citation trends</div>
+        <div class="legend" id="chartLegend"></div>
+      </div>
+      <div class="chart-wrap"><canvas id="mainChart"></canvas></div>
+    </div>
   </section>
 
   <!-- ── PUBLICATIONS ── -->
@@ -199,6 +203,15 @@
     <div class="section-intro">
       <h2>Publications</h2>
       <p>Citation counts fetched live from OpenAlex on each page load · grouped by Initiative pillar</p>
+    </div>
+    <!-- Sort controls -->
+    <div style="display:flex; align-items:center; gap:.75rem; margin-bottom:1.25rem;">
+      <span style="font-size:.78rem; color:var(--ink-soft); font-weight:500;">Sort by</span>
+      <div style="display:inline-flex; background:var(--bg); border-radius:8px; padding:3px; gap:2px;">
+        <button id="sort-pillar"  class="sort-btn active" onclick="sortPubs('pillar')">Pillar</button>
+        <button id="sort-year"    class="sort-btn"        onclick="sortPubs('year')">Year</button>
+        <button id="sort-citations" class="sort-btn"      onclick="sortPubs('citations')">Citations</button>
+      </div>
     </div>
     <div class="pub-list" id="pubList"></div>
   </section>
@@ -209,21 +222,9 @@
       <h2>Membership growth</h2>
       <p>Growth of the MPI member community since the Initiative's launch in 2021</p>
     </div>
-    <div class="two-col">
-      <div class="card">
-        <div class="card-header"><div class="card-title">Members over time</div></div>
-        <div class="chart-wrap" style="height:260px;"><canvas id="membershipChart"></canvas></div>
-      </div>
-      <div class="card" style="display:flex; flex-direction:column; justify-content:center; padding:2rem;">
-        <div class="stat-label" style="font-size:.8rem; text-transform:uppercase; letter-spacing:.8px; margin-bottom:.75rem;">Current membership</div>
-        <div class="mem-highlight"><div class="mem-big">416</div><div class="mem-unit">members</div></div>
-        <div style="font-size:.85rem; color:var(--ink-soft); font-weight:300; line-height:1.7; margin-top:.75rem;">
-          <div>📍 <strong style="color:var(--ink);">35</strong> countries represented</div>
-          <div>🔬 <strong style="color:var(--ink);">155</strong> research groups</div>
-          <div>🏛️ <strong style="color:var(--ink);">7</strong> international symposia held</div>
-          <div>📈 <strong style="color:var(--ink);">~3×</strong> growth since 2021</div>
-        </div>
-      </div>
+    <div class="card">
+      <div class="card-header"><div class="card-title">Members over time</div></div>
+      <div class="chart-wrap" style="height:260px;"><canvas id="membershipChart"></canvas></div>
     </div>
 
     <!-- Map card with full country list -->
@@ -312,6 +313,11 @@ const CONFIG = {
       authors:'Aho et al.', journal:'PROTEOMICS', year:2025,
       doi:'10.1002/pmic.202500019', type:'peer-reviewed', pillar:'education' },
 
+    { id:'DIA Kleiner Jagtap', shortTitle:'DIA Interlaboratory Comparison Using a Model Microbiome',
+      title:'Data-Independent Acquisition Mass Spectrometry as a Tool for Metaproteomics: Interlaboratory Comparison Using a Model Microbiome',
+      authors:'Rajczewski et al.', journal:'Proteomics', year:2025,
+      doi:'10.1002/pmic.202400187', type:'peer-reviewed', pillar:'collaboration' },
+
     { id:'standardisation', shortTitle:'Standardisation & Open Data',
       title:'The need for standardisation and improved open (meta)data practices in metaproteomics',
       authors:'Van Den Bossche et al.', journal:'ChemRxiv (preprint)', year:2025,
@@ -385,15 +391,42 @@ function yearRange() {
 
 let cachedCitationData = {};
 
-/* ─── Publication cards ─── */
+/* ─── Publication cards — initial render via sortPubs ─── */
 function buildPubCards() {
-  const list = document.getElementById('pubList');
   document.getElementById('pubCount').textContent = CONFIG.publications.length;
   document.getElementById('totalPubs').textContent = CONFIG.publications.length;
+  sortPubs('pillar');  /* default sort */
+}
 
-  CONFIG.publications.forEach(pub => {
+/* ─── Sort publications ─── */
+let currentSort = 'pillar';
+
+function sortPubs(by) {
+  currentSort = by;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(`sort-${by}`)?.classList.add('active');
+
+  const pillarOrder = { collaboration: 0, education: 1, standardization: 2 };
+  const sorted = [...CONFIG.publications].sort((a, b) => {
+    if (by === 'pillar') return pillarOrder[a.pillar] - pillarOrder[b.pillar];
+    if (by === 'year')   return b.year - a.year;
+    if (by === 'citations') {
+      const ca = cachedCitationData[a.id]?.count || 0;
+      const cb = cachedCitationData[b.id]?.count || 0;
+      return cb - ca;
+    }
+    return 0;
+  });
+
+  const list = document.getElementById('pubList');
+  list.innerHTML = '';
+  sorted.forEach(pub => {
     const pillar = PILLARS[pub.pillar];
     const typeNote = pub.type === 'preprint' ? 'Preprint' : (pub.type === 'under-review' ? 'Under review' : 'Peer-reviewed');
+    const count = cachedCitationData[pub.id]?.count;
+    const citDisplay = count !== undefined
+      ? count.toLocaleString()
+      : '<span class="spinner"></span>';
     const card = document.createElement('div');
     card.className = 'pub-card';
     card.style.borderLeftColor = pillar.color;
@@ -407,14 +440,12 @@ function buildPubCards() {
         <a class="pub-doi" href="https://doi.org/${pub.doi}" target="_blank">doi.org/${pub.doi}</a>
       </div>
       <div class="pub-metric">
-        <div class="pub-cit-num" id="cit-${pub.id}"><span class="spinner"></span></div>
+        <div class="pub-cit-num" id="cit-${pub.id}">${citDisplay}</div>
         <div class="pub-cit-label">citations</div>
       </div>`;
     list.appendChild(card);
   });
 }
-
-/* ─── Sparklines ─── */
 function buildSparkline(pubId, byYear, color) {
   const years = yearRange();
   const ctx = document.getElementById(`spark-${pubId}`); if (!ctx) return;
@@ -530,57 +561,37 @@ function buildMembershipChart() {
           data: CONFIG.membership.map(d => d.members),
           borderColor: '#0f8f6e',
           backgroundColor: 'rgba(15,143,110,.08)',
-          fill: true,
-          tension: .4,
-          pointRadius: 5,
-          pointBackgroundColor: '#0f8f6e',
-          pointBorderColor: '#fff',
-          pointBorderWidth: 2,
-          yAxisID: 'yMembers',
+          fill: true, tension: .4,
+          pointRadius: 5, pointBackgroundColor: '#0f8f6e',
+          pointBorderColor: '#fff', pointBorderWidth: 2,
         },
         {
           label: 'Research groups',
           data: CONFIG.membership.map(d => d.groups),
           borderColor: '#1258a8',
           backgroundColor: 'rgba(18,88,168,.06)',
-          fill: true,
-          tension: .4,
-          pointRadius: 5,
-          pointBackgroundColor: '#1258a8',
-          pointBorderColor: '#fff',
-          pointBorderWidth: 2,
-          yAxisID: 'yGroups',
+          fill: true, tension: .4,
+          pointRadius: 5, pointBackgroundColor: '#1258a8',
+          pointBorderColor: '#fff', pointBorderWidth: 2,
           borderDash: [5, 3],
         }
       ]
     },
     options: {
-      responsive: true,
-      maintainAspectRatio: false,
+      responsive: true, maintainAspectRatio: false,
       plugins: {
         legend: {
-          display: true,
-          position: 'top',
-          align: 'end',
+          display: true, position: 'top', align: 'end',
           labels: { boxWidth: 12, boxHeight: 12, borderRadius: 3, useBorderRadius: true, font: { size: 12 }, color: '#7a8fa8' }
         },
         tooltip: { mode: 'index', intersect: false }
       },
       scales: {
         x: { grid: { color: 'rgba(0,0,0,.04)' } },
-        yMembers: {
-          type: 'linear', position: 'left',
-          title: { display: true, text: 'Members', color: '#0f8f6e', font: { size: 11 } },
-          ticks: { color: '#0f8f6e', stepSize: 50 },
-          grid: { color: 'rgba(0,0,0,.04)' },
-          min: 0,
-        },
-        yGroups: {
-          type: 'linear', position: 'right',
-          title: { display: true, text: 'Research groups', color: '#1258a8', font: { size: 11 } },
-          ticks: { color: '#1258a8', stepSize: 25 },
-          grid: { drawOnChartArea: false },
-          min: 0,
+        y: {
+          min: 0, grid: { color: 'rgba(0,0,0,.04)' },
+          ticks: { stepSize: 50 },
+          title: { display: true, text: 'Count', font: { size: 11 }, color: '#7a8fa8' }
         }
       }
     }
@@ -611,6 +622,7 @@ async function loadAllCitations() {
   });
 
   renderMainChart();
+  sortPubs(currentSort);  /* refresh pub list with live citation data */
 
   document.getElementById('lastUpdated').textContent =
     (anySuccess ? 'Live data · ' : 'Failed to load · ') +
