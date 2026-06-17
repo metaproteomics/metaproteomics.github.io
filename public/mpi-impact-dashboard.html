@@ -106,8 +106,40 @@
     .coming-soon p { font-size:.85rem; color:var(--ink-soft); font-weight:300; }
 
     .sort-btn { border:none; background:none; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:.78rem; font-weight:500; color:var(--ink-soft); padding:.4rem .85rem; border-radius:6px; transition:background .15s,color .15s; }
+    .sort-btn.lg { font-size:.95rem; padding:.55rem 1.1rem; font-weight:600; }
     .sort-btn.active { background:var(--surface); color:var(--blue); box-shadow:var(--shadow-sm); }
     .sort-btn:hover:not(.active) { color:var(--blue); }
+
+    /* Outreach sub-nav panels */
+    .outreach-panel { display:none; }
+    .outreach-panel.active { display:block; }
+
+    /* IMS host-city roadmap */
+    .roadmap { display:flex; align-items:flex-start; justify-content:space-between; position:relative; padding:1.75rem .5rem .25rem; gap:.25rem; overflow-x:auto; }
+    .roadmap::before { content:''; position:absolute; top:34px; left:40px; right:40px; height:2px; background:var(--rule); }
+    .roadmap-stop { display:flex; flex-direction:column; align-items:center; text-align:center; flex:1; min-width:96px; position:relative; cursor:pointer; }
+    .roadmap-dot { width:13px; height:13px; border-radius:50%; background:var(--surface); border:3px solid var(--teal); margin-bottom:.65rem; z-index:1; flex-shrink:0; transition:transform .15s, box-shadow .15s; }
+    .roadmap-stop:hover .roadmap-dot, .roadmap-stop.active .roadmap-dot { transform:scale(1.25); box-shadow:0 0 0 4px var(--teal-lt); }
+    .roadmap-stop:hover .roadmap-year, .roadmap-stop.active .roadmap-year { color:var(--teal); }
+    .roadmap-stop.webinar { min-width:70px; flex:.6; }
+    .roadmap-stop.webinar .roadmap-dot { width:8px; height:8px; border-color:var(--blue); margin-top:3px; }
+    .roadmap-stop.webinar:hover .roadmap-dot, .roadmap-stop.webinar.active .roadmap-dot { box-shadow:0 0 0 4px var(--blue-lt); }
+    .roadmap-stop.webinar:hover .roadmap-year, .roadmap-stop.webinar.active .roadmap-year { color:var(--blue); }
+    .roadmap-stop.webinar .roadmap-year { font-size:.95rem; color:var(--ink-soft); }
+    .roadmap-stop.webinar .roadmap-edition { color:var(--blue); }
+    .roadmap-info { display:flex; flex-direction:column; align-items:center; }
+    .roadmap-year { font-family:'DM Serif Display',serif; font-size:1.15rem; color:var(--ink); line-height:1; transition:color .15s; }
+    .roadmap-city { font-size:.8rem; font-weight:600; color:var(--ink-mid); margin-top:4px; }
+    .roadmap-country { font-size:.7rem; color:var(--ink-soft); margin-top:1px; }
+    .roadmap-edition { font-size:.65rem; color:var(--blue); text-transform:uppercase; letter-spacing:.6px; margin-top:5px; font-weight:600; }
+
+    /* Edition detail panel */
+    .stat-grid.cols-4 { grid-template-columns:repeat(4,1fr); margin-bottom:0; }
+    .stat-card.muted { border-top-color:var(--ink-soft); }
+    .stat-card.muted .stat-val { color:var(--ink-mid); }
+
+    /* Select control (map edition picker / metric toggle) */
+    .select-control { font-family:'DM Sans',sans-serif; font-size:.78rem; font-weight:500; color:var(--blue); background:var(--blue-lt); border:none; border-radius:6px; padding:.45rem .75rem; cursor:pointer; }
 
     .footer { text-align:center; padding:2rem; font-size:.75rem; color:#b0bcc8; font-weight:300; }
     .footer a { color:var(--blue); text-decoration:none; }
@@ -116,10 +148,17 @@
     @media (max-width:720px) {
       .main { padding:1.25rem; }
       .stat-grid { grid-template-columns:1fr; }
+      .stat-grid.cols-4 { grid-template-columns:repeat(2,1fr); }
       .two-col { grid-template-columns:1fr; }
       .pub-card { grid-template-columns:1fr; }
       .pub-metric { text-align:left; display:flex; align-items:center; gap:1rem; }
       .header-updated { display:none; }
+
+      .roadmap { flex-direction:column; align-items:flex-stretch; gap:1.4rem; padding:.5rem 0 .5rem 1rem; }
+      .roadmap::before { top:6px; bottom:6px; left:6px; right:auto; width:2px; height:auto; }
+      .roadmap-stop { flex-direction:row; align-items:center; text-align:left; min-width:0; gap:1rem; }
+      .roadmap-dot { margin-bottom:0; }
+      .roadmap-info { align-items:flex-start; }
     }
   </style>
 </head>
@@ -137,8 +176,8 @@
   <nav class="nav">
     <button class="nav-tab active" onclick="showTab('overview', this)">Overview</button>
     <button class="nav-tab" onclick="showTab('membership', this)">Membership</button>
-    <button class="nav-tab" onclick="showTab('publications', this)">Publications <span class="tab-badge" id="pubCount">—</span></button>
-    <button class="nav-tab soon" title="Coming soon">Outreach <span class="tab-badge">soon</span></button>
+    <button class="nav-tab" onclick="showTab('publications', this)">Publications</button>
+    <button class="nav-tab" onclick="showTab('outreach', this)">Outreach</button>
   </nav>
 </div>
 
@@ -252,9 +291,110 @@
     </div>
   </section>
 
-  <!-- ── OUTREACH (coming soon) ── -->
+  <!-- ── OUTREACH ── -->
   <section class="section" id="sec-outreach">
-    <div class="coming-soon"><div class="coming-soon-icon">🎙️</div><h3>Outreach &amp; Conference presence</h3><p>Workshops, posters, and invited talks will be tracked here in a future update.</p></div>
+    <div class="section-intro">
+      <h2>Outreach</h2>
+      <p>Symposia, webinars, and training that connect the global metaproteomics community</p>
+    </div>
+
+    <!-- Sub-nav -->
+    <div style="display:flex; align-items:center; gap:.75rem; margin-bottom:1.25rem;">
+      <div style="display:inline-flex; background:var(--bg); border-radius:8px; padding:3px; gap:2px;">
+        <button id="outreach-tab-symposia" class="sort-btn lg active" onclick="showOutreachSub('symposia', this)">Symposia &amp; Webinars</button>
+        <button id="outreach-tab-teaching" class="sort-btn lg" onclick="showOutreachSub('teaching', this)">Teaching &amp; Workshops</button>
+      </div>
+    </div>
+
+    <!-- ── Symposia & Webinars ── -->
+    <div class="outreach-panel active" id="outreach-symposia">
+
+      <!-- Cumulative stats (always reflects in-person IMS editions) -->
+      <div class="stat-grid">
+        <div class="stat-card teal">
+          <div class="stat-val" id="imsStatEditions">—</div>
+          <div class="stat-label">International Symposia held</div>
+          <div class="stat-sub" id="imsStatEditionsSub">—</div>
+        </div>
+        <div class="stat-card blue">
+          <div class="stat-val" id="imsStatInstitutions">—</div>
+          <div class="stat-label">Institutions engaged</div>
+          <div class="stat-sub" id="imsStatInstitutionsSub">—</div>
+        </div>
+        <div class="stat-card amber">
+          <div class="stat-val" id="imsStatCountries">—</div>
+          <div class="stat-label">Countries reached</div>
+          <div class="stat-sub">across all editions</div>
+        </div>
+      </div>
+
+      <!-- Host city roadmap -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">IMS roadmap</div>
+          <div style="font-size:.78rem; color:var(--ink-soft);">Host cities, edition by edition</div>
+        </div>
+        <div class="roadmap" id="imsRoadmap"></div>
+      </div>
+
+      <!-- Edition detail panel (synced with roadmap / comparison chart hover) -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title" id="imsDetailTitle">Edition details</div>
+          <div style="font-size:.78rem; color:var(--ink-soft);" id="imsDetailSub"></div>
+        </div>
+        <div id="imsDetailBody"></div>
+      </div>
+
+      <!-- Compare editions -->
+      <div class="card">
+        <div class="card-header">
+          <div style="display:flex; align-items:center; gap:.85rem; flex-wrap:wrap;">
+            <div class="card-title">Compare editions</div>
+            <div style="display:inline-flex; background:var(--bg); border-radius:8px; padding:3px; gap:2px;">
+              <button class="sort-btn ims-type-btn active" data-type="IMS" onclick="setIMSType('IMS')">In-person Symposia</button>
+              <button class="sort-btn ims-type-btn" data-type="Webinar" onclick="setIMSType('Webinar')">Webinars</button>
+            </div>
+          </div>
+          <div style="display:inline-flex; background:var(--bg); border-radius:8px; padding:3px; gap:2px;" id="imsMetricToggle">
+            <button class="sort-btn active" data-metric="attendees" onclick="setIMSMetric('attendees', this)">Attendees</button>
+            <button class="sort-btn" data-metric="institutions" onclick="setIMSMetric('institutions', this)">Institutions</button>
+            <button class="sort-btn" data-metric="countriesRepresented" onclick="setIMSMetric('countriesRepresented', this)">Countries</button>
+          </div>
+        </div>
+        <div class="chart-wrap" style="height:280px;"><canvas id="imsCompareChart"></canvas></div>
+        <div class="legend" id="imsCompareLegend" style="margin-top:1rem;"></div>
+      </div>
+
+      <!-- Geographic distribution -->
+      <div class="card">
+        <div class="card-header">
+          <div style="display:flex; align-items:center; gap:.85rem; flex-wrap:wrap;">
+            <div class="card-title">Where attendees come from</div>
+            <div style="display:inline-flex; background:var(--bg); border-radius:8px; padding:3px; gap:2px;">
+              <button class="sort-btn ims-type-btn active" data-type="IMS" onclick="setIMSType('IMS')">In-person Symposia</button>
+              <button class="sort-btn ims-type-btn" data-type="Webinar" onclick="setIMSType('Webinar')">Webinars</button>
+            </div>
+          </div>
+          <select id="imsMapSelect" class="select-control" onchange="buildIMSMap(this.value)"></select>
+        </div>
+        <div style="position:relative;">
+          <svg id="imsWorldMap" style="width:100%; display:block;"></svg>
+          <div id="imsMapTooltip" style="
+            position:absolute; display:none; pointer-events:none;
+            background:var(--ink); color:#fff; border-radius:6px;
+            padding:6px 10px; font-size:.78rem; font-weight:500;
+            box-shadow:0 4px 12px rgba(0,0,0,.2); white-space:nowrap;
+            transform:translate(-50%,-110%);
+          "></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Teaching & Workshops (coming soon) ── -->
+    <div class="outreach-panel" id="outreach-teaching">
+      <div class="coming-soon"><div class="coming-soon-icon">🎓</div><h3>Teaching &amp; Workshops</h3><p>Training sessions, hands-on workshops, and educational activities will be tracked here in a future update.</p></div>
+    </div>
   </section>
 
 </main>
@@ -290,7 +430,7 @@ const CONFIG = {
 
     { id:'campi-1', shortTitle:'CAMPI-1',
       title:'Critical Assessment of MetaProteome Investigation (CAMPI): a multi-laboratory comparison of established workflows',
-      authors:'Van Den Bossche et al.', journal:'Nature Communications', year:2021,
+      authors:'Kunath et al.', journal:'Nature Communications', year:2021,
       doi:'10.1038/s41467-021-27542-8', type:'peer-reviewed', pillar:'collaboration' },
 
     { id:'campi-2', shortTitle:'CAMPI-2',
@@ -325,7 +465,7 @@ const CONFIG = {
 
     { id:'five-years', shortTitle:'Five Years of MPI',
       title:'The Metaproteomics Initiative: Five Years of Community-Driven Progress',
-      authors:'Van Den Bossche et al.', journal:'Microbiome', year:2026,
+      authors:'Van Den Bossche & Kunath et al.', journal:'Microbiome', year:2026,
       doi:'10.26434/chemrxiv.15000318/v1', type:'preprint',
       pillar:'collaboration' },
 
@@ -344,6 +484,280 @@ const CONFIG = {
     { year:2025, members:395, groups:153 },
     { year:2026, members:416, groups:155 },
   ],
+
+  /* ── International Metaproteomics Symposia (IMS) & webinars ──
+     Generated from participant lists via process_ims_data.py.
+     "institutions" = academicInstitutions + companies.
+     "countries" (per entry) covers academic institutions only -
+     companies and non-affiliated (personal email) attendees are
+     not assigned a country. */
+// Auto-generated by process_ims_data.py - paste into CONFIG in the dashboard
+imsEditions: [
+  {
+    id: '1st IMS', number: 1, year: 2016, type: 'In Person',
+    hostCity: 'Magdeburg', hostCountry: 'Germany',
+    attendees: 43, academicInstitutions: 19, companies: 2, institutions: 21,
+    companyNames: ['Biocrates Life Sciences', 'Waters Corporation'],
+    nonAffiliated: 4, countriesRepresented: 11,
+    countries: [
+      { country: 'Germany', iso: 276, attendees: 21, institutions: 8 },
+      { country: 'Denmark', iso: 208, attendees: 3, institutions: 1 },
+      { country: 'United Kingdom', iso: 826, attendees: 3, institutions: 2 },
+      { country: 'Belgium', iso: 56, attendees: 2, institutions: 1 },
+      { country: 'Italy', iso: 380, attendees: 1, institutions: 1 },
+      { country: 'Netherlands', iso: 528, attendees: 1, institutions: 1 },
+      { country: 'Spain', iso: 724, attendees: 1, institutions: 1 },
+      { country: 'United States', iso: 840, attendees: 1, institutions: 1 },
+      { country: 'Norway', iso: 578, attendees: 1, institutions: 1 },
+      { country: 'Luxembourg', iso: 442, attendees: 1, institutions: 1 },
+      { country: 'Sweden', iso: 752, attendees: 1, institutions: 1 },
+    ],
+  },
+  {
+    id: '2nd IMS', number: 2, year: 2017, type: 'In Person',
+    hostCity: 'Alghero', hostCountry: 'Italy',
+    attendees: 55, academicInstitutions: 31, companies: 0, institutions: 31,
+    companyNames: [],
+    nonAffiliated: 2, countriesRepresented: 13,
+    countries: [
+      { country: 'Italy', iso: 380, attendees: 8, institutions: 4 },
+      { country: 'Belgium', iso: 56, attendees: 7, institutions: 2 },
+      { country: 'France', iso: 250, attendees: 7, institutions: 3 },
+      { country: 'Germany', iso: 276, attendees: 7, institutions: 6 },
+      { country: 'United States', iso: 840, attendees: 5, institutions: 4 },
+      { country: 'Denmark', iso: 208, attendees: 4, institutions: 3 },
+      { country: 'Luxembourg', iso: 442, attendees: 4, institutions: 2 },
+      { country: 'Norway', iso: 578, attendees: 3, institutions: 1 },
+      { country: 'Canada', iso: 124, attendees: 2, institutions: 2 },
+      { country: 'Spain', iso: 724, attendees: 2, institutions: 1 },
+      { country: 'Sweden', iso: 752, attendees: 2, institutions: 1 },
+      { country: 'Finland', iso: 246, attendees: 1, institutions: 1 },
+      { country: 'Slovenia', iso: 705, attendees: 1, institutions: 1 },
+    ],
+  },
+  {
+    id: '3rd IMS', number: 3, year: 2018, type: 'In Person',
+    hostCity: 'Leipzig', hostCountry: 'Germany',
+    attendees: 77, academicInstitutions: 28, companies: 2, institutions: 30,
+    companyNames: ['Bruker', 'Thermo Fisher Scientific'],
+    nonAffiliated: 5, countriesRepresented: 13,
+    countries: [
+      { country: 'Germany', iso: 276, attendees: 38, institutions: 9 },
+      { country: 'United States', iso: 840, attendees: 6, institutions: 4 },
+      { country: 'France', iso: 250, attendees: 5, institutions: 3 },
+      { country: 'Norway', iso: 578, attendees: 4, institutions: 1 },
+      { country: 'Luxembourg', iso: 442, attendees: 3, institutions: 1 },
+      { country: 'Czech Republic', iso: 203, attendees: 2, institutions: 1 },
+      { country: 'Spain', iso: 724, attendees: 2, institutions: 1 },
+      { country: 'Canada', iso: 124, attendees: 2, institutions: 2 },
+      { country: 'United Kingdom', iso: 826, attendees: 2, institutions: 1 },
+      { country: 'Finland', iso: 246, attendees: 2, institutions: 1 },
+      { country: 'Italy', iso: 380, attendees: 2, institutions: 2 },
+      { country: 'Sweden', iso: 752, attendees: 1, institutions: 1 },
+      { country: 'Belgium', iso: 56, attendees: 1, institutions: 1 },
+    ],
+  },
+  {
+    id: '4th IMS', number: 4, year: 2021, type: 'In Person',
+    hostCity: 'Luxembourg', hostCountry: 'Luxembourg',
+    attendees: 81, academicInstitutions: 30, companies: 1, institutions: 31,
+    companyNames: ['Colgate-Palmolive'],
+    nonAffiliated: 4, countriesRepresented: 14,
+    countries: [
+      { country: 'Germany', iso: 276, attendees: 16, institutions: 7 },
+      { country: 'France', iso: 250, attendees: 11, institutions: 4 },
+      { country: 'Luxembourg', iso: 442, attendees: 10, institutions: 2 },
+      { country: 'Norway', iso: 578, attendees: 9, institutions: 1 },
+      { country: 'United States', iso: 840, attendees: 7, institutions: 5 },
+      { country: 'Italy', iso: 380, attendees: 6, institutions: 3 },
+      { country: 'Belgium', iso: 56, attendees: 3, institutions: 1 },
+      { country: 'Netherlands', iso: 528, attendees: 3, institutions: 1 },
+      { country: 'Finland', iso: 246, attendees: 3, institutions: 1 },
+      { country: 'United Kingdom', iso: 826, attendees: 3, institutions: 1 },
+      { country: 'Spain', iso: 724, attendees: 2, institutions: 1 },
+      { country: 'Czech Republic', iso: 203, attendees: 1, institutions: 1 },
+      { country: 'Canada', iso: 124, attendees: 1, institutions: 1 },
+      { country: 'South Korea', iso: 410, attendees: 1, institutions: 1 },
+    ],
+  },
+  {
+    id: '5th IMS', number: 5, year: 2023, type: 'In Person',
+    hostCity: 'Avignon', hostCountry: 'France',
+    attendees: 106, academicInstitutions: 46, companies: 5, institutions: 51,
+    companyNames: ['Bruker', 'Phylogene', 'Pierre Fabre', 'Puratos Group', 'Thermo Fisher Scientific'],
+    nonAffiliated: 2, countriesRepresented: 16,
+    countries: [
+      { country: 'France', iso: 250, attendees: 21, institutions: 7 },
+      { country: 'Germany', iso: 276, attendees: 17, institutions: 11 },
+      { country: 'Canada', iso: 124, attendees: 11, institutions: 1 },
+      { country: 'Italy', iso: 380, attendees: 10, institutions: 5 },
+      { country: 'Norway', iso: 578, attendees: 7, institutions: 4 },
+      { country: 'United Kingdom', iso: 826, attendees: 5, institutions: 4 },
+      { country: 'United States', iso: 840, attendees: 5, institutions: 4 },
+      { country: 'Belgium', iso: 56, attendees: 4, institutions: 1 },
+      { country: 'Luxembourg', iso: 442, attendees: 4, institutions: 1 },
+      { country: 'Spain', iso: 724, attendees: 3, institutions: 2 },
+      { country: 'Denmark', iso: 208, attendees: 2, institutions: 1 },
+      { country: 'Finland', iso: 246, attendees: 2, institutions: 1 },
+      { country: 'Czech Republic', iso: 203, attendees: 1, institutions: 1 },
+      { country: 'China', iso: 156, attendees: 1, institutions: 1 },
+      { country: 'Netherlands', iso: 528, attendees: 1, institutions: 1 },
+      { country: 'Austria', iso: 40, attendees: 1, institutions: 1 },
+    ],
+  },
+  {
+    id: '6th IMS', number: 6, year: 2025, type: 'In Person',
+    hostCity: 'Oslo', hostCountry: 'Norway',
+    attendees: 79, academicInstitutions: 40, companies: 5, institutions: 45,
+    companyNames: ['Bruker', 'DNASense', 'MS-OMICS', 'Nestle R&D', 'PreOmics'],
+    nonAffiliated: 6, countriesRepresented: 14,
+    countries: [
+      { country: 'Germany', iso: 276, attendees: 14, institutions: 9 },
+      { country: 'United States', iso: 840, attendees: 10, institutions: 7 },
+      { country: 'Norway', iso: 578, attendees: 9, institutions: 2 },
+      { country: 'France', iso: 250, attendees: 6, institutions: 4 },
+      { country: 'Belgium', iso: 56, attendees: 6, institutions: 1 },
+      { country: 'Italy', iso: 380, attendees: 5, institutions: 4 },
+      { country: 'Israel', iso: 376, attendees: 4, institutions: 4 },
+      { country: 'United Kingdom', iso: 826, attendees: 3, institutions: 2 },
+      { country: 'Netherlands', iso: 528, attendees: 3, institutions: 1 },
+      { country: 'Luxembourg', iso: 442, attendees: 2, institutions: 1 },
+      { country: 'Austria', iso: 40, attendees: 2, institutions: 2 },
+      { country: 'Sweden', iso: 752, attendees: 1, institutions: 1 },
+      { country: 'Spain', iso: 724, attendees: 1, institutions: 1 },
+      { country: 'Canada', iso: 124, attendees: 1, institutions: 1 },
+    ],
+  },
+],
+
+imsWebinars: [
+  {
+    id: '1st Webinar', number: 1, year: 2021, type: 'Webinar',
+    hostCity: 'Online', hostCountry: 'Online',
+    attendees: 130, academicInstitutions: 47, companies: 2, institutions: 49,
+    companyNames: ['Bruker', 'Colgate-Palmolive'],
+    nonAffiliated: 17, countriesRepresented: 15,
+    countries: [
+      { country: 'Germany', iso: 276, attendees: 23, institutions: 8 },
+      { country: 'United States', iso: 840, attendees: 19, institutions: 8 },
+      { country: 'France', iso: 250, attendees: 18, institutions: 6 },
+      { country: 'Canada', iso: 124, attendees: 10, institutions: 4 },
+      { country: 'Norway', iso: 578, attendees: 8, institutions: 3 },
+      { country: 'Luxembourg', iso: 442, attendees: 8, institutions: 1 },
+      { country: 'Spain', iso: 724, attendees: 7, institutions: 3 },
+      { country: 'United Kingdom', iso: 826, attendees: 4, institutions: 3 },
+      { country: 'Italy', iso: 380, attendees: 3, institutions: 2 },
+      { country: 'Belgium', iso: 56, attendees: 2, institutions: 1 },
+      { country: 'Australia', iso: 36, attendees: 2, institutions: 2 },
+      { country: 'Austria', iso: 40, attendees: 2, institutions: 1 },
+      { country: 'Latvia', iso: 428, attendees: 1, institutions: 1 },
+      { country: 'Czech Republic', iso: 203, attendees: 1, institutions: 1 },
+      { country: 'Finland', iso: 246, attendees: 1, institutions: 1 },
+    ],
+  },
+  {
+    id: '2nd Webinar', number: 2, year: 2025, type: 'Webinar',
+    hostCity: 'Online', hostCountry: 'Online',
+    attendees: 111, academicInstitutions: 67, companies: 4, institutions: 71,
+    companyNames: ['Bioinformatics Solutions Inc.', 'Calico Life Sciences', 'Evosep Biosystems', 'PreOmics'],
+    nonAffiliated: 6, countriesRepresented: 24,
+    countries: [
+      { country: 'United States', iso: 840, attendees: 21, institutions: 13 },
+      { country: 'Germany', iso: 276, attendees: 17, institutions: 11 },
+      { country: 'Italy', iso: 380, attendees: 10, institutions: 4 },
+      { country: 'France', iso: 250, attendees: 9, institutions: 4 },
+      { country: 'India', iso: 356, attendees: 7, institutions: 4 },
+      { country: 'Austria', iso: 40, attendees: 5, institutions: 2 },
+      { country: 'United Kingdom', iso: 826, attendees: 4, institutions: 4 },
+      { country: 'Norway', iso: 578, attendees: 3, institutions: 2 },
+      { country: 'Luxembourg', iso: 442, attendees: 3, institutions: 2 },
+      { country: 'China', iso: 156, attendees: 2, institutions: 2 },
+      { country: 'Ireland', iso: 372, attendees: 2, institutions: 2 },
+      { country: 'Australia', iso: 36, attendees: 2, institutions: 2 },
+      { country: 'Spain', iso: 724, attendees: 2, institutions: 1 },
+      { country: 'Netherlands', iso: 528, attendees: 2, institutions: 2 },
+      { country: 'Greece', iso: 300, attendees: 1, institutions: 1 },
+      { country: 'Indonesia', iso: 360, attendees: 1, institutions: 1 },
+      { country: 'Saudi Arabia', iso: 682, attendees: 1, institutions: 1 },
+      { country: 'Israel', iso: 376, attendees: 1, institutions: 1 },
+      { country: 'Finland', iso: 246, attendees: 1, institutions: 1 },
+      { country: 'Japan', iso: 392, attendees: 1, institutions: 1 },
+      { country: 'Switzerland', iso: 756, attendees: 1, institutions: 1 },
+      { country: 'Denmark', iso: 208, attendees: 1, institutions: 1 },
+      { country: 'Sweden', iso: 752, attendees: 1, institutions: 1 },
+      { country: 'Belgium', iso: 56, attendees: 1, institutions: 1 },
+    ],
+  },
+],
+
+imsCumulative: {
+  count: 6,
+  totalAcademicInstitutions: 96,
+  totalCompanies: 12,
+  totalInstitutions: 108,
+  totalNonAffiliated: 23,
+  totalCountries: 20,
+  countries: [
+    { country: 'Germany', iso: 276, attendees: 113, institutions: 22 },
+    { country: 'France', iso: 250, attendees: 50, institutions: 11 },
+    { country: 'United States', iso: 840, attendees: 34, institutions: 13 },
+    { country: 'Norway', iso: 578, attendees: 33, institutions: 4 },
+    { country: 'Italy', iso: 380, attendees: 32, institutions: 10 },
+    { country: 'Luxembourg', iso: 442, attendees: 24, institutions: 3 },
+    { country: 'Belgium', iso: 56, attendees: 23, institutions: 2 },
+    { country: 'Canada', iso: 124, attendees: 17, institutions: 2 },
+    { country: 'United Kingdom', iso: 826, attendees: 16, institutions: 5 },
+    { country: 'Spain', iso: 724, attendees: 11, institutions: 3 },
+    { country: 'Denmark', iso: 208, attendees: 9, institutions: 5 },
+    { country: 'Netherlands', iso: 528, attendees: 8, institutions: 3 },
+    { country: 'Finland', iso: 246, attendees: 8, institutions: 1 },
+    { country: 'Sweden', iso: 752, attendees: 5, institutions: 2 },
+    { country: 'Czech Republic', iso: 203, attendees: 4, institutions: 1 },
+    { country: 'Israel', iso: 376, attendees: 4, institutions: 4 },
+    { country: 'Austria', iso: 40, attendees: 3, institutions: 2 },
+    { country: 'Slovenia', iso: 705, attendees: 1, institutions: 1 },
+    { country: 'South Korea', iso: 410, attendees: 1, institutions: 1 },
+    { country: 'China', iso: 156, attendees: 1, institutions: 1 },
+  ],
+},
+
+webinarCumulative: {
+  count: 2,
+  totalAcademicInstitutions: 92,
+  totalCompanies: 6,
+  totalInstitutions: 98,
+  totalNonAffiliated: 23,
+  totalCountries: 27,
+  countries: [
+    { country: 'Germany', iso: 276, attendees: 40, institutions: 15 },
+    { country: 'United States', iso: 840, attendees: 40, institutions: 17 },
+    { country: 'France', iso: 250, attendees: 27, institutions: 6 },
+    { country: 'Italy', iso: 380, attendees: 13, institutions: 5 },
+    { country: 'Norway', iso: 578, attendees: 11, institutions: 3 },
+    { country: 'Luxembourg', iso: 442, attendees: 11, institutions: 2 },
+    { country: 'Canada', iso: 124, attendees: 10, institutions: 4 },
+    { country: 'Spain', iso: 724, attendees: 9, institutions: 3 },
+    { country: 'United Kingdom', iso: 826, attendees: 8, institutions: 5 },
+    { country: 'Austria', iso: 40, attendees: 7, institutions: 2 },
+    { country: 'India', iso: 356, attendees: 7, institutions: 4 },
+    { country: 'Australia', iso: 36, attendees: 4, institutions: 4 },
+    { country: 'Belgium', iso: 56, attendees: 3, institutions: 1 },
+    { country: 'Finland', iso: 246, attendees: 2, institutions: 1 },
+    { country: 'China', iso: 156, attendees: 2, institutions: 2 },
+    { country: 'Ireland', iso: 372, attendees: 2, institutions: 2 },
+    { country: 'Netherlands', iso: 528, attendees: 2, institutions: 2 },
+    { country: 'Latvia', iso: 428, attendees: 1, institutions: 1 },
+    { country: 'Czech Republic', iso: 203, attendees: 1, institutions: 1 },
+    { country: 'Greece', iso: 300, attendees: 1, institutions: 1 },
+    { country: 'Indonesia', iso: 360, attendees: 1, institutions: 1 },
+    { country: 'Saudi Arabia', iso: 682, attendees: 1, institutions: 1 },
+    { country: 'Israel', iso: 376, attendees: 1, institutions: 1 },
+    { country: 'Japan', iso: 392, attendees: 1, institutions: 1 },
+    { country: 'Switzerland', iso: 756, attendees: 1, institutions: 1 },
+    { country: 'Denmark', iso: 208, attendees: 1, institutions: 1 },
+    { country: 'Sweden', iso: 752, attendees: 1, institutions: 1 },
+  ],
+},
 };
 
 /* ─── OpenAlex API ─── */
@@ -381,6 +795,14 @@ function showTab(name, btn) {
   if (btn && !btn.classList.contains('soon')) btn.classList.add('active');
 }
 
+/* ─── Outreach sub-nav (Symposia & Webinars / Teaching & Workshops) ─── */
+function showOutreachSub(name, btn) {
+  document.querySelectorAll('#sec-outreach .outreach-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(`outreach-${name}`)?.classList.add('active');
+  document.querySelectorAll('#sec-outreach .sort-btn').forEach(b => b.classList.remove('active'));
+  btn?.classList.add('active');
+}
+
 /* ─── Year range ─── */
 function yearRange() {
   const years = [];
@@ -393,7 +815,6 @@ let cachedCitationData = {};
 
 /* ─── Publication cards — initial render via sortPubs ─── */
 function buildPubCards() {
-  document.getElementById('pubCount').textContent = CONFIG.publications.length;
   document.getElementById('totalPubs').textContent = CONFIG.publications.length;
   sortPubs('pillar');  /* default sort */
 }
@@ -598,6 +1019,214 @@ function buildMembershipChart() {
   });
 }
 
+/* ─── IMS: type toggle (In-person Symposia / Webinars) ───
+   Appears on both the "Compare editions" and "Where attendees come from"
+   cards (kept in sync between the two), and drives only those two -
+   the cumulative stat cards above always summarize in-person IMS
+   editions specifically. */
+let imsType = 'IMS';
+
+function setIMSType(type) {
+  imsType = type;
+  document.querySelectorAll('.ims-type-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.type === type);
+  });
+
+  buildIMSCompareChart();
+  buildIMSMapSelector();
+  buildIMSMap('all');
+}
+
+function imsTypeEntries() {
+  return imsType === 'Webinar' ? CONFIG.imsWebinars : CONFIG.imsEditions;
+}
+function imsTypeCumulative() {
+  return imsType === 'Webinar' ? CONFIG.webinarCumulative : CONFIG.imsCumulative;
+}
+function imsTypeColor() {
+  return imsType === 'Webinar' ? { fill: 'var(--blue)', fillLt: 'var(--blue-lt)', solid: '#1258a8' }
+                                : { fill: 'var(--teal)', fillLt: 'var(--teal-lt)', solid: '#0f8f6e' };
+}
+
+/* ─── IMS: cumulative stat cards (always in-person IMS editions) ─── */
+function buildIMSCumulativeCards() {
+  const cum = CONFIG.imsCumulative;
+  const firstYear = CONFIG.imsEditions[0]?.year;
+
+  document.getElementById('imsStatEditions').textContent = cum.count;
+  document.getElementById('imsStatEditionsSub').textContent = firstYear ? `since ${firstYear}` : '';
+
+  document.getElementById('imsStatInstitutions').textContent = cum.totalInstitutions;
+  document.getElementById('imsStatInstitutionsSub').textContent =
+    `${cum.totalAcademicInstitutions} academic · ${cum.totalCompanies} industry`;
+
+  document.getElementById('imsStatCountries').textContent = cum.totalCountries;
+}
+
+/* ─── IMS: shared helpers ─── */
+function imsAllEntries() {
+  return [...CONFIG.imsEditions, ...CONFIG.imsWebinars]
+    .sort((a, b) => a.year - b.year || (a.type === 'Webinar' ? 1 : -1));
+}
+function imsFindEdition(id) {
+  return [...CONFIG.imsEditions, ...CONFIG.imsWebinars].find(e => e.id === id);
+}
+function imsLabel(ed) {
+  return ed.id;
+}
+
+/* ─── IMS: host-city roadmap (interactive) ───
+   Includes both in-person editions and webinars, in chronological order.
+   Webinar stops render smaller and in blue to distinguish them from the
+   (larger, teal) in-person symposia. */
+function buildIMSRoadmap() {
+  const el = document.getElementById('imsRoadmap');
+  el.innerHTML = imsAllEntries().map(ed => {
+    const isWebinar = ed.type === 'Webinar';
+    return `
+    <div class="roadmap-stop${isWebinar ? ' webinar' : ''}" data-id="${ed.id}"
+         onmouseenter="previewIMSEdition('${ed.id}')"
+         onmouseleave="resetIMSPreview()"
+         onclick="previewIMSEdition('${ed.id}')">
+      <div class="roadmap-dot"></div>
+      <div class="roadmap-info">
+        <div class="roadmap-year">${ed.year}</div>
+        <div class="roadmap-city">${isWebinar ? 'Online' : ed.hostCity}</div>
+        <div class="roadmap-country">${isWebinar ? '' : ed.hostCountry}</div>
+        <div class="roadmap-edition">${ed.id}</div>
+      </div>
+    </div>
+  `;
+  }).join('');
+}
+
+function highlightRoadmap(id) {
+  document.querySelectorAll('#imsRoadmap .roadmap-stop').forEach(stop => {
+    stop.classList.toggle('active', stop.dataset.id === id);
+  });
+}
+
+/* ─── IMS: edition detail panel ───
+   Shown by default for the most recent edition; hovering a roadmap stop or
+   a bar in the comparison chart below previews that edition instead.
+   Moving away resets back to the latest edition (not an empty prompt). */
+function renderIMSDetail(ed) {
+  const titleEl = document.getElementById('imsDetailTitle');
+  const subEl = document.getElementById('imsDetailSub');
+  const bodyEl = document.getElementById('imsDetailBody');
+
+  const isWebinar = ed.type === 'Webinar';
+  titleEl.textContent = `${imsLabel(ed)} · ${ed.year}`;
+  subEl.textContent = isWebinar ? 'Online webinar' : `${ed.hostCity}, ${ed.hostCountry}`;
+
+  bodyEl.innerHTML = `
+    <div class="stat-grid cols-4">
+      <div class="stat-card teal">
+        <div class="stat-val">${ed.attendees}</div>
+        <div class="stat-label">Attendees</div>
+      </div>
+      <div class="stat-card blue">
+        <div class="stat-val">${ed.institutions}</div>
+        <div class="stat-label">Institutions</div>
+        <div class="stat-sub">${ed.academicInstitutions} academic · ${ed.companies} industry</div>
+      </div>
+      <div class="stat-card amber">
+        <div class="stat-val">${ed.countriesRepresented}</div>
+        <div class="stat-label">Countries represented</div>
+      </div>
+      <div class="stat-card muted">
+        <div class="stat-val">—</div>
+        <div class="stat-label">Retention</div>
+        <div class="stat-sub">coming soon</div>
+      </div>
+    </div>
+  `;
+}
+
+function previewIMSEdition(id) {
+  const ed = imsFindEdition(id);
+  if (!ed) return;
+  renderIMSDetail(ed);
+  highlightRoadmap(id);
+}
+
+function resetIMSPreview() {
+  // Defaults to the most recent in-person symposium, even if a later
+  // webinar exists - webinars are previewed on hover, but shouldn't
+  // override the default "latest IMS" view.
+  const latestInPerson = CONFIG.imsEditions.slice(-1)[0];
+  previewIMSEdition(latestInPerson.id);
+}
+
+/* ─── IMS: compare editions ─── */
+const IMS_METRICS = {
+  attendees:            { label: 'Attendees' },
+  institutions:         { label: 'Institutions' },
+  countriesRepresented: { label: 'Countries represented' },
+};
+
+let imsMetric = 'attendees';
+let imsCompareChartInstance = null;
+
+function setIMSMetric(metric, btn) {
+  imsMetric = metric;
+  btn.parentElement.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  buildIMSCompareChart();
+}
+
+function buildIMSCompareChart() {
+  const all = imsTypeEntries();
+  const color = imsTypeColor();
+  const labels = all.map(ed => `${imsLabel(ed)} '${String(ed.year).slice(2)}`);
+  const data = all.map(ed => ed[imsMetric]);
+  const metricLabel = IMS_METRICS[imsMetric].label;
+
+  if (imsCompareChartInstance) imsCompareChartInstance.destroy();
+  imsCompareChartInstance = new Chart(document.getElementById('imsCompareChart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: metricLabel,
+        data,
+        backgroundColor: color.solid + 'dd',
+        borderColor: color.solid,
+        borderWidth: 1,
+        borderRadius: 4,
+        maxBarThickness: 56,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      onHover: (evt, elements) => {
+        if (elements.length) previewIMSEdition(all[elements[0].index].id);
+        else resetIMSPreview();
+      },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            afterBody: (items) => {
+              const ed = all[items[0].dataIndex];
+              const loc = ed.type === 'Webinar' ? 'Online' : `${ed.hostCity}, ${ed.hostCountry}`;
+              return [loc, `${ed.attendees} attendees · ${ed.institutions} institutions · ${ed.countriesRepresented} countries`];
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false } },
+        y: { min: 0, title: { display: true, text: metricLabel, font: { size: 11 }, color: '#7a8fa8' }, grid: { color: 'rgba(0,0,0,.04)' } }
+      }
+    }
+  });
+
+  document.getElementById('imsCompareLegend').innerHTML = `
+    <div class="legend-item"><div class="legend-dot" style="background:${color.solid};"></div>${imsType === 'Webinar' ? 'Webinar' : 'In-person symposium'}</div>
+  `;
+}
+
 /* ─── Main fetch ─── */
 async function loadAllCitations() {
   const currentYear = new Date().getFullYear();
@@ -668,8 +1297,15 @@ const COUNTRY_GROUPS = {
   392: { name:'Japan',        groups:1  },
 };
 
-/* ─── World map (shared drawing function) ─── */
-function drawMap(svgEl, tooltipEl, world) {
+/* ─── World map (shared drawing function) ───
+   countryData: { isoNumeric: { name, ...valueFields } }
+   opts: { valueKey, fillColor, bubbleColor, tooltip(d) } */
+function drawMap(svgEl, tooltipEl, world, countryData = COUNTRY_GROUPS, opts = {}) {
+  const valueKey = opts.valueKey || 'groups';
+  const fillColor = opts.fillColor || 'var(--teal-lt)';
+  const bubbleColor = opts.bubbleColor || 'var(--teal)';
+  const tooltipFn = opts.tooltip || (d => `<strong>${d.name}</strong> · ${d[valueKey]} group${d[valueKey] !== 1 ? 's' : ''}`);
+
   const W = svgEl.parentElement.clientWidth || 600;
   const H = Math.round(W * 0.52);
   svgEl.setAttribute('viewBox', `0 0 ${W} ${H}`);
@@ -681,33 +1317,34 @@ function drawMap(svgEl, tooltipEl, world) {
   const path = d3.geoPath().projection(projection);
   const svg = d3.select(svgEl);
   const countries = topojson.feature(world, world.objects.countries);
-  const maxGroups = Math.max(...Object.values(COUNTRY_GROUPS).map(d => d.groups));
-  const rScale = d3.scaleSqrt().domain([0, maxGroups]).range([0, 18]);
+  const values = Object.values(countryData).map(d => d[valueKey]);
+  const maxVal = values.length ? Math.max(...values) : 1;
+  const rScale = d3.scaleSqrt().domain([0, maxVal]).range([0, 18]);
 
   svg.selectAll('path.country')
     .data(countries.features)
     .join('path')
     .attr('class','country')
     .attr('d', path)
-    .attr('fill', d => COUNTRY_GROUPS[+d.id] ? 'var(--teal-lt)' : '#e8eef4')
+    .attr('fill', d => countryData[+d.id] ? fillColor : '#e8eef4')
     .attr('stroke', '#fff')
     .attr('stroke-width', 0.4)
-    .style('cursor', d => COUNTRY_GROUPS[+d.id] ? 'pointer' : 'default')
+    .style('cursor', d => countryData[+d.id] ? 'pointer' : 'default')
     .on('mousemove', function(event, d) {
-      const info = COUNTRY_GROUPS[+d.id]; if (!info) return;
+      const info = countryData[+d.id]; if (!info) return;
       const [mx, my] = d3.pointer(event);
       tooltipEl.style.display = 'block';
       tooltipEl.style.left = `${mx}px`;
       tooltipEl.style.top  = `${my}px`;
-      tooltipEl.innerHTML = `<strong>${info.name}</strong> · ${info.groups} group${info.groups > 1 ? 's' : ''}`;
+      tooltipEl.innerHTML = tooltipFn(info);
     })
     .on('mouseleave', () => { tooltipEl.style.display = 'none'; });
 
   const bubbleData = countries.features
-    .filter(d => COUNTRY_GROUPS[+d.id])
+    .filter(d => countryData[+d.id])
     .map(d => {
       const c = projection(d3.geoCentroid(d));
-      return { ...COUNTRY_GROUPS[+d.id], cx: c[0], cy: c[1] };
+      return { ...countryData[+d.id], cx: c[0], cy: c[1] };
     })
     .filter(d => d.cx && d.cy && isFinite(d.cx) && isFinite(d.cy));
 
@@ -716,8 +1353,8 @@ function drawMap(svgEl, tooltipEl, world) {
     .join('circle')
     .attr('class','bubble')
     .attr('cx', d => d.cx).attr('cy', d => d.cy)
-    .attr('r', d => Math.max(4, rScale(d.groups)))
-    .attr('fill', 'var(--teal)').attr('fill-opacity', 0.75)
+    .attr('r', d => Math.max(4, rScale(d[valueKey])))
+    .attr('fill', bubbleColor).attr('fill-opacity', 0.75)
     .attr('stroke', '#fff').attr('stroke-width', 1)
     .style('cursor','pointer')
     .on('mousemove', function(event, d) {
@@ -725,19 +1362,25 @@ function drawMap(svgEl, tooltipEl, world) {
       tooltipEl.style.display = 'block';
       tooltipEl.style.left = `${mx}px`;
       tooltipEl.style.top  = `${my}px`;
-      tooltipEl.innerHTML = `<strong>${d.name}</strong> · ${d.groups} group${d.groups > 1 ? 's' : ''}`;
+      tooltipEl.innerHTML = tooltipFn(d);
     })
     .on('mouseleave', () => { tooltipEl.style.display = 'none'; });
 }
 
-async function buildWorldMap() {
-  let world;
-  try {
-    const r = await fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json');
-    world = await r.json();
-  } catch {
-    return;
+/* ─── Shared world-atlas fetch (cached) ─── */
+let worldAtlasPromise = null;
+function getWorldAtlas() {
+  if (!worldAtlasPromise) {
+    worldAtlasPromise = fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+      .then(r => r.json())
+      .catch(() => null);
   }
+  return worldAtlasPromise;
+}
+
+async function buildWorldMap() {
+  const world = await getWorldAtlas();
+  if (!world) return;
 
   /* Draw on overview tab */
   const svgOv = document.getElementById('worldMapOverview');
@@ -770,12 +1413,68 @@ function buildCountryBars() {
   `).join('');
 }
 
+/* ─── IMS: geographic distribution ─── */
+function imsMapTooltip(d) {
+  return `<strong>${d.name}</strong> · ${d.attendees} attendee${d.attendees !== 1 ? 's' : ''} · ${d.institutions} institution${d.institutions !== 1 ? 's' : ''}`;
+}
+
+async function buildIMSMap(selection) {
+  selection = selection || document.getElementById('imsMapSelect')?.value || 'all';
+  const world = await getWorldAtlas();
+  const svg = document.getElementById('imsWorldMap');
+  const tt = document.getElementById('imsMapTooltip');
+  if (!world || !svg || !tt) return;
+
+  const color = imsTypeColor();
+  let countries;
+  if (selection === 'all') {
+    countries = imsTypeCumulative().countries;
+  } else {
+    countries = imsTypeEntries().find(ed => ed.id === selection)?.countries || [];
+  }
+
+  const countryData = {};
+  countries.forEach(c => {
+    countryData[c.iso] = { name: c.country, attendees: c.attendees, institutions: c.institutions };
+  });
+
+  drawMap(svg, tt, world, countryData, {
+    valueKey: 'institutions',
+    fillColor: color.fillLt,
+    bubbleColor: color.fill,
+    tooltip: imsMapTooltip,
+  });
+}
+
+function buildIMSMapSelector() {
+  const select = document.getElementById('imsMapSelect');
+  if (!select) return;
+  const isWebinar = imsType === 'Webinar';
+  const allLabel = isWebinar ? 'All webinars (cumulative)' : 'All IMS editions (cumulative)';
+  const options = [`<option value="all">${allLabel}</option>`].concat(
+    imsTypeEntries().map(ed => {
+      const label = isWebinar
+        ? `${ed.id} (${ed.year}, online)`
+        : `${ed.id} (${ed.year}, ${ed.hostCity})`;
+      return `<option value="${ed.id}">${label}</option>`;
+    })
+  );
+  select.innerHTML = options.join('');
+}
+
 /* ─── Init ─── */
 buildPubCards();
 buildMembershipChart();
 renderMainChart();
 loadAllCitations();
 buildWorldMap();
+
+buildIMSCumulativeCards();
+buildIMSRoadmap();
+resetIMSPreview();
+buildIMSCompareChart();
+buildIMSMapSelector();
+buildIMSMap('all');
 </script>
 </body>
 </html>
